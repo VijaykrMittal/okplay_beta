@@ -1,0 +1,45 @@
+{
+  "ProjectName": "okplay beta",
+  "ProjectGuid": "bb94e78f-ddee-4a5d-9c7b-252178f20241",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.okplaybeta",
+  "DisplayName": "okplay beta",
+  "Author": "",
+  "Description": "okplay beta",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{c4d7da09-5851-4f2b-a6f4-06524d49e3ad}",
+  "WP8ProductID": "{897721b3-8f26-4b51-b1a7-bfe43ba6b31f}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.okplaybeta",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
