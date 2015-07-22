@@ -1,0 +1,77 @@
+@media (min-width:0px) and (max-width:1280px) {
+}
+
+@media (min-width:0px) and (max-width:1024px) {
+}
+
+@media screen and (max-width: 960px){
+}
+
+@media (min-width:0px) and (max-width:800px) {
+}
+
+@media (min-width:0px) and (max-width:768px) {
+}
+
+@media (min-width:0px) and (max-width:640px) {
+}
+
+@media (min-width:0px) and (max-width:630px) {
+}
+
+@media (min-width:0px) and (max-width:600px) {
+}
+
+@media (min-width:0px) and (max-width:599px) {
+}
+
+@media (min-width:0px) and (max-width:580px) {
+}
+
+@media (min-width:0px) and (max-width:533px) {
+}
+
+@media (min-width:0px) and (max-width:440px) {
+}
+
+@media (min-width:0px) and (max-width:410px) {
+    
+    /*main-Layout*/
+    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .nvbar span { font-size:13px;}
+    .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
+    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .srchDv { width:85%;height:100%;float:left}
+    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .popup {width: 290px;height: auto;display: none;position: absolute;top: 105px;right: 9px;z-index:99999}
+    /*#ageList li {height:50px !important}*/
+    .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
+    .nvbar a {text-decoration:none}
+    
+    /*Category Design*/
+    #ageList li span{padding: 15px 210px 17px 0px !important;}
+    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
+    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
+    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
+    
+    /*scrollview design*/
+    .bx-viewport {width: 103% !important;overflow: hidden;/* position: relative; */height: 180px !important;margin: 0px auto !important;}
+    .bxslider li img {height:180px !important}
+    
+    /*POP OVER*/
+    .popOver {width:280px !important;height:300px !important;background:#000 !important}
+}
+
+@media (min-width:0px) and (max-width:390px) {
+}
+
+@media (min-width:0px) and (max-width:370px) {
+}
+
+@media (min-width:0px) and (max-width:320px) {
+}
+
+@media screen and ( max-height: 390px ){
+}

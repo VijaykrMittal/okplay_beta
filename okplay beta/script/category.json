@@ -1,0 +1,10 @@
+[
+    { "id": 1,  "value":"Health", "task":"category" ,"class":"Health"},
+    { "id": 2,  "value": "Nutrition", "task":"category" ,"class":"Nutrition"},
+    { "id": 3,  "value": "Mental development", "task":"category" ,"class":"Mental development"},
+    { "id": 4,  "value": "Education", "task":"category" ,"class":"Education"},
+    { "id": 5,  "value": "Play time", "task":"category" ,"class":"Play time"},
+    { "id": 6,  "value": "Family", "task":"category" ,"class":"Family"},
+    { "id": 7,  "value": "Travelling With Children", "task":"category" ,"class":"Travelling With Children"},
+    { "id": 8,  "value": "Recent News", "task":"category" ,"class":"Recent News" }
+]

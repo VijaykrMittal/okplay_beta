@@ -1,0 +1,29 @@
+.km-drawer{content: "\e077";}
+li:after {content: none;}
+
+#ageList li:last-child, #categoryList li:last-child {border-bottom:1px solid !important;border-color: #252525 !important;border-width: 0 0 1px 0 !important;}
+#ageList li span, #categoryList li span {font-size:16px !important;font-family:times !important}
+
+/*7-8-2015*/
+#category-dropdown {text-align:center;display:none;margin-top: 50px;}
+#age-dropdown {text-align:center;margin-top: 50px;}
+.dropFld {width: 90%;height: 35px;padding-left:7px;}
+
+/*8-8-2015*/
+
+#headerContent p:nth-child(1) {font-size: 25px;text-align: center;}
+#headerContent p:nth-child(2) {font-size: 14px;text-align: center;}
+.noartcle {font-size: 14px;margin-top: 30px;text-align: center;}
+.textTitle {font-weight: 100;font-size: 18px;padding-left: 8px;line-height: 39px;color: #FFF;font-family: times;text-shadow:#000 2px 2px 5px;}
+
+
+.drawerBtn {display:none}
+
+.bx-wrapper .bx-pager {position: absolute;bottom: 15px;}
+.bx-pager {display:none}
+#popup {display:none}
+
+
+
+
+

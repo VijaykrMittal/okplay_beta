@@ -3,14 +3,56 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.common.min.css" rel="stylesheet"/>
+    <link href="kendo/styles/kendo.default.min.css" rel="stylesheet"/>
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="styles/lib/jquery.bxslider.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet"/>
+    <link href="styles/main.css" rel="stylesheet"/>
 
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="script/lib/jquery.bxslider.min.js"></script>
+    <script src="kendo/js/kendo.all.min.js"></script>
+    <script src="script/lib/jquery.validate.js"></script>
     
+    <style>
+        .k-grid .k-header {display: none;}
+        /*#grid {background-color:#373F4A;}
+        #grid tbody tr{height:50px;background-color:#373F4A;color:#FFF;font-family:times;}
+        .k-grid td {border-style:none !important}*/
+        #grid tbody tr{height:50px;font-family:times;}
+        .km-touch-scrollbar {opacity:0 !important}
+    </style>
 </head>
 <body>
     
+    <div data-role="layout" data-id="main-layout">
+        <div data-role="header" id="header">
+            <div data-role="navbar" class="nvbar">
+                <a href="#loginView" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
+                <a data-align="right"><span>REGISTER&nbsp;&nbsp;</span></a>
+            </div>
+            <div class="bottom_nvbar">
+                <a data-role="button" href="#homepageView" class="logo"></a>
+                <div class="srchDv">
+                    <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search"/>
+                </div>
+                <div class="menuDv">
+                    <a data-role="button" class="menu"></a>
+                </div>
+            </div>
+            <div class="popup">
+                <div class="km-listview-wrapper"><ul id="ageList"  class="km-widget km-listview km-list"></ul></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--External JS Place Here-->
+    <script src="script/app.js"></script>
+    <script src="script/homeView.js"></script>
+    <script src="script/category.js"></script>
+    <script src="script/login.js"></script>
 </body>
 </html>
