@@ -31,28 +31,37 @@
         <div data-role="header" id="header">
             <div data-role="navbar" class="nvbar">
                 <a href="#loginView" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
-                <a data-align="right"><span>REGISTER&nbsp;&nbsp;</span></a>
+                <a href="#signupView" data-align="right"><span>REGISTER&nbsp;&nbsp;</span></a>
             </div>
             <div class="bottom_nvbar">
                 <a data-role="button" href="#homepageView" class="logo"></a>
                 <div class="srchDv">
+                    <a data-role="button" class="srchbtn" data-click="srchData"></a>
                     <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search"/>
                 </div>
                 <div class="menuDv">
-                    <a data-role="button" class="menu"></a>
+                    <a data-role="button" id="menubtn" class="menu"></a>
                 </div>
             </div>
             <div class="popup">
-                <div class="km-listview-wrapper"><ul id="ageList"  class="km-widget km-listview km-list"></ul></div>
+                <div class="km-listview-wrapper"><ul id="categoryList"  class="categoryList km-widget km-listview km-list"></ul></div>
             </div>
         </div>
-        
     </div>
+    
+    <script >
+        function srchData()
+        {
+            //$('.srchtxt').val();
+            app.categoryService.viewModel.srchDataCall($('.srchtxt').val());
+        }
+    </script>
     
     <!--External JS Place Here-->
     <script src="script/app.js"></script>
     <script src="script/homeView.js"></script>
     <script src="script/category.js"></script>
     <script src="script/login.js"></script>
+    <script src="script/signup.js"></script>
 </body>
 </html>

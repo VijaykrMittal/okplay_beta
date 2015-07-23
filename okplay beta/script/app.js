@@ -52,7 +52,17 @@ var app = (function(global){
                                                                     initial:'views/homepage.html',
                                                                     layout:'main-layout'
                                                                 }
+    
+    
     );
+    
+    localStorage.setItem("articleDetailAPI","http://okplay.club/mobileapi/article-detail");
+    localStorage.setItem("articleListAPI","http://okplay.club/mobileapi/article-list");
+    localStorage.setItem("allCategoryListAPI","http://okplay.club/mobileapi/allcategories");
+    localStorage.setItem("slideshowListAPI","http://okplay.club/mobileapi/slideshow-list");
+    localStorage.setItem("allAgesListAPI","http://okplay.club/mobileapi/all-ages-list");
+    localStorage.setItem("userLoginAPI","http://okplay.club/mobileapi/userlogin");
+    localStorage.setItem("searchDataAPI","http://okplay.club/mobileapi/searchdata");
     
     return{
       mobileApp : mobileApp

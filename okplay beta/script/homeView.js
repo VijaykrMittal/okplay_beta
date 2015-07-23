@@ -3,30 +3,22 @@
         app = global.app = global.app || {};
     
     homeViewModel = kendo.data.ObservableObject.extend({
-        
-        categorydrawerData:'',
-        categoryName:'',
-        dataListStatus:'',
-        categoryText:'',
-        listData:'',
-        articleDetail:'',
-        
-        scrollImgDataSource:'',
-        categoryListData:'',
-        
-        categorydataSource:'',
-        
         show:function()
-        {  
-            console.log(sessionStorage.getItem('sliderAPIStatus'));
+        {
+            app.mobileApp.showLoading();
             $('.popup').hide();
-            
-            if(sessionStorage.getItem('sliderAPIStatus') === "null" || sessionStorage.getItem('sliderAPIStatus') === null)
+            $('.srchtxt').val('');
+            if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.scrollViewImage();
+                app.homeService.viewModel.categoryDataShow();
             }
-            
-            app.homeService.viewModel.categoryDataShow();
+            else
+            {
+                setTimeout(function(){
+                    app.mobileApp.hideLoading();
+                },2000);
+            }
             
             $('.menu').unbind();
             $('.menu').on('click',function(){
@@ -39,7 +31,7 @@
             var category = new kendo.data.DataSource({
                     transport: {
                         read: {
-                            url: 'http://okplay.club/mobileapi/allcategories',
+                            url: localStorage.getItem("allCategoryListAPI"),
                             type:"GET",
                             dataType: "json",
                         }
@@ -64,9 +56,7 @@
         
         setCategoryListData :function(data)
         {
-            //this.set("categorydataSource",data);
-            
-            var html = "<div c>";
+            var html = "";
             for(var x in data)
             {
                if($.isNumeric(x))
@@ -75,8 +65,12 @@
                 }
             }
             
-            $('#ageList').html(html);
+            $('#categoryList').html(html);
             kendo.bind('.popup',app.homeService.viewModel);
+            
+            setTimeout(function(){
+                app.mobileApp.hideLoading();
+            },2000);
         },
         
         scrollViewImage : function()
@@ -84,7 +78,7 @@
           var scrollData = new kendo.data.DataSource({
                 transport: {
                     read: {
-                        url: 'http://okplay.club/mobileapi/slideshow-list',
+                        url: localStorage.getItem('slideshowListAPI'),
                         type:"GET",
                         dataType: "json",
                         data: { apiaction:"slideshowList"} 
@@ -132,17 +126,22 @@
             
             $('#bxs').html(html);
             $('.bxslider').bxSlider();
+            
+             
         },
         
         categoryArticle : function(e)
         {
-            $('.popup').slideToggle("slow","swing");
-            sessionStorage.setItem("sliderAPIStatus",true);
+            app.mobileApp.showLoading();
+            $('select').val('0');
+            $('.popup').hide();
+            sessionStorage.setItem("SliderCategoryAPIStatus",true);
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
+            
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
                         read: {
-                            url:'http://okplay.club/mobileapi/article-list',
+                            url:localStorage.getItem('articleListAPI'),
                             type:"GET",
                             dataType: "json",
                             data: { apiaction:"articlelist",catId:e['target']['attributes']['data-id']['value']} 

@@ -1,102 +1,16 @@
-<!--<div data-role="view" data-title="okplay" id="homepage-view" data-model="app.homeService.viewModel" data-show="app.homeService.viewModel.categoryShow" data-use-native-scrolling="true">
-    
-    <div id="grid"></div>
-    
-    <div id="headerContent">
-        <p data-bind="text:categoryName"></p>
-        <p data-bind="text:categoryText"></p>
-    </div>
-    
-    <div style="margin-top: -15px;">
-        <p class="noartcle" data-bind="text:dataListStatus"></p>
-        <ul id="List" data-role="listview" data-template="ListView" data-bind="source:listData">
-
-        </ul>
-    </div>
-</div>
-
-<script type="text/x-kendo-template" id="ListView">
-   <div data-bind="click:articleDataCall" data-id="#: data['id'] #"  style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
-        <span data-value="#: data['id'] #" class="textTitle">#: data['title'] #</span>
-   </div>
-</script>
-
-<div data-role="view" id="healthView" data-model="app.homeService.viewModel" data-show="app.homeService.viewModel.show" data-use-native-scrolling="true">
-    <div data-role="content">
-        <div id="headerContent">
-            <p id="categoryName" data-bind="text:categoryName"></p>
-            <p data-bind="text:categoryText"></p>
-        </div>
-        
-        <div id="filterDropdwn">
-            <p id="category-dropdown">
-                <select class="dropFld" onchange="app.homeService.viewModel.ageDrpDownFilter(this.value);">
-                    <option value="0" selected="selected">-Any-</option>
-                    <option>Health</option>
-                    <option>Nutrition</option>
-                    <option>Mental development</option>
-                    <option>Education</option>
-                    <option>Play time</option>
-                    <option>Family</option>
-                    <option>Travelling With Children</option>
-                    <option>Recent News</option>
-                </select>
-            </p>
-            <p id="age-dropdown">
-                <select class="dropFld" onchange="app.homeService.viewModel.drpdownFilter(this.value);">
-                    <option value="0" selected="selected">-Any-</option>
-                    <option value="Prenatal">Prenatal</option>
-                    <option value="0 to 3 months">0 to 3 months</option>
-                    <option value="3 to 12 months">3 to 12 months</option>
-                    <option value="1 to 3 years">1 to 3 years</option>
-                    <option value="3 to 5 years">3 to 5 years</option>
-                    <option value="5 to 7 years">5 to 7 years</option>
-                </select>
-            </p>
-        </div>
-        <div style="margin-top: 50px;">
-            <p class="noartcle" data-bind="text:dataListStatus"></p>
-            <ul id="List" data-role="listview" data-template="ListView" data-bind="source:listData">
-
-            </ul>
-        </div>
-        <div style="margin-bottom:30px;">
-            
-        </div>
-    </div>
-</div>
-
-
-
--->
-
-<!--New Updated HTML Code-->
-
-<!--Homepage View-->
+<!--Homepage View and categoryList template-->
 <div data-role="view" data-title="okplay" id="homepageView" data-use-native-scrolling="true" data-model="app.homeService.viewModel" data-show="app.homeService.viewModel.show">
-    <!--Category ListData Div-->
-   
-    <div id="bxs">
-        
-    </div>
-    
-    
+    <!--Category ListData-->
+    <div id="bxs"></div>
 </div>
 
-<!--Category ListData Template-->
 <script type="text/x-kendo-template" id="categoryListView">
     <span data-id="#: data['id'] #" data-bind="click:categoryArticle">#: data['name'] #</span>
 </script>
 
-
-
-<!--categoryArticle View-->
-<div data-role="view" id="categoryArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show">
+<!-- Article View and their template-->
+<div data-role="view" id="categoryArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true">
     <div data-role="content">
-        <!--<div id="popup">
-            <ul id="ageList" data-role="listview" data-template="categoryListView" data-bind="source:categoryListData"></ul>
-        </div>-->
-        
         <div id="filterDropdwn">
             <p id="age-dropdown">
                 <select class="dropFld" id="ageDropFld" onchange="app.categoryService.viewModel.drpdownFilter(this.options[this.selectedIndex].getAttribute('data-id'));"></select>
@@ -111,27 +25,27 @@
     </div>
 </div>
 
-<!--Article View template-->
 <script type="text/x-kendo-template" id="articleView">
-   <div data-bind="click:articleDataCall" data-id="#: data['id'] #"  style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
+   <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #"  style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
         <span data-value="#: data['id'] #" class="textTitle">#: data['title'] #</span>
    </div>
+   <a data-role="button" class="sharebtn" data-icon="share"></a> 
 </script>
 
 
 <!--Login VIEW-->
-<div data-role="view" id="loginView" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.show">
+<div data-role="view" id="loginView" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.show" data-use-native-scrolling="true">
     <div data-role="content">
         <div class="txtfldCont">
-            <form id="loginForm">
+            <form id="loginForm" class="frmdv">
+                <h1>
+                    Log In
+                </h1>
                 <p>
-                    User account
+                    <input type="text" name="email" data-bind="value:email" class="logTxtFld" id="email" Placeholder="E-mail Address" required/>
                 </p>
                 <p>
-                    <input type="text" name="email" data-bind="value:email" id="email" Placeholder="E-mail Address" required/>
-                </p>
-                <p>
-                    <input type="password" name="pwd" data-bind="value:pwd" id="pwd" Placeholder="Password" required/>
+                    <input type="password" name="pwd" data-bind="value:pwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
                 </p>
             </form>
             <p>
@@ -140,3 +54,29 @@
         </div>
     </div>
 </div>
+
+
+<!--Registration View-->
+<div data-role="view" id="signupView" data-model="app.signupService.viewModel" data-show="app.signupService.viewModel.show">
+    
+</div>
+
+<!--search View Template-->
+<div data-role="view" id="searchContent" data-use-native-scrolling="true" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.searchShow">
+    <div data-role="content">
+        <h1>
+            Site Search
+        </h1>
+        <p data-bind="text:searchStatus"></p>
+        <div id="searchalldata">
+            <ul id="alldatasrch" data-role="listview" data-template="searchView" data-bind="source:searchlistData"></ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-kendo-template" id="searchView">
+   <div style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
+   </div>
+    <h4>#: data['title']#</h4>
+    <a href="" style="position: absolute;top: 277px;right: 18px;text-decoration:none">Read More</a>
+</script>

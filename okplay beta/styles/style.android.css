@@ -46,9 +46,10 @@
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
     .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     .popup {width: 290px;height: auto;display: none;position: absolute;top: 105px;right: 9px;z-index:99999}
-    /*#ageList li {height:50px !important}*/
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
+    .srchDv .srchbtn {position: absolute !important;;top: 71px !important;;right: 91px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
+    .srchDv .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     
     /*Category Design*/
     #ageList li span{padding: 15px 210px 17px 0px !important;}
@@ -60,8 +61,19 @@
     .bx-viewport {width: 103% !important;overflow: hidden;/* position: relative; */height: 180px !important;margin: 0px auto !important;}
     .bxslider li img {height:180px !important}
     
-    /*POP OVER*/
-    .popOver {width:280px !important;height:300px !important;background:#000 !important}
+    /*23-07-2015*/
+    
+    /*login Page*/
+    .txtfldCont {width: 80%;margin: 0px auto;}
+    .frmdv {width:100%;}
+    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
+    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
+    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    
+    /*main article Page*/
+    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999}
 }
 
 @media (min-width:0px) and (max-width:390px) {

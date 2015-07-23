@@ -4,19 +4,43 @@
     
     categoryViewModel = kendo.data.ObservableObject.extend({
         articlelistData:'',
+        dataListStatus:'',
+        articleDetail:'',
+        searchlistData:'',
+        searchStatus:'',
         
         show:function()
         {
+            app.mobileApp.showLoading();
             $('.menu').unbind();
-            $('.menu').on('click',function(){
+            $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");
+            });
+            
+            $('#ageDropFld').click(function(){
+               $('.popup').hide();
             });
             app.categoryService.viewModel.fetchAgeListdata();
         },
         
         setArticleListData:function(data)
         {
-            this.set("articlelistData",data);
+            //$('#age-dropdown select').val('0');
+            
+            if(data.length ===0 || data.length === "0")
+            {
+                this.set("dataListStatus","There is no article.");
+                this.set("articlelistData","");
+                app.mobileApp.hideLoading();
+            }
+            else
+            {
+                this.set("dataListStatus","");
+                this.set("articlelistData",data);
+                app.mobileApp.hideLoading();
+               
+            }
+            
         },
         
         fetchAgeListdata : function()
@@ -24,7 +48,7 @@
             var ageData = new kendo.data.DataSource({
                 transport: {
                     read: {
-                        url: 'http://okplay.club/mobileapi/all-ages-list',
+                        url: localStorage.getItem('allAgesListAPI'),
                         type:"GET",
                         dataType: "json",
                     }
@@ -50,23 +74,71 @@
         showAgeDropDown:function(data)
         {
             var html = "";
-            html = "<option>All Age Group</option>";
+            html = "<option value='0' data-id='0'>All Age Group</option>";
             for(var x in data)
             {
                 if($.isNumeric(x))
                 {
-                    html +="<option data-id='"+data[x]['id']+"'>"+data[x]['name']+"</option>"
+                    html +="<option value='"+data[x]['id']+"' data-id='"+data[x]['id']+"'>"+data[x]['name']+"</option>"
                 }
             }
+            
             $('#ageDropFld').html(html);
+            setTimeout(function(){
+                app.mobileApp.hideLoading();
+            },2000);
         },
         
         drpdownFilter:function(data)
         {
-            var categoryAgeFilter  = new kendo.data.DataSource({
+            app.mobileApp.showLoading();
+            if(data === 0 || data === '0')
+            {
+                var categoryAllFilter  = new kendo.data.DataSource({
                     transport: {
                         read: {
-                            url:'http://okplay.club/mobileapi/article-list',
+                            url:localStorage.getItem('articleListAPI'),
+                            type:"GET",
+                            dataType: "json",
+                            data: { apiaction:"articlelist",catId:sessionStorage.getItem("categorySelectItem")} 
+                        }
+                        
+                    },
+                    filter: { field: "value", operator: "eq", value: data },
+                    schema: {
+                        data: function(data)
+                        {
+                        	return [data];
+                        }
+                    },
+                    error: function (e) {
+                    	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    	function () { }, "Notification", 'OK');
+                    },
+                });
+                categoryAllFilter.fetch(function(){
+                    var that = this;
+                    var data = that.data();
+                    console.log(data);
+                    
+                    if(data[0]['code'] === 1 || data[0]['code'] === "1")
+                    {
+                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
+                    }
+                    else
+                    {
+                       navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        	function () { }, "Notification", 'OK'); 
+                    }
+                    
+                });
+            }
+            else
+            {
+                var categoryAgeFilter  = new kendo.data.DataSource({
+                    transport: {
+                        read: {
+                            url:localStorage.getItem('articleListAPI'),
                             type:"GET",
                             dataType: "json",
                             data: { apiaction:"articlelist",catId:sessionStorage.getItem("categorySelectItem"),ageId:data} 
@@ -84,22 +156,147 @@
                     	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                     	function () { }, "Notification", 'OK');
                     },
+                });
+                categoryAgeFilter.fetch(function(){
+                    var that = this;
+                    var data = that.data();
+                    console.log(data);
+                    if(data[0]['code'] === 1 || data[0]['code'] === "1")
+                    {
+                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
+                    }
+                    else
+                    {
+                       navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        	function () { }, "Notification", 'OK'); 
+                    }
+                    
+                });
+            }
+        },
+        
+        /* main article content data show functions*/
+        
+        articleContentShow : function()
+        {
+            app.mobileApp.showLoading();
+            
+            setTimeout(function(){
+               app.mobileApp.hideLoading();
+            },6000);
+        },
+        
+        articleContentDataCall : function(e)
+        {
+            $('.popup').hide();
+            app.mobileApp.showLoading();
+            sessionStorage.setItem("mainArticleStatus",true);
+            
+            var articleContent = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: localStorage.getItem('articleDetailAPI'),
+                        type:"GET",
+                        dataType: "json", 
+                        data: { apiaction:"articledetail",nodeId:e['target']['attributes']['data-id'].value} 
+                    }
+                },
+                schema: {
+                    data: function(data)
+                    {
+                        return [data];
+                    }
+                },
+                error: function (e) {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                },
+
             });
-            categoryAgeFilter.fetch(function(){
-                var that = this;
-                var data = that.data();
-                
-                if(data[0]['code'] === 1 || data[0]['code'] === "1")
+            articleContent.fetch(function(){
+                var data = this.data();
+                console.log(data);
+                if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
-                    app.categoryService.viewModel.setArticleListData(data[0]['data']);
+                    app.categoryService.viewModel.setArticleDataSource(data[0]['data']);
                 }
                 else
                 {
-                   navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK'); 
+                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
                 }
-                
             });
+        },
+        
+        setArticleDataSource : function(data)
+        {
+            this.set("articleDetail",data);
+            app.mobileApp.navigate("views/articleData.html");
+        },
+        
+        searchShow:function()
+        {
+            //$('.srchtxt').val('');
+        },
+        
+        srchDataCall:function(searchKeyword)
+        {
+           // app.mobileApp.showLoading();
+            //var searchTxt = $('.srchtxt').val();
+            
+            console.log("text search");
+            console.log(searchKeyword);
+            var searchContent = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: localStorage.getItem('searchDataAPI'),
+                        type:"GET",
+                        dataType: "json", 
+                        data: { apiaction:"searchdata",keyword:searchKeyword} 
+                    }
+                },
+                schema: {
+                    data: function(data)
+                    {
+                        return [data];
+                    }
+                },
+                error: function (e) {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                },
+
+            });
+            searchContent.fetch(function(){
+                var data = this.data();
+                alert("done");
+                if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                {
+                    app.categoryService.viewModel.setSearchData(data[0]['data']);
+                }
+                else
+                {
+                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
+                }
+            });
+        },
+        
+        setSearchData  :function(data)
+        {
+            console.log(data.length);
+            
+            if(data.length === 0 || data.length === '0')
+            {
+                this.set('searchStatus',"no related search found.");
+                this.set('searchlistData','');
+                //app.mobileApp.navigate("#searchContent");
+            }
+            else
+            {
+                this.set('searchlistData',data);
+                this.set('searchStatus',"");
+               // app.mobileApp.navigate("#searchContent");
+            }
+            app.mobileApp.navigate("#searchContent");
         }
     });
     app.categoryService = {
