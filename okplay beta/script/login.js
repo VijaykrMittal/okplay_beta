@@ -43,11 +43,11 @@
         
         loginSubmit:function()
         {
-           // console.log(this.get('email'));
             var status = $('#loginForm').valid();
             
             if(status === false)
             return status;
+            
             app.mobileApp.showLoading();
             var loginDataSource = new kendo.data.DataSource({
                 transport:{
@@ -91,18 +91,19 @@
         
         setUserLogindata : function(data)
         {
-            console.log(data);
             localStorage.getItem('userEmail',data['mail']);
             localStorage.getItem('userName',data['name']);
-            $('.nvbar .afterLogin').show();
-            $('.nvbar .beforeLogin').hide();
+            localStorage.setItem("loginStatus","true");
             app.mobileApp.hideLoading();
-            //app.mobileApp.navigate("views/homepage.html");
+            app.mobileApp.navigate("views/homepage.html");
         },
         
         userLogout : function()
         {
-            
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userName');
+            localStorage.setItem("loginStatus","false");
+            app.mobileApp.navigate("views/homepage.html");
         }
     });
     app.loginService = {

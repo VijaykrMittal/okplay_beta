@@ -6,7 +6,7 @@
         
         show : function()
         {
-           
+            $('.popup').hide();
         },
     });
     app.signupService = {

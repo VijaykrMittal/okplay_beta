@@ -5,6 +5,7 @@
     homeViewModel = kendo.data.ObservableObject.extend({
         show:function()
         {
+            console.log(localStorage.getItem('userLoginStatus'));
             app.mobileApp.showLoading();
             $('.nvbar .afterLogin').show();
             $('.nvbar .beforeLogin').hide();

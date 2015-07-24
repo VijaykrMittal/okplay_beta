@@ -46,7 +46,9 @@ var app = (function(global){
     }
     document.addEventListener('deviceready', onDeviceReady, false);
     
-    var mobileApp = new kendo.mobile.Application(document.body,
+    if(localStorage.getItem('loginStatus') === "null" || localStorage.getItem('loginStatus') === null || localStorage.getItem('loginStatus') === false || localStorage.getItem('loginStatus') === "false")
+    {
+        var mobileApp = new kendo.mobile.Application(document.body,
                                                                 {
                                                                     skin:'flat',
                                                                     initial:'views/homepage.html',
@@ -54,7 +56,22 @@ var app = (function(global){
                                                                 }
     
     
+        );
+    }
+    else
+    {
+        var mobileApp = new kendo.mobile.Application(document.body,
+                                                                {
+                                                                    skin:'flat',
+                                                                    initial:'views/homepage.html',
+                                                                    layout:'login-layout'
+                                                                }
+    
+    
     );
+    }
+    
+    
     
     localStorage.setItem("articleDetailAPI","http://okplay.club/mobileapi/article-detail");
     localStorage.setItem("articleListAPI","http://okplay.club/mobileapi/article-list");

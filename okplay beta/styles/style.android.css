@@ -55,8 +55,10 @@
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
     .nvbar .afterLogin {display:none}
-    .nvbar .logPos {position: absolute;top: 4px;right: 70px;}
+    .nvbar .logPos {position: absolute;top: 4px;right: 70px;width:106px}
     .nvbar .regPos {position: absolute;top: 4px;right: -6px;}
+    .nvbar .mainLogPos {position: absolute;top: 4px;right: 70px;}
+    .nvbar .mainSignPos {position: absolute;top: 4px;right: -6px;}
     
     /*Category Design*/
     #ageList li span{padding: 15px 210px 17px 0px !important;}

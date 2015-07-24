@@ -7,6 +7,10 @@
         
         srchDataCall:function(searchTxt)
         {
+            if(searchTxt === "")
+            {
+                searchTxt = "all";
+            }
             var searchContent = new kendo.data.DataSource({
                 transport: {
                     read: {
@@ -30,8 +34,6 @@
             });
             searchContent.fetch(function(){
                 var data = this.data();
-                console.log(data);
-                console.log(searchTxt);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.searchService.viewModel.setSearchData(data[0]['data']);

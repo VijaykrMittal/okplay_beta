@@ -30,8 +30,30 @@
     <div data-role="layout" data-id="main-layout">
         <div data-role="header" id="header">
             <div data-role="navbar" class="nvbar">
-                <a data-role="button" data-click="movetoLogin" class="removebtn logPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
-                <a data-role="button" data-click="movetoSignup" class="removebtn signPos" data-align="right">REGISTER</a>
+                <a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
+                <a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>
+            </div>
+            <div class="bottom_nvbar">
+                <a data-role="button" href="#homepageView" class="logo"></a>
+                <div class="srchDv">
+                    <a data-role="button" class="srchbtn" data-click="srchData"></a>
+                    <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>
+                </div>
+                <div class="menuDv">
+                    <a data-role="button" id="menubtn" class="menu"></a>
+                </div>
+            </div>
+            <div class="popup">
+                <div class="km-listview-wrapper"><ul id="categoryList"  class="categoryList km-widget km-listview km-list"></ul></div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="layout" data-id="login-layout">
+        <div data-role="header" id="header">
+            <div data-role="navbar" class="nvbar">
+                <a data-role="button"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>
+                <a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>
             </div>
             <div class="bottom_nvbar">
                 <a data-role="button" href="#homepageView" class="logo"></a>
@@ -50,13 +72,12 @@
     </div>
     
     <script >
-        function srchData()
-        {
-            //$('.srchtxt').val();
-            //app.mobileApp.navigate("views/searchView.html");
-            sessionStorage.setItem("searchKeyboard",$('.srchtxt').val());
-            app.searchService.viewModel.srchDataCall($('.srchtxt').val());
-        }
+        
+        $(document).ready(function(){
+            $('.srchbtn').on('click',function(){
+                app.searchService.viewModel.srchDataCall($(this).next().val());
+            });
+        });
         
         function movetoSignup()
         {
@@ -66,6 +87,11 @@
         function movetoLogin()
         {
             app.mobileApp.navigate("views/login.html");
+        }
+        
+        function movetoLogout()
+        {
+            app.loginService.viewModel.userLogout();
         }
     </script>
     
