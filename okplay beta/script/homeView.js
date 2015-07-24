@@ -6,6 +6,8 @@
         show:function()
         {
             app.mobileApp.showLoading();
+            $('.nvbar .afterLogin').show();
+            $('.nvbar .beforeLogin').hide();
             $('.popup').hide();
             $('.srchtxt').val('');
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
@@ -167,7 +169,7 @@
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                         app.categoryService.viewModel.setArticleListData(data[0]['data']);
-                        app.mobileApp.navigate("#categoryArticleView");
+                        app.mobileApp.navigate("views/categoryList.html");
                     }
                     else
                     {
@@ -175,6 +177,16 @@
                     	function () { }, "Notification", 'OK');
                     }
                 });
+        },
+        
+        movetoLogin:function()
+        {
+            alert("movetoLogin");
+        },
+        
+        movetoSignup :function()
+        {
+            alert("movetoSignup");
         }
     });
     app.homeService = {

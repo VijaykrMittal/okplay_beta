@@ -4,10 +4,11 @@
     var loginBindingValue;
     
     loginViewModel = kendo.data.ObservableObject.extend({
-        
+        email:'',
         show : function()
         {
             $('.popup').hide();
+            $('label.error').hide();
             loginBindingValue = kendo.observable({
                 email: '',
                 pwd:''
@@ -42,7 +43,7 @@
         
         loginSubmit:function()
         {
-            
+           // console.log(this.get('email'));
             var status = $('#loginForm').valid();
             
             if(status === false)
@@ -91,8 +92,17 @@
         setUserLogindata : function(data)
         {
             console.log(data);
-            alert("DONE");
+            localStorage.getItem('userEmail',data['mail']);
+            localStorage.getItem('userName',data['name']);
+            $('.nvbar .afterLogin').show();
+            $('.nvbar .beforeLogin').hide();
             app.mobileApp.hideLoading();
+            //app.mobileApp.navigate("views/homepage.html");
+        },
+        
+        userLogout : function()
+        {
+            
         }
     });
     app.loginService = {

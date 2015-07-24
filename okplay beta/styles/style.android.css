@@ -48,8 +48,15 @@
     .popup {width: 290px;height: auto;display: none;position: absolute;top: 105px;right: 9px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
-    .srchDv .srchbtn {position: absolute !important;;top: 71px !important;;right: 70px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
-    .srchDv .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
+    .srchbtn {position: absolute !important;;top: 71px !important;;right: 70px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
+    .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
+    
+    /*24-07-2015*/
+    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
+    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
+    .nvbar .afterLogin {display:none}
+    .nvbar .logPos {position: absolute;top: 4px;right: 70px;}
+    .nvbar .regPos {position: absolute;top: 4px;right: -6px;}
     
     /*Category Design*/
     #ageList li span{padding: 15px 210px 17px 0px !important;}
@@ -61,9 +68,12 @@
     .bx-viewport {width: 103% !important;overflow: hidden;/* position: relative; */height: 180px !important;margin: 0px auto !important;}
     .bxslider li img {height:180px !important}
     
-    /*23-07-2015*/
+    
     
     /*login Page*/
+    
+    /*23-07-2015*/
+    
     .txtfldCont {width: 80%;margin: 0px auto;}
     .frmdv {width:100%;}
     #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
@@ -71,6 +81,15 @@
     #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
     .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    
+    /*signup*/
+    
+    /*24-07-2015*/
+    
+    #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
+    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
+    
     
     /*main article Page*/
     .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999}

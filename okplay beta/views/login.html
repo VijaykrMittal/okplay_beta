@@ -1,0 +1,20 @@
+<div data-role="view" id="loginView" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.show" data-use-native-scrolling="true">
+    <div data-role="content">
+        <div class="txtfldCont">
+            <form id="loginForm" class="frmdv">
+                <h1>
+                    Log In
+                </h1>
+                <p>
+                    <input type="text" name="email" data-bind="value:email" class="logTxtFld" id="email" Placeholder="E-mail Address" required/>
+                </p>
+                <p>
+                    <input type="password" name="pwd" data-bind="value:pwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
+                </p>
+            </form>
+            <p>
+                <a data-role="button" data-click="app.loginService.viewModel.loginSubmit">Log In</a>
+            </p>
+        </div>
+    </div>
+</div>

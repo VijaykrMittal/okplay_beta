@@ -6,7 +6,7 @@
         
         show : function()
         {
-           alert("signup");
+           
         },
     });
     app.signupService = {

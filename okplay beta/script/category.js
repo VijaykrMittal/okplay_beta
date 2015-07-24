@@ -233,71 +233,55 @@
             app.mobileApp.navigate("views/articleData.html");
         },
         
-        searchShow:function()
+        searchShow:function(e)
         {
-            //$('.srchtxt').val('');
+            alert("ok");
+            $('.srchtxt').val('');
         },
         
-        srchDataCall:function(searchKeyword)
-        {
-           // app.mobileApp.showLoading();
-            //var searchTxt = $('.srchtxt').val();
-            
-            console.log("text search");
-            console.log(searchKeyword);
-            var searchContent = new kendo.data.DataSource({
-                transport: {
-                    read: {
-                        url: localStorage.getItem('searchDataAPI'),
-                        type:"GET",
-                        dataType: "json", 
-                        data: { apiaction:"searchdata",keyword:searchKeyword} 
-                    }
-                },
-                schema: {
-                    data: function(data)
-                    {
-                        return [data];
-                    }
-                },
-                error: function (e) {
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-                },
-
-            });
-            searchContent.fetch(function(){
-                var data = this.data();
-                alert("done");
-                if(data[0]['code'] === 1 || data[0]['code'] === '1')
-                {
-                    app.categoryService.viewModel.setSearchData(data[0]['data']);
-                }
-                else
-                {
-                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
-                }
-            });
-        },
         
-        setSearchData  :function(data)
+        /*setSearchData  :function(data)
         {
-            console.log(data.length);
-            
-            if(data.length === 0 || data.length === '0')
+            if(app.mobileApp.view().id === "#searchContent")
             {
+                if(data.length === 0 || data.length === '0')
+                {
                 this.set('searchStatus',"no related search found.");
                 this.set('searchlistData','');
                 //app.mobileApp.navigate("#searchContent");
+                }
+                else
+                {
+                this.set('searchlistData',data);
+                this.set('searchStatus',"");
+                // app.mobileApp.navigate("#searchContent");
+                }
+                //window.location.reload();
+                console.log(data);
+                console.log(data.length);
             }
             else
             {
+                if(data.length === 0 || data.length === '0')
+                {
+                this.set('searchStatus',"no related search found.");
+                this.set('searchlistData','');
+                //app.mobileApp.navigate("#searchContent");
+                }
+                else
+                {
                 this.set('searchlistData',data);
                 this.set('searchStatus',"");
-               // app.mobileApp.navigate("#searchContent");
+                // app.mobileApp.navigate("#searchContent");
+                }
+                console.log("navigate");
+                console.log(data.length);
+                console.log(data);
+                app.mobileApp.navigate("#searchContent");
             }
-            app.mobileApp.navigate("#searchContent");
-        }
+            
+            
+        }*/
     });
     app.categoryService = {
         viewModel : new categoryViewModel()

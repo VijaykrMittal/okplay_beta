@@ -1,0 +1,45 @@
+<!--Registration View-->
+<div data-role="view" id="signupView" data-use-native-scrolling="true" data-model="app.signupService.viewModel" data-show="app.signupService.viewModel.show">
+    <div data-role="contant">
+        <div class="txtfldCont">
+            <form id="signupForm" class="frmdv">
+               <h1>
+                    Sign Up
+               </h1>
+                <p>
+                    <input type="text" name="signupEmail" id="signupEmail" placeholder="Email" class="signupTxtFld" required/>
+                </p>
+                <p>
+                    <input type="password" name="signupPassword" id="signupPassword" placeholder="Password" class="signupTxtFld" required/>
+                </p>
+                <p>
+                    <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="signupTxtFld" required/>
+                </p>
+                <p>
+                    <select name="signupAffiliated" id="signupAffiliated" class="signupTxtFld">
+                        <option>None</option>
+                        <option>School 1</option>
+                        <option>School 2</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" name="signupOther" id="signupOther" placeholder="Other" class="signupTxtFld"/>
+                </p>
+                <p>
+                    <input type="text" name="signupName" id="signupName" placeholder="Name" class="signupTxtFld"/>
+                </p>
+                <p>
+                    <textarea class="signupTxtarea">
+                        
+                    </textarea>
+                </p>
+                <p>
+                    <input type="text" name="" id="" placeholder="Upload Picture" class="signupTxtFld"/>
+                </p>
+            </form>
+            <p>
+                <a data-role="button" data-click="app.signupService.viewModel.signupSubmit">Create new account</a>
+            </p>
+        </div>
+    </div>
+</div>
