@@ -46,32 +46,30 @@ var app = (function(global){
     }
     document.addEventListener('deviceready', onDeviceReady, false);
     
-    if(localStorage.getItem('loginStatus') === "null" || localStorage.getItem('loginStatus') === null || localStorage.getItem('loginStatus') === false || localStorage.getItem('loginStatus') === "false")
+    if(localStorage.getItem('loginStatus') === "true" || localStorage.getItem('loginStatus') === true)
     {
-        var mobileApp = new kendo.mobile.Application(document.body,
-                                                                {
-                                                                    skin:'flat',
-                                                                    initial:'views/homepage.html',
-                                                                    layout:'main-layout'
-                                                                }
-    
-    
-        );
-    }
-    else
-    {
+       // alert("true");
         var mobileApp = new kendo.mobile.Application(document.body,
                                                                 {
                                                                     skin:'flat',
                                                                     initial:'views/homepage.html',
                                                                     layout:'login-layout'
                                                                 }
-    
-    
-    );
+        );
     }
-    
-    
+    else
+    {
+        
+       // alert("false");
+        
+        var mobileApp = new kendo.mobile.Application(document.body,
+                                                                {
+                                                                    skin:'flat',
+                                                                    initial:'views/homepage.html',
+                                                                    layout:'main-layout'
+                                                                }
+        );
+    }
     
     localStorage.setItem("articleDetailAPI","http://okplay.club/mobileapi/article-detail");
     localStorage.setItem("articleListAPI","http://okplay.club/mobileapi/article-list");

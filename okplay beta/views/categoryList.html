@@ -9,14 +9,22 @@
         <!--Article View-->
         <div style="margin-top: -15px;">
             <p class="noartcle" data-bind="text:dataListStatus"></p>
-            <ul id="List" data-role="listview" data-template="articleView" data-bind="source:articlelistData"></ul>
+            <ul id="articlelist" data-role="listview" data-template="articleView" data-bind="source:articlelistData"></ul>
         </div>
     </div>
 </div>
 
 <script type="text/x-kendo-template" id="articleView">
-   <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #"  style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
+   <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv"  style="background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
         <span data-value="#: data['id'] #" class="textTitle">#: data['title'] #</span>
    </div>
-   <a data-role="button" class="sharebtn" data-icon="share"></a> 
+   <a data-role="button" data-id="#: data['id'] #" class="sharebtn" data-click="ok" data-icon="share"></a> 
+</script>
+
+
+<script>
+    function ok(e)
+    {
+        alert(e['target']['context']['attributes']['data-id']['value']);
+    }
 </script>

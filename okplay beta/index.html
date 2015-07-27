@@ -27,7 +27,7 @@
 </head>
 <body>
     
-    <div data-role="layout" data-id="main-layout">
+    <div data-role="layout" data-id="main-layout" class="main-layout">
         <div data-role="header" id="header">
             <div data-role="navbar" class="nvbar">
                 <a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
@@ -49,10 +49,10 @@
         </div>
     </div>
     
-    <div data-role="layout" data-id="login-layout">
+    <div data-role="layout" data-id="login-layout" class="login-layout">
         <div data-role="header" id="header">
             <div data-role="navbar" class="nvbar">
-                <a data-role="button"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>
+                <a data-role="button" data-click="movetoaccountView"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>
                 <a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>
             </div>
             <div class="bottom_nvbar">
@@ -92,6 +92,12 @@
         function movetoLogout()
         {
             app.loginService.viewModel.userLogout();
+        }
+        
+        function movetoaccountView()
+        {
+            alert("ok");
+            app.mobileApp.navigate("#myaccountView");
         }
     </script>
     

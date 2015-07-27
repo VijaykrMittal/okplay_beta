@@ -39,6 +39,10 @@
                 	return false;
                 }
             });
+            
+            /*myaccount view*/
+            $('#username').text(localStorage.getItem('userName'));
+            $('#useremail').text(localStorage.getItem('userEmail'));
         },
         
         loginSubmit:function()
@@ -91,8 +95,8 @@
         
         setUserLogindata : function(data)
         {
-            localStorage.getItem('userEmail',data['mail']);
-            localStorage.getItem('userName',data['name']);
+            localStorage.setItem('userEmail',data['mail']);
+            localStorage.setItem('userName',data['name']);
             localStorage.setItem("loginStatus","true");
             app.mobileApp.hideLoading();
             app.mobileApp.navigate("views/homepage.html");
@@ -104,6 +108,11 @@
             localStorage.removeItem('userName');
             localStorage.setItem("loginStatus","false");
             app.mobileApp.navigate("views/homepage.html");
+        },
+        
+        moveToAccount : function()
+        {
+            app.mobileApp.navigate("#myaccount-view");
         }
     });
     app.loginService = {

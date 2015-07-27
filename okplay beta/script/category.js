@@ -9,9 +9,10 @@
         searchlistData:'',
         searchStatus:'',
         
-        show:function()
+        show:function(e)
         {
             app.mobileApp.showLoading();
+           
             $('.menu').unbind();
             $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");
@@ -21,12 +22,11 @@
                $('.popup').hide();
             });
             app.categoryService.viewModel.fetchAgeListdata();
+             
         },
         
         setArticleListData:function(data)
-        {
-            //$('#age-dropdown select').val('0');
-            
+        {   
             if(data.length ===0 || data.length === "0")
             {
                 this.set("dataListStatus","There is no article.");
@@ -231,57 +231,7 @@
         {
             this.set("articleDetail",data);
             app.mobileApp.navigate("views/articleData.html");
-        },
-        
-        searchShow:function(e)
-        {
-            alert("ok");
-            $('.srchtxt').val('');
-        },
-        
-        
-        /*setSearchData  :function(data)
-        {
-            if(app.mobileApp.view().id === "#searchContent")
-            {
-                if(data.length === 0 || data.length === '0')
-                {
-                this.set('searchStatus',"no related search found.");
-                this.set('searchlistData','');
-                //app.mobileApp.navigate("#searchContent");
-                }
-                else
-                {
-                this.set('searchlistData',data);
-                this.set('searchStatus',"");
-                // app.mobileApp.navigate("#searchContent");
-                }
-                //window.location.reload();
-                console.log(data);
-                console.log(data.length);
-            }
-            else
-            {
-                if(data.length === 0 || data.length === '0')
-                {
-                this.set('searchStatus',"no related search found.");
-                this.set('searchlistData','');
-                //app.mobileApp.navigate("#searchContent");
-                }
-                else
-                {
-                this.set('searchlistData',data);
-                this.set('searchStatus',"");
-                // app.mobileApp.navigate("#searchContent");
-                }
-                console.log("navigate");
-                console.log(data.length);
-                console.log(data);
-                app.mobileApp.navigate("#searchContent");
-            }
-            
-            
-        }*/
+        }
     });
     app.categoryService = {
         viewModel : new categoryViewModel()

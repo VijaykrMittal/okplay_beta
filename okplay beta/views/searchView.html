@@ -1,4 +1,4 @@
-<div data-role="view" id="searchContent" data-use-native-scrolling="true" data-model="app.searchService.viewModel">
+<div data-role="view" id="searchContent" data-use-native-scrolling="true" data-model="app.searchService.viewModel" data-show="app.searchService.viewModel.show">
     <div data-role="content">
         <h1>
             Site Search
@@ -11,8 +11,16 @@
 </div>
 
 <script type="text/x-kendo-template" id="searchView">
-   <div style="width:100%;height:250px;background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
+   <div class="articleDv" style="background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
+        <span>#: data['title']#</span>
    </div>
-    <h4>#: data['title']#</h4>
-    <a href="" style="position: absolute;top: 277px;right: 18px;text-decoration:none">Read More</a>
+   <a data-role="button" data-click="moveToArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
+    
+</script>
+
+<script>
+    function moveToArticle(e)
+    {
+        alert(e['target']['context']['attributes']['data-id']['value']);
+    }
 </script>

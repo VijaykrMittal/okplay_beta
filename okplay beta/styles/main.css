@@ -14,7 +14,6 @@ li:after {content: none;}
 #headerContent p:nth-child(1) {font-size: 25px;text-align: center;}
 #headerContent p:nth-child(2) {font-size: 14px;text-align: center;}
 .noartcle {font-size: 14px;margin-top: 30px;text-align: center;}
-.textTitle {font-weight: 100;font-size: 18px;padding-left: 8px;line-height: 39px;color: #FFF;font-family: times;text-shadow:#000 2px 2px 5px;}
 
 
 .drawerBtn {display:none}
@@ -22,6 +21,11 @@ li:after {content: none;}
 .bx-wrapper .bx-pager {position: absolute;bottom: 15px;}
 .bx-pager {display:none}
 #popup {display:none}
+
+
+/*27-07-2015*/
+.removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
+.removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
 
 
 

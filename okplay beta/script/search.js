@@ -5,8 +5,15 @@
     searchViewModel = kendo.data.ObservableObject.extend({
         searchlistData:'',
         
+        show : function(e)
+        {
+            e.view.scroller.scrollTo(0, 0);
+        },
+        
         srchDataCall:function(searchTxt)
         {
+            app.mobileApp.showLoading();
+            $('.popup').hide();
             if(searchTxt === "")
             {
                 searchTxt = "all";
@@ -49,15 +56,13 @@
         {
             if(data.length === 0 || data.length === '0')
             {
-            this.set('searchStatus',"no related search found.");
-            this.set('searchlistData','');
-            //app.mobileApp.navigate("#searchContent");
+                this.set('searchStatus',"no related search found.");
+                this.set('searchlistData','');
             }
             else
             {
-            this.set('searchlistData',data);
-            this.set('searchStatus',"");
-            // app.mobileApp.navigate("#searchContent");
+                this.set('searchlistData',data);
+                this.set('searchStatus',"");
             }
              app.mobileApp.navigate("views/searchView.html");
         }
