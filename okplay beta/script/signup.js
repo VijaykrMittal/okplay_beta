@@ -4,9 +4,10 @@
     
     signupViewModel = kendo.data.ObservableObject.extend({
         
-        show : function()
+        show : function(e)
         {
             $('.popup').hide();
+            e.view.scroller.scrollTo(0, 0);
         },
     });
     app.signupService = {

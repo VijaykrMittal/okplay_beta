@@ -11,7 +11,9 @@
         
         show:function(e)
         {
+            
             app.mobileApp.showLoading();
+            alert("ok");
            
             $('.menu').unbind();
             $('.menu').on('click',function(e){
@@ -21,24 +23,24 @@
             $('#ageDropFld').click(function(){
                $('.popup').hide();
             });
+            e.view.scroller.scrollTo(0, 0);
             app.categoryService.viewModel.fetchAgeListdata();
              
         },
-        
         setArticleListData:function(data)
-        {   
+        { 
             if(data.length ===0 || data.length === "0")
             {
                 this.set("dataListStatus","There is no article.");
                 this.set("articlelistData","");
                 app.mobileApp.hideLoading();
+               
             }
             else
             {
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
                 app.mobileApp.hideLoading();
-               
             }
             
         },
@@ -119,7 +121,6 @@
                 categoryAllFilter.fetch(function(){
                     var that = this;
                     var data = that.data();
-                    console.log(data);
                     
                     if(data[0]['code'] === 1 || data[0]['code'] === "1")
                     {
@@ -160,7 +161,6 @@
                 categoryAgeFilter.fetch(function(){
                     var that = this;
                     var data = that.data();
-                    console.log(data);
                     if(data[0]['code'] === 1 || data[0]['code'] === "1")
                     {
                         app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -177,8 +177,9 @@
         
         /* main article content data show functions*/
         
-        articleContentShow : function()
+        articleContentShow : function(e)
         {
+            e.view.scroller.scrollTo(0, 0);
             app.mobileApp.showLoading();
             
             setTimeout(function(){
@@ -215,7 +216,6 @@
             });
             articleContent.fetch(function(){
                 var data = this.data();
-                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.categoryService.viewModel.setArticleDataSource(data[0]['data']);

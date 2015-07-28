@@ -98,7 +98,6 @@
             });
             scrollData.fetch(function(){
                 var data = this.data();
-                console.log(data[0]['code']);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.homeService.viewModel.setScrollViewData(data[0]['data']);
@@ -132,6 +131,7 @@
         
         categoryArticle : function(e)
         {
+            $(".km-native-scroller").scrollTop(0);
             app.mobileApp.showLoading();
             $('select').val('0');
             $('.popup').hide();

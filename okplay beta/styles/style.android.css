@@ -472,7 +472,7 @@
     .sharebtn span {font-size:28px !important;}
     
     /*Search*/
-    .searchBtn {position: absolute;top: 225px;right: 0px;text-decoration:none;color:#000 !important;border-style:none !important;background:none !important}
+    .searchBtn {position: absolute;top: 203px;right: 0px;text-decoration:none;color:#000 !important;border-style:none !important;background:none !important}
     .searchBtn:active {background:none !important;color:#000 !important}
     
     /*main articleDv*/

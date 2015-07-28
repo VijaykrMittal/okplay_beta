@@ -16,7 +16,7 @@
 
 <script type="text/x-kendo-template" id="articleView">
    <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv"  style="background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
-        <span data-value="#: data['id'] #" class="textTitle">#: data['title'] #</span>
+        <p data-value="#: data['id'] #" class="textTitle articleTit">#: data['title'] #</p>
    </div>
    <a data-role="button" data-id="#: data['id'] #" class="sharebtn" data-click="ok" data-icon="share"></a> 
 </script>

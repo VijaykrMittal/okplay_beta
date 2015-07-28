@@ -28,6 +28,20 @@ li:after {content: none;}
 .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
 
 
+/*28-07-2015*/
+#signupForm .camDv{width:100%;margin: -15px 0px 25px 0px;}
+#signupForm .camDv .camContDv {width: 40%;height: 120px;margin: 0px auto;border-radius: 50%;display: block;}
+#signupForm .camDv .camContDv .captureBtn {width: 100%;border-radius:50%;border: none;margin-top: 1px;margin-left: -5px;background:none !important}
+#signupForm .camDv .camContDv .captureBtn img{border-radius: 50%;width:110px !important;height:110px !important}
+.articleTit {font-size: 18px;
+color: #FFF;
+margin: 10px;
+line-height: 40px;
+font-weight: bold;
+text-shadow: 2px 2px 5px #000000;
+}
+
+
 
 
 

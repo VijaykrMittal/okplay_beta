@@ -4,6 +4,8 @@ var app = (function(global){
     {
         window.connectionInfo = new ConnectionApp();
         networkStatus();
+        
+        window.camera = new cameraFunction(); 
     };
     
     var networkStatus = function()
@@ -44,6 +46,72 @@ var app = (function(global){
     	},
         
     }
+    
+    function cameraFunction(){}
+    
+    cameraFunction.prototype = {
+        
+        captureCamera:function()
+        {
+            var that = this;
+            try
+            {
+                navigator.camera.getPicture(that.cameraSuccess,that.cameraError,{
+                    quality:50,
+                    destinationType:Camera.DestinationType.DATA_URL,
+                    sourceType:Camera.PictureSourceType.CAMERA,
+                    encodingType:Camera.EncodingType.JPEG
+                });
+            }
+            catch(e)
+            {
+                alert(e.message);
+            }
+        },
+        
+        cameraSuccess:function(imageData)
+        {
+            var image = document.getElementById('myImage');
+            image.src = "data:image/jpeg;base64," + imageData;
+            localStorage.setItem("userImage",imageData);
+        },
+        
+        cameraError:function(message)
+        {
+            navigator.notification.alert("Camera Capture "+message,function(){},"Image/Upload Failed","OK");
+        },
+        
+        gallery:function()
+        {
+            var that = this;
+            try
+            {
+                navigator.camera.getPicture(that.gallerySuccess,that.galleryError,{
+                quality:50,
+                destinationType:Camera.DestinationType.DATA_URL,
+                sourceType:Camera.PictureSourceType.PHOTOLIBRARY,
+                encodingType:Camera.EncodingType.JPEG
+                });
+            }
+            catch(e)
+            {
+                alert(e.message);
+            }
+        },
+        
+        gallerySuccess:function(imageData)
+        {
+            var image = document.getElementById('myImage');
+            image.src = "data:image/jpeg;base64," + imageData;
+            localStorage.setItem("userImage",imageData);
+        },
+        
+        galleryError:function(messsage)
+        {
+            navigator.notification.alert("Gallery "+messsage,function(){},"Image/Upload Failed","OK");
+        }
+    }
+    
     document.addEventListener('deviceready', onDeviceReady, false);
     
     if(localStorage.getItem('loginStatus') === "true" || localStorage.getItem('loginStatus') === true)
