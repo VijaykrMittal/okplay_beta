@@ -74,7 +74,8 @@
         
         $(document).ready(function(){
             $('.srchbtn').on('click',function(){
-                app.searchService.viewModel.srchDataCall($(this).next().val());
+                //app.searchService.viewModel.srchDataCall($(this).next().val());
+                app.mobileApp.navigate("views/searchView.html?keyword="+$(this).next().val());
             });
         });
         

@@ -7,17 +7,18 @@
         
         show : function(e)
         {
+            app.mobileApp.showLoading();
             e.view.scroller.scrollTo(0, 0);
+            if(e['sender']['params']['keyword'] === "")
+            {
+                e['sender']['params']['keyword'] ="all";
+            }
+            app.searchService.viewModel.srchDataCall(e['sender']['params']['keyword']);
         },
         
         srchDataCall:function(searchTxt)
         {
-            app.mobileApp.showLoading();
             $('.popup').hide();
-            if(searchTxt === "")
-            {
-                searchTxt = "all";
-            }
             var searchContent = new kendo.data.DataSource({
                 transport: {
                     read: {
@@ -41,7 +42,6 @@
             });
             searchContent.fetch(function(){
                 var data = this.data();
-                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.searchService.viewModel.setSearchData(data[0]['data']);
@@ -65,14 +65,11 @@
                 this.set('searchlistData',data);
                 this.set('searchStatus',"");
             }
-            app.mobileApp.navigate("views/searchView.html");
         },
         
         readMoreArticle : function(e)
         {
             $('.popup').hide();
-            app.mobileApp.showLoading();
-            
             sessionStorage.setItem("srchNodeId",e['target']['context']['attributes']['data-id']['value']);
             app.mobileApp.navigate("views/articleData.html?param=searchList");
         }
