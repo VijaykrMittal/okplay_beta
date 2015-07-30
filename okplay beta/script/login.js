@@ -78,6 +78,7 @@
                 if(data[0]['code'] === "1" || data[0]['code'] === 1)
                 {
                     app.loginService.viewModel.setUserLogindata(data[0]['data']);
+                    app.homeService.viewModel.loginStatus=true;
                 }
                 else if(data[0]['code'] === "4" || data[0]['code'] === 4)
                 {
@@ -97,7 +98,7 @@
         {
             localStorage.setItem('userEmail',data['mail']);
             localStorage.setItem('userName',data['name']);
-            localStorage.setItem("loginStatus","true");
+            localStorage.setItem("loginStatus",true);
             app.mobileApp.hideLoading();
             app.mobileApp.navigate("views/homepage.html");
         },
@@ -106,8 +107,10 @@
         {
             localStorage.removeItem('userEmail');
             localStorage.removeItem('userName');
-            localStorage.setItem("loginStatus","false");
+            localStorage.setItem("loginStatus",false);
+            app.homeService.viewModel.loginStatus = false;
             app.mobileApp.navigate("views/homepage.html");
+            app.homeService.viewModel.show();
         },
         
         moveToAccount : function()

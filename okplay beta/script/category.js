@@ -11,21 +11,65 @@
         
         show:function(e)
         {
-            
             app.mobileApp.showLoading();
-            alert("ok");
-           
+            $('select').val('0');
+            $('.popup').hide();
+            $('.srchtxt').val('');
+            
             $('.menu').unbind();
             $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");
+                $('.srchtxt').blur();
             });
             
             $('#ageDropFld').click(function(){
                $('.popup').hide();
             });
             e.view.scroller.scrollTo(0, 0);
+            
+            app.categoryService.viewModel.categoryArticleData(e['sender']['params']['id']);
             app.categoryService.viewModel.fetchAgeListdata();
              
+        },
+        
+        categoryArticleData : function(data)
+        {
+            var categoryDataSource  = new kendo.data.DataSource({
+                    transport: {
+                        read: {
+                            url:localStorage.getItem('articleListAPI'),
+                            type:"GET",
+                            dataType: "json",
+                            data: { apiaction:"articlelist",catId:data} 
+                        }
+                        
+                    },
+                    filter: { field: "value", operator: "eq", value: data },
+                    schema: {
+                        data: function(data)
+                        {
+                        	return [data];
+                        }
+                    },
+                    error: function (e) {
+                    	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    	function () { }, "Notification", 'OK');
+                    },
+                });
+                categoryDataSource .fetch(function(){
+                    var that = this;
+                    var data = that.data();
+                    console.log(data);
+                    if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                    {
+                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
+                    }
+                    else
+                    {
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    	function () { }, "Notification", 'OK');
+                    }
+                });
         },
         setArticleListData:function(data)
         { 
@@ -34,7 +78,6 @@
                 this.set("dataListStatus","There is no article.");
                 this.set("articlelistData","");
                 app.mobileApp.hideLoading();
-               
             }
             else
             {
@@ -121,7 +164,6 @@
                 categoryAllFilter.fetch(function(){
                     var that = this;
                     var data = that.data();
-                    
                     if(data[0]['code'] === 1 || data[0]['code'] === "1")
                     {
                         app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -131,7 +173,6 @@
                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         	function () { }, "Notification", 'OK'); 
                     }
-                    
                 });
             }
             else
@@ -175,62 +216,31 @@
             }
         },
         
-        /* main article content data show functions*/
-        
-        articleContentShow : function(e)
-        {
-            e.view.scroller.scrollTo(0, 0);
-            app.mobileApp.showLoading();
-            
-            setTimeout(function(){
-               app.mobileApp.hideLoading();
-            },6000);
-        },
-        
         articleContentDataCall : function(e)
         {
             $('.popup').hide();
-            app.mobileApp.showLoading();
-            sessionStorage.setItem("mainArticleStatus",true);
+           // app.mobileApp.showLoading();
             
-            var articleContent = new kendo.data.DataSource({
-                transport: {
-                    read: {
-                        url: localStorage.getItem('articleDetailAPI'),
-                        type:"GET",
-                        dataType: "json", 
-                        data: { apiaction:"articledetail",nodeId:e['target']['attributes']['data-id'].value} 
-                    }
-                },
-                schema: {
-                    data: function(data)
-                    {
-                        return [data];
-                    }
-                },
-                error: function (e) {
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-                },
-
-            });
-            articleContent.fetch(function(){
-                var data = this.data();
-                if(data[0]['code'] === 1 || data[0]['code'] === '1')
-                {
-                    app.categoryService.viewModel.setArticleDataSource(data[0]['data']);
-                }
-                else
-                {
-                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
-                }
-            });
+            sessionStorage.setItem("catNodeId",e['currentTarget']['attributes']['data-id']['value']);
+            app.mobileApp.navigate("views/articleData.html?param=articleList");
         },
         
-        setArticleDataSource : function(data)
+        shareMessageAndURL:function(id)
         {
-            this.set("articleDetail",data);
-            app.mobileApp.navigate("views/articleData.html");
+            this.share('The message', 'The subject', null, 'http://okplay.club/set-routine');
+        },
+        
+        share : function(message, subject, image, link)
+        {
+           window.plugins.socialsharing.share(message, subject, image, link, this.onSuccess, this.onError);
+        },
+        
+        onSuccess: function(msg) {
+            console.log('SocialSharing success: ' + msg);
+        },
+
+        onError: function(msg) {
+            alert('SocialSharing error: ' + msg);
         }
     });
     app.categoryService = {

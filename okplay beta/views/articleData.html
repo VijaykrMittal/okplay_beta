@@ -1,33 +1,35 @@
-<div data-role="view"  id="mainArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.articleContentShow" data-use-native-scrolling="true">
-    <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail">
-        
-    </div>
+<div data-role="view"  id="mainArticleView" data-model="app.mainArticleService.viewModel" data-show="app.mainArticleService.viewModel.show" data-use-native-scrolling="true">
+    <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail"></div>
 </div>
 
 <script type="text/x-kendo-template" id="articleContentView">
-    <div style="width: 100%;">
-        <div class="mainArticleDv" style="background:url('#:data['field_inner_bannr_image']#') no-repeat;background-size:100% 85%;">
-    
+    #if(data === ""){#
+        <p>Loading....</p>
+    #}else{#
+        <div class="mainTempDv">
+            <div class="even fstDv">
+                <h2 style="text-align:center;color:\#FFF">#:data['field_first_title']#</h2>
+                <h2 style="text-align:center;color:\#FFF">#:data['field_bold_title']#</h2>
+            </div>
+            <div class="dvWdh odd">
+                #=data['field_first_text_area']#
+                <h2>#:data['field_second_title']#</h2>
+                #=data['field_second_text_area']#
+            </div>
+            <div class="even dvWdh">
+                <h2>#:data['field_third_title']#</h2>
+                #=data['field_third_text_area']#
+            </div>
+            <div class="dvWdh odd">
+                <h2>#:data['field_fourth_title']#</h2>
+                #=data['field_fourth_text_area']#
+            </div>
+            <div class="even lstDv">
+                <h2 style="font-size:20px;text-align:center;line-height:40px;">#:data['field_fifth_title']#</h2>
+                #=data['field_fifth_text_area']#
+            </div>
         </div>
-        <div style="width:95%;height:70px;margin:0px auto;background-color:\#00AEEF;margin-top: -70px;">
-            <p style="font-size:25px;text-align:center;color:\#FFF">#:data['field_first_title']#</p>
-            <h2 style="text-align:center;margin-top: -20px;color:\#FFF">#:data['field_bold_title']#</h2>
-        </div>
-        <div style="width:95%;margin:0px auto;border:1px solid \#ccc;margin-bottom:15px;">
-           
-            <p style="text-align:justify">#:data['field_first_text_area']#</p>
+    #}#
+        
     
-            <p style="font-size:20px;text-align:center">#:data['field_second_title']#</p>
-            <p style="text-align:justify">#:data['field_second_text_area']#</p>
-    
-            <p style="font-size:20px;text-align:center">#:data['field_third_title']#</p>
-            <p style="text-align:justify">#:data['field_third_text_area']#</p>
-    
-            <p style="font-size:20px;text-align:center">#:data['field_fourth_title']#</p>
-            <p style="text-align:justify">#:data['field_fourth_text_area']#</p>
-    
-            <p style="font-size:20px;text-align:center">#:data['field_fifth_title']#</p>
-            <p style="text-align:justify">#:data['field_fifth_text_area']#</p>
-        </div>
-    </div>
 </script>

@@ -15,16 +15,26 @@
 </div>
 
 <script type="text/x-kendo-template" id="articleView">
-   <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv"  style="background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
-        <p data-value="#: data['id'] #" class="textTitle articleTit">#: data['title'] #</p>
-   </div>
-   <a data-role="button" data-id="#: data['id'] #" class="sharebtn" data-click="ok" data-icon="share"></a> 
+    #var imagePath = data['path']#
+    
+    #if(imagePath !== "http://okplay.club/"){#
+        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
+            <img src="#:data['path']#" width="100%" height="100%"/>        
+            <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+        </div>
+    #}else{#
+        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
+            <img src="styles/images/no-image.jpg" width="100%" height="100%"/>    
+            <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+        </div>
+    #}#
+    <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a> 
 </script>
 
 
 <script>
-    function ok(e)
+    function shareArticle(e)
     {
-        alert(e['target']['context']['attributes']['data-id']['value']);
+        app.categoryService.viewModel.shareMessageAndURL(e['target']['context']['attributes']['data-id']['value']);
     }
 </script>

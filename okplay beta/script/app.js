@@ -1,11 +1,17 @@
 var app = (function(global){
     
+    /*var onBackKeyDown = function()
+    {
+        alert(mobileApp.view()['element']['0']['id']);
+    };*/
+    
     var onDeviceReady = function()
     {
         window.connectionInfo = new ConnectionApp();
         networkStatus();
         
         window.camera = new cameraFunction(); 
+        //document.addEventListener('backbutton', onBackKeyDown, false);
     };
     
     var networkStatus = function()
@@ -114,7 +120,7 @@ var app = (function(global){
     
     document.addEventListener('deviceready', onDeviceReady, false);
     
-    if(localStorage.getItem('loginStatus') === "true" || localStorage.getItem('loginStatus') === true)
+   /* if(localStorage.getItem('loginStatus') === "true" || localStorage.getItem('loginStatus') === true)
     {
        // alert("true");
         var mobileApp = new kendo.mobile.Application(document.body,
@@ -137,7 +143,14 @@ var app = (function(global){
                                                                     layout:'main-layout'
                                                                 }
         );
-    }
+    }*/
+    var mobileApp = new kendo.mobile.Application(document.body,
+                                                            {
+                                                                skin:'flat',
+                                                                initial:'views/homepage.html',
+                                                                layout:'main-layout'
+                                                            }
+    );
     
     localStorage.setItem("articleDetailAPI","http://okplay.club/mobileapi/article-detail");
     localStorage.setItem("articleListAPI","http://okplay.club/mobileapi/article-list");

@@ -41,6 +41,7 @@
             });
             searchContent.fetch(function(){
                 var data = this.data();
+                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.searchService.viewModel.setSearchData(data[0]['data']);
@@ -64,7 +65,7 @@
                 this.set('searchlistData',data);
                 this.set('searchStatus',"");
             }
-             app.mobileApp.navigate("views/searchView.html");
+            app.mobileApp.navigate("views/searchView.html");
         },
         
         readMoreArticle : function(e)
@@ -72,38 +73,8 @@
             $('.popup').hide();
             app.mobileApp.showLoading();
             
-            var articleContent = new kendo.data.DataSource({
-                transport: {
-                    read: {
-                        url: localStorage.getItem('articleDetailAPI'),
-                        type:"GET",
-                        dataType: "json", 
-                        data: { apiaction:"articledetail",nodeId:e['target']['context']['attributes']['data-id']['value']} 
-                    }
-                },
-                schema: {
-                    data: function(data)
-                    {
-                        return [data];
-                    }
-                },
-                error: function (e) {
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-                },
-
-            });
-            articleContent.fetch(function(){
-                var data = this.data();
-                if(data[0]['code'] === 1 || data[0]['code'] === '1')
-                {
-                    app.categoryService.viewModel.setArticleDataSource(data[0]['data']);
-                }
-                else
-                {
-                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
-                }
-            });
+            sessionStorage.setItem("srchNodeId",e['target']['context']['attributes']['data-id']['value']);
+            app.mobileApp.navigate("views/articleData.html?param=searchList");
         }
     });
     app.searchService = {

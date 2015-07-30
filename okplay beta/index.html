@@ -29,12 +29,11 @@
     
     <div data-role="layout" data-id="main-layout" class="main-layout">
         <div data-role="header" id="header">
-            <div data-role="navbar" class="nvbar">
-                <a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>
-                <a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>
+            <div data-role="navbar" class="nvbar mainLayoutID" id="mainLayoutID">
+                
             </div>
             <div class="bottom_nvbar">
-                <a data-role="button" href="#homepageView" class="logo"></a>
+                <a data-role="button" href="views/homepage.html" class="logo"></a>
                 <div class="srchDv">
                     <a data-role="button" class="srchbtn" data-click="srchData"></a>
                     <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>
@@ -58,7 +57,7 @@
             <div class="bottom_nvbar">
                 <a data-role="button" href="#homepageView" class="logo"></a>
                 <div class="srchDv">
-                    <a data-role="button" class="srchbtn" data-click="srchData"></a>
+                    <a data-role="button" class="srchbtn" data-click="srchData"></a>movetoLogout
                     <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>
                 </div>
                 <div class="menuDv">
@@ -96,7 +95,6 @@
         
         function movetoaccountView()
         {
-            alert("ok");
             app.mobileApp.navigate("#myaccountView");
         }
     </script>
@@ -108,5 +106,7 @@
     <script src="script/login.js"></script>
     <script src="script/signup.js"></script>
     <script src="script/search.js"></script>
+    <script src="script/mainArticle.js"></script>
+    <script src="Plugins/SocialSharing/www/SocialSharing.js"></script>
 </body>
 </html>

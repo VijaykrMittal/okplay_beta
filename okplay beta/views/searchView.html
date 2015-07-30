@@ -11,11 +11,21 @@
 </div>
 
 <script type="text/x-kendo-template" id="searchView">
-   <div class="articleDv" style="background:url('#:data['path']#') no-repeat;background-size:100% 100%;">
-        <span>#: data['title']#</span>
-   </div>
-   <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
     
+    #var imagePath = data['path']#
+    
+    #if(imagePath !== "http://okplay.club/"){#
+        <div class="articleDv">
+            <img src="#:data['path']#" width="100%" height="100%"/>        
+            <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+        </div>
+    #}else{#
+        <div data-id="#: data['id'] #" class="articleDv">
+            <img src="styles/images/no-image.jpg" width="100%" height="100%"/>    
+            <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+        </div>
+    #}#
+    <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
 </script>
 
 <script>

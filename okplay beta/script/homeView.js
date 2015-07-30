@@ -3,11 +3,19 @@
         app = global.app = global.app || {};
     
     homeViewModel = kendo.data.ObservableObject.extend({
-        show:function()
+        
+        loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
+        
+        show:function(e)
         {
             app.mobileApp.showLoading();
             $('.popup').hide();
             $('.srchtxt').val('');
+            
+            $('.srchtxt').focus(function(){
+                $('.popup').hide();
+            });
+            
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.scrollViewImage();
@@ -23,6 +31,7 @@
             $('.menu').unbind();
             $('.menu').on('click',function(){
                 $('.popup').slideToggle("slow","swing");
+                $('.srchtxt').blur();
             });
         },
         
@@ -61,11 +70,25 @@
             {
                if($.isNumeric(x))
                 {
-                    html +='<li data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                    html +='<li class="select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
                 }
             }
+            var hhtml ="";
+            if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
+            {
+                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>';
+                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>';
+            }
+            else
+            {
+                hhtml = '<a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>';
+                hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
+            }
             
-            $('#categoryList').html(html);
+            
+            $('#mainLayoutID').html(hhtml);
+            kendo.bind('.mainLayoutID',app.homeService.viewModel);
+             $('#categoryList').html(html);
             kendo.bind('.popup',app.homeService.viewModel);
             
             setTimeout(function(){
@@ -131,50 +154,8 @@
         
         categoryArticle : function(e)
         {
-            $(".km-native-scroller").scrollTop(0);
-            app.mobileApp.showLoading();
-            $('select').val('0');
-            $('.popup').hide();
-            sessionStorage.setItem("SliderCategoryAPIStatus",true);
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
-            
-            var categoryDataSource  = new kendo.data.DataSource({
-                    transport: {
-                        read: {
-                            url:localStorage.getItem('articleListAPI'),
-                            type:"GET",
-                            dataType: "json",
-                            data: { apiaction:"articlelist",catId:e['target']['attributes']['data-id']['value']} 
-                        }
-                        
-                    },
-                    filter: { field: "value", operator: "eq", value: e['target']['attributes']['data-id']['value'] },
-                    schema: {
-                        data: function(data)
-                        {
-                        	return [data];
-                        }
-                    },
-                    error: function (e) {
-                    	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
-                    },
-                });
-                categoryDataSource .fetch(function(){
-                    var that = this;
-                    var data = that.data();
-                    
-                    if(data[0]['code'] === 1 || data[0]['code'] === '1')
-                    {
-                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
-                        app.mobileApp.navigate("views/categoryList.html");
-                    }
-                    else
-                    {
-                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
-                    }
-                });
+            app.mobileApp.navigate("views/categoryList.html?id="+e['target']['attributes']['data-id']['value']);
         },
         
         movetoLogin:function()
