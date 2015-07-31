@@ -7,27 +7,58 @@
         <p>Loading....</p>
     #}else{#
         <div class="mainTempDv">
-            <div class="even fstDv">
-                <h2 style="text-align:center;color:\#FFF">#:data['field_first_title']#</h2>
-                <h2 style="text-align:center;color:\#FFF">#:data['field_bold_title']#</h2>
-            </div>
-            <div class="dvWdh odd">
-                #=data['field_first_text_area']#
-                <h2>#:data['field_second_title']#</h2>
-                #=data['field_second_text_area']#
-            </div>
-            <div class="even dvWdh">
-                <h2>#:data['field_third_title']#</h2>
-                #=data['field_third_text_area']#
-            </div>
-            <div class="dvWdh odd">
-                <h2>#:data['field_fourth_title']#</h2>
-                #=data['field_fourth_text_area']#
-            </div>
-            <div class="even lstDv">
-                <h2 style="font-size:20px;text-align:center;line-height:40px;">#:data['field_fifth_title']#</h2>
-                #=data['field_fifth_text_area']#
-            </div>
+            #if(data['field_inner_bannr_image'] !== "http://okplay.club/"){#
+                <div class="bannerDv">
+                    <img src="#:data['field_inner_bannr_image']#" width="100%" height="100%"/>
+                </div>
+                <div class="bannerWthcontentDv">
+                    <div class="even fstDv">
+                        <h2>#:data['field_first_title']#</h2>
+                        <h2>#:data['field_bold_title']#</h2>
+                    </div>
+                    <div class="dvWdh odd">
+                        #=data['field_first_text_area']#
+                        <h2>#:data['field_second_title']#</h2>
+                        #=data['field_second_text_area']#
+                    </div>
+                    <div class="even dvWdh">
+                        <h2>#:data['field_third_title']#</h2>
+                        #=data['field_third_text_area']#
+                    </div>
+                    <div class="dvWdh odd">
+                        <h2>#:data['field_fourth_title']#</h2>
+                        #=data['field_fourth_text_area']#
+                    </div>
+                    <div class="even lstDv">
+                        <h2 style="font-size:20px;text-align:center;line-height:40px;">#:data['field_fifth_title']#</h2>
+                        #=data['field_fifth_text_area']#
+                    </div>
+                </div>
+            #}else{#
+                <div class="bannerremContentDv">
+                    <div class="even fstDv">
+                        <h2>#:data['field_first_title']#</h2>
+                        <h2>#:data['field_bold_title']#</h2>
+                    </div>
+                    <div class="dvWdh odd ">
+                        #=data['field_first_text_area']#
+                        <div><h2>#:data['field_second_title']#</h2></div>
+                        #=data['field_second_text_area']#
+                    </div>
+                    <div class="odd dvWdh">
+                        <h2>#:data['field_third_title']#</h2>
+                        #=data['field_third_text_area']#
+                    </div>
+                    <div class="dvWdh odd">
+                        <div><h2>#:data['field_fourth_title']#</h2></div>
+                        #=data['field_fourth_text_area']#
+                    </div>
+                    <div class="odd lstDv">
+                        <h2>#:data['field_fifth_title']#</h2>
+                        #=data['field_fifth_text_area']#
+                    </div>
+                </div>
+            #}#
         </div>
     #}#
         

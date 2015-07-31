@@ -26,7 +26,7 @@
                         type:"GET",
                         dataType: "json", 
                         data: { apiaction:"searchdata",keyword:searchTxt} 
-                    }
+                    },
                 },
                 schema: {
                     data: function(data)
@@ -59,6 +59,7 @@
             {
                 this.set('searchStatus',"no related search found.");
                 this.set('searchlistData','');
+                app.mobileApp.hideLoading();
             }
             else
             {

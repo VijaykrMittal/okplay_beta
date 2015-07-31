@@ -36,26 +36,12 @@ li:after {content: none;}
 #signupForm .camDv .camContDv .captureBtn {width: 100%;border-radius:50%;border: none;margin-top: 1px;margin-left: -5px;background:none !important}
 #signupForm .camDv .camContDv .captureBtn img{border-radius: 50%;width:110px !important;height:110px !important}
 .articleTit {font-size: 18px;color: #FFF;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times}
+.blankarticleTit {font-size: 18px;color: #FFE600;margin: 16px;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;}
 #signupForm h2 {text-align:center}
 #signupForm p label:nth-child(1) {margin-left:-3px}
 #signupForm p label:nth-child(2) {margin-left:47px}
 
-.mainTempDv {width:98%;margin:0px auto;margin-top:30px;}
-.even {background:#FFE600;}
-.odd {background:#FFE;}
 
-.fstDv {width:100%;height:125px;margin:0px auto;margin-top:-25px}
-.lstDv {width:100%;margin-bottom:8px;}
-.dvWdh {width:100%}
-
-.fstDv h2, .fstDv h2 {text-align:center;color:#FFF;line-height:40px}
-.odd h2 {text-align:center;color:#FFE600;}
-.even h2 {text-align:center;color:#FFF;}
-
-.readMoreBtn{}
-
-
-.active {background-color:#FF6100 !important}
 
 
 
