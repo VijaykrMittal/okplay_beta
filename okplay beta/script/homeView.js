@@ -20,12 +20,13 @@
             {
                 app.homeService.viewModel.scrollViewImage();
                 app.homeService.viewModel.categoryDataShow();
+                sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
             {
                 setTimeout(function(){
                     app.mobileApp.hideLoading();
-                },2000);
+                },1000);
             }
             
             $('.menu').unbind();
