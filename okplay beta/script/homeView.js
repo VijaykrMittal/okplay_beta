@@ -15,7 +15,7 @@
             $('.srchtxt').focus(function(){
                 $('.popup').hide();
             });
-            
+            app.homeService.viewModel.getUserLoginStatus();
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.scrollViewImage();
@@ -34,6 +34,26 @@
                 $('.popup').slideToggle("slow","swing");
                 $('.srchtxt').blur();
             });
+        },
+        
+        getUserLoginStatus :function()
+        {
+            var hhtml ="";
+            
+            if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
+            {
+                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>';
+                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>';
+            }
+            else
+            {
+                hhtml = '<a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>';
+                hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
+            }
+            
+            
+            $('#mainLayoutID').html(hhtml);
+            kendo.bind('.mainLayoutID',app.homeService.viewModel);
         },
         
         categoryDataShow:function()
@@ -74,21 +94,7 @@
                     html +='<li class="select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
                 }
             }
-            var hhtml ="";
-            if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
-            {
-                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>';
-                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>';
-            }
-            else
-            {
-                hhtml = '<a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>';
-                hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
-            }
             
-            
-            $('#mainLayoutID').html(hhtml);
-            kendo.bind('.mainLayoutID',app.homeService.viewModel);
              $('#categoryList').html(html);
             kendo.bind('.popup',app.homeService.viewModel);
             

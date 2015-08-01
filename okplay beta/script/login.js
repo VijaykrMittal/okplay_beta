@@ -78,7 +78,6 @@
                 if(data[0]['code'] === "1" || data[0]['code'] === 1)
                 {
                     app.loginService.viewModel.setUserLogindata(data[0]['data']);
-                    app.homeService.viewModel.loginStatus=true;
                 }
                 else if(data[0]['code'] === "4" || data[0]['code'] === 4)
                 {
@@ -99,6 +98,7 @@
             localStorage.setItem('userEmail',data['mail']);
             localStorage.setItem('userName',data['name']);
             localStorage.setItem("loginStatus",true);
+            app.homeService.viewModel.loginStatus=true;
             app.mobileApp.hideLoading();
             app.mobileApp.navigate("views/homepage.html");
         },

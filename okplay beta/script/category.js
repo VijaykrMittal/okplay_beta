@@ -227,7 +227,7 @@
         
         shareMessageAndURL:function(id)
         {
-            this.share('The message', 'The subject', null, 'http://okplay.club/set-routine');
+            this.share('The message', 'The subject', null, 'http://okplay.club/node/'+id);
         },
         
         share : function(message, subject, image, link)
