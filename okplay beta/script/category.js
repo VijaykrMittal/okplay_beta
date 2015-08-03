@@ -8,6 +8,7 @@
         articleDetail:'',
         searchlistData:'',
         searchStatus:'',
+        selectCategory:'',
         
         show:function(e)
         {
@@ -34,6 +35,7 @@
         
         categoryArticleData : function(data)
         {
+            app.categoryService.viewModel.setSelectCategory(data);
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
                         read: {
@@ -71,6 +73,36 @@
                     }
                 });
         },
+        
+        setSelectCategory : function(id)
+        {
+            var that = this;
+            if(id === "80")
+            {
+                that.set("selectCategory","Health");
+            }
+            else if(id === "72")
+            {
+                that.set("selectCategory","Mental development");
+            }
+            else if(id === "73")
+            {
+                that.set("selectCategory","Nutrition");
+            }
+            else if(id === "82")
+            {
+                that.set("selectCategory","Education");
+            }
+            else if(id=== "75")
+            {
+                that.set("selectCategory","Play time");
+            }
+            else if(id=== "77")
+            {
+                that.set("selectCategory","Family");
+            }
+        },
+        
         setArticleListData:function(data)
         { 
             if(data.length ===0 || data.length === "0")
@@ -81,9 +113,12 @@
             }
             else
             {
+                setTimeout(function(){
+                    app.mobileApp.hideLoading();
+                },5000);
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
-                app.mobileApp.hideLoading();
+                //app.mobileApp.hideLoading();
             }
             
         },

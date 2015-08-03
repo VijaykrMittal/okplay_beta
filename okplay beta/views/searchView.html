@@ -1,9 +1,9 @@
 <div data-role="view" id="searchContent" data-use-native-scrolling="true" data-model="app.searchService.viewModel" data-show="app.searchService.viewModel.show">
     <div data-role="content">
-        <h1>
+        <h1 class="txtclass">
             Site Search
         </h1>
-        <p data-bind="text:searchStatus"></p>
+        <p class="txtclass" data-bind="text:searchStatus"></p>
         <div id="searchalldata">
             <ul id="alldatasrch" data-role="listview" data-template="searchView" data-bind="source:searchlistData"></ul>
         </div>
@@ -11,10 +11,7 @@
 </div>
 
 <script type="text/x-kendo-template" id="searchView">
-    
-    #var imagePath = data['path']#
-    
-    #if(imagePath !== "http://okplay.club/"){#
+    #if(data['path'] !== "http://okplay.club/"){#
         <div class="articleDv">
             <img src="#:data['path']#" width="100%" height="100%"/>        
             <p data-value="#: data['id'] #" class="textTitle blankarticleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>

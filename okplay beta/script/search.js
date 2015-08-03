@@ -8,11 +8,14 @@
         show : function(e)
         {
             app.mobileApp.showLoading();
+            $('p.txtclass').html("");
+            $("#alldatasrch").html("");
             e.view.scroller.scrollTo(0, 0);
             if(e['sender']['params']['keyword'] === "")
             {
                 e['sender']['params']['keyword'] ="all";
             }
+            sessionStorage.setItem("searchKeyword",e['sender']['params']['keyword']);
             app.searchService.viewModel.srchDataCall(e['sender']['params']['keyword']);
         },
         
@@ -57,7 +60,7 @@
         {
             if(data.length === 0 || data.length === '0')
             {
-                this.set('searchStatus',"no related search found.");
+                this.set('searchStatus',sessionStorage.getItem("searchKeyword")+" related search not found.");
                 this.set('searchlistData','');
                 app.mobileApp.hideLoading();
             }
@@ -66,6 +69,9 @@
                 this.set('searchlistData',data);
                 this.set('searchStatus',"");
             }
+            setTimeout(function(){
+                app.mobileApp.hideLoading();
+            },100000)
         },
         
         readMoreArticle : function(e)

@@ -524,11 +524,13 @@
     .bannerWthcontentDv {width:100%;margin-top:25px;}
     .bannerremContentDv {width:100%;margin-top:30px;}
     
-    .fstDv {width:100%;margin:0px auto;margin-top:-25px}
+    .fstDv {width:100%;margin:0px auto;margin-top:-25px;background-color: #FFE600;}
     .lstDv {width:100%;margin-bottom:8px;}
     .dvWdh {width:100%}
+    .odd table, .even table {width:100% !important}
+    .bold {display: block;font-weight: 700;}
     
-    .fstDv h2 {text-align:center;color:#FFF;font-family: times;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 25px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
+    .fstDv h3 {text-align:center;color:#FFF;font-family: times;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 25px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFF;font-family: times;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 25px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .even h2 {text-align:center;color:#FFF;font-family: times;}
     
@@ -543,6 +545,13 @@
     
     #alldatasrch li {width: 100%;  margin-left: 0px;}
     #articlelist li {width: 100%;  margin-left: 0px;}
+    
+    /*3-08-2015*/
+    .title {position: absolute;top: -10px;left: 5px;font-size: 22px;color: #fff;text-transform: uppercase;font-weight: 400;}
+    .ageGrouop{position: absolute;left: 18px;top: 75px;font-size: 16px;color: #fff;text-transform: uppercase;font-weight: 600;font-style: italic;}
+    /*.ageGrouop div {position: absolute;top: 50px;left: 25px;font-size: 16px;color: #fff;text-transform: uppercase;font-weight: 600;  font-style: italic;}*/
+    .article_category {position: absolute;left: 5px;bottom: 10px;font-size: 18px;color: #fff;text-transform: uppercase;font-weight: 600;padding: 0;}
+    .article_category div {padding: 5px 0 5px 10px;}
 }
 
 @media (min-width:0px) and (max-width:368px) {

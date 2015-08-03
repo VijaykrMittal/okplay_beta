@@ -8,6 +8,7 @@
         show :function(e)
         {   
             app.mobileApp.showLoading();
+            $('.mainTempDv').html("");
             e.view.scroller.scrollTo(0, 0);
             if(e['sender']['params']['param'] === "articleList")
             {
@@ -72,10 +73,12 @@
         
         setarticleDetail : function(data)
         {
-            this.set("articleDetail",data);
             setTimeout(function(){
                app.mobileApp.hideLoading();
-            },6000);
+            },5000);
+            this.set("articleDetail",data);
+            //app.mobileApp.hideLoading();
+            
         },
     });
     app.mainArticleService = {

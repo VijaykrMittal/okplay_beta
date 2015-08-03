@@ -8,7 +8,7 @@ li:after {content: none;}
 
 /*7-8-2015*/
 #category-dropdown {text-align:center;display:none;margin-top: 50px;}
-#age-dropdown {text-align:center;margin-top: 50px;}
+#age-dropdown {text-align:center;/*margin-top: 50px;*/}
 .dropFld {width: 90%;height: 35px;padding-left:7px;}
 
 /*8-8-2015*/
@@ -40,6 +40,11 @@ li:after {content: none;}
 #signupForm h2 {text-align:center}
 #signupForm p label:nth-child(1) {margin-left:-3px}
 #signupForm p label:nth-child(2) {margin-left:47px}
+
+.km-loader {background: #000 !important;opacity: 0.9 !important;}
+.txtclass {text-align:center}
+#filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+.articleDv{height: auto !important;}
 
 
 

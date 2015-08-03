@@ -1,6 +1,7 @@
 <div data-role="view" id="categoryArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true">
     <div data-role="content">
         <div id="filterDropdwn">
+            <h2 class="txtclass" data-bind="text:selectCategory"></h2>
             <p id="age-dropdown">
                 <select class="dropFld" id="ageDropFld" onchange="app.categoryService.viewModel.drpdownFilter(this.options[this.selectedIndex].getAttribute('data-id'));"></select>
             </p>
@@ -19,13 +20,33 @@
     
     #if(imagePath !== "http://okplay.club/"){#
         <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
-            <img src="#:data['path']#" width="100%" height="100%"/>        
-            <p data-value="#: data['id'] #" class="textTitle blankarticleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+            <img src="#:data['path']#" width="100%" height="100%"/>   
+            <div class="ageGrouop">
+                # for (var i = 0; i < data['ageName'].length; i++) { #
+                    <div class="agesTxt">#: data['ageName'][i] #</div>
+                # } #
+            </div>
+            <div class="article_category">
+                # for (var i = 0; i < data['mainCate'].length; i++) { #
+                    <div>#: data['mainCate'][i] #</div>
+                # } #
+            </div>
+            <p data-value="#: data['id'] #" class="title">#: data['title'] #</p>
         </div>
     #}else{#
         <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
-            <img src="styles/images/no-image.jpg" width="100%" height="100%"/>    
-            <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
+            <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
+            <div class="ageGrouop">
+                # for (var i = 0; i < data['ageName'].length; i++) { #
+                    <div class="agesTxt">#: data['ageName'][i] #</div>
+                # } #
+            </div> 
+            <div class="article_category">
+                # for (var i = 0; i < data['mainCate'].length; i++) { #
+                    <div>#: data['mainCate'][i] #</div>
+                # } #
+            </div>        
+            <p data-value="#: data['id'] #" class="title" >#: data['title'] #</p>
         </div>
     #}#
     <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a> 

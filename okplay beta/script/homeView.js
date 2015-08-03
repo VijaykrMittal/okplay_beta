@@ -5,6 +5,7 @@
     homeViewModel = kendo.data.ObservableObject.extend({
         
         loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
+        networkStatus : true,
         
         show:function(e)
         {
@@ -15,18 +16,21 @@
             $('.srchtxt').focus(function(){
                 $('.popup').hide();
             });
+           
             app.homeService.viewModel.getUserLoginStatus();
+            app.homeService.viewModel.scrollViewImage();
+           // app.homeService.viewModel.categoryDataShow();
+            
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
-                app.homeService.viewModel.scrollViewImage();
                 app.homeService.viewModel.categoryDataShow();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
             {
                 setTimeout(function(){
-                    app.mobileApp.hideLoading();
-                },1000);
+                app.mobileApp.hideLoading();
+                },500);
             }
             
             $('.menu').unbind();
@@ -58,7 +62,9 @@
         
         categoryDataShow:function()
         {
-            var category = new kendo.data.DataSource({
+            try
+            {
+                var category = new kendo.data.DataSource({
                     transport: {
                         read: {
                             url: localStorage.getItem("allCategoryListAPI"),
@@ -74,14 +80,18 @@
                     },
                     error: function (e) {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Notification", 'Ok');
                     },
-
                 });
                 category.fetch(function(){
                     var data = this.data();
                     app.homeService.viewModel.setCategoryListData(data[0]);
                 });
+            }
+            catch(e)
+            {
+                console.log(e);
+            }
         },
         
         setCategoryListData :function(data)
@@ -97,10 +107,6 @@
             
              $('#categoryList').html(html);
             kendo.bind('.popup',app.homeService.viewModel);
-            
-            setTimeout(function(){
-                app.mobileApp.hideLoading();
-            },2000);
         },
         
         scrollViewImage : function()
@@ -148,15 +154,19 @@
             {
                if($.isNumeric(x))
                 {
-                    html +='<li style="float: left; list-style: none; position: relative; width: 396px;"><img src="'+data[x]['path']+'"></li>';
+                    html +='<li style="float: left; list-style: none; position: relative; width: 100% !important;margin-left:-51px"><img src="'+data[x]['path']+'"></li>';
                 }
             }
             html += '</ul>';
             
             $('#bxs').html(html);
-            $('.bxslider').bxSlider();
+            $('.bxslider').bxSlider({
+                mode:'fade'
+            });
             
-             
+            setTimeout(function(){
+                app.mobileApp.hideLoading();
+            },2000);
         },
         
         categoryArticle : function(e)
