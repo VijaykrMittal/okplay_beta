@@ -10,11 +10,27 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
+            e.view.scroller.scrollTo(0, 0);
             $('.popup').hide();
             $('.srchtxt').val('');
             
-            $('.srchtxt').focus(function(){
-                $('.popup').hide();
+            /*$('.menu').unbind();
+            $('body').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                    $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });*/
+            
+            $('.menu').unbind();
+            $('.menu').on('click',function(e){
+                $('.popup').slideToggle("slow","swing");
+                $('.srchtxt').blur();
             });
            
             app.homeService.viewModel.getUserLoginStatus();
@@ -32,12 +48,6 @@
                 app.mobileApp.hideLoading();
                 },500);
             }
-            
-            $('.menu').unbind();
-            $('.menu').on('click',function(){
-                $('.popup').slideToggle("slow","swing");
-                $('.srchtxt').blur();
-            });
         },
         
         getUserLoginStatus :function()

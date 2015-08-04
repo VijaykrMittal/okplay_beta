@@ -49,7 +49,13 @@
             <p data-value="#: data['id'] #" class="title" >#: data['title'] #</p>
         </div>
     #}#
-    <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a> 
+                    
+    #if(imagePath !== "http://okplay.club/"){#               
+        <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a>                     
+    #}else{#
+        <a data-role="button" data-id="#:data['id'] #" data-path="#:data['path']#" class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
+    #}# 
+    
 </script>
 
 

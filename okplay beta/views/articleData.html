@@ -1,5 +1,7 @@
 <div data-role="view"  id="mainArticleView" data-model="app.mainArticleService.viewModel" data-show="app.mainArticleService.viewModel.show" data-use-native-scrolling="true">
-    <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail"></div>
+    <div data-role="content">
+        <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail"></div>
+    </div>
 </div>
 
 <script type="text/x-kendo-template" id="articleContentView">

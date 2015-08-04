@@ -17,6 +17,8 @@
             $('.popup').hide();
             $('.srchtxt').val('');
             
+            $('#articlelist').html("");
+            
             $('.menu').unbind();
             $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");

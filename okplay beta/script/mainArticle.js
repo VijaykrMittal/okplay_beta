@@ -22,6 +22,7 @@
         
         articleDetailAPI : function(data)
         {
+            //app.mobileApp.showLoading();
             var articleContent = new kendo.data.DataSource({
                 transport: {
                     read: {
@@ -48,10 +49,10 @@
                         if(data['data']['field_third_text_area'] === null){data['data']['field_third_text_area'] ="";}
                         if(data['data']['field_third_title'] === null){data['data']['field_third_title'] ="";}
                         return [data];
-                        console.log(data)
                     }
                 },
                 error: function (e) {
+                    app.mobileApp.hideLoading();
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                     function () { }, "Notification", 'OK');
                 },
@@ -73,12 +74,11 @@
         
         setarticleDetail : function(data)
         {
+            this.set("articleDetail",data);
             setTimeout(function(){
                app.mobileApp.hideLoading();
             },5000);
-            this.set("articleDetail",data);
             //app.mobileApp.hideLoading();
-            
         },
     });
     app.mainArticleService = {
