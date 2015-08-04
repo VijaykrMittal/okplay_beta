@@ -1,13 +1,25 @@
 (function(global){
     var signupViewModel,
         app = global.app = global.app || {};
-    
+    var signupBindingValue;
     signupViewModel = kendo.data.ObservableObject.extend({
         
         show : function(e)
         {
             $('.popup').hide();
             e.view.scroller.scrollTo(0, 0);
+            $('.radioChk').prop('checked', false);
+            signupBindingValue = kendo.observable({
+                signupfname: '',
+                signuplname:'',
+                signupEmail:'',
+                signupPassword:'',
+                signupmobilenumber:'',
+                gender_male:'Male',
+                gender_female:'Female',
+            });
+            
+            kendo.bind($('#signupForm'), signupBindingValue);
             
             $('#signupForm').validate({
                 rules:{
@@ -16,7 +28,12 @@
                         required:true
                     },
                     signupPassword:{
-                        required:true
+                        required:true,
+                        minlength: 6
+                    },
+                    confirmPassword:{
+                        required:true,
+                        equalTo: "#signupPassword"
                     },
                     gender:{
                         required:true
@@ -28,6 +45,9 @@
                         required: "E-mail field is required."
                     },
                     signupPassword:{
+                        required:"Password field is required."
+                    },
+                    confirmPassword:{
                         required:"Password field is required."
                     },
                     gender:{
@@ -42,11 +62,61 @@
         
         signupSubmit : function()
         {
-            alert("under maintenance");
-           /* var status = $('#signupForm').valid();
+            dataParam = {};
+            var status = $('#signupForm').valid();
             
             if(status === false)
-            return status;*/
+            return status;
+            
+            dataParam['firstname'] = signupBindingValue.signupfname; 
+            dataParam['lastname'] = signupBindingValue.signuplname; 
+            dataParam['email'] = signupBindingValue.signupEmail; 
+            dataParam['password'] = signupBindingValue.signupPassword; 
+            dataParam['mobilenumber'] = signupBindingValue.signupmobilenumber; 
+            dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
+            
+            /*var dataSource = new kendo.data.DataSource({
+            transport: {
+                read: {
+                        url: localStorage.getItem("userSignupAPI"),
+                        type:"POST",
+                        dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
+                        data: { apiaction:"usersignup",email:dataParam['email'],password:dataParam['password'],fname:dataParam['firstname'],lname:dataParam['lastname'],mobile:dataParam['mobilenumber'],gender:dataParam['gender']}
+                }
+            },
+            schema: {
+                data: function(data)
+            	{
+                	return [data];
+            	}
+            },
+            error: function (e) {
+            	 app.mobileApp.hideLoading();
+                 navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+            },
+
+            });
+            dataSource.fetch(function(){
+                
+            	var data = this.data();
+                app.mobileApp.showLoading();
+                if(data[0]['code'] === "1" || data[0]['code'] === 1)
+                {
+                    app.mobileApp.navigate("views/homepage.html");
+                }
+                else if(data[0]['code'] === "2" || data[0]['code'] === 2)
+                {
+                    navigator.notification.alert("Some field is missing.",
+                    function () { }, "Notification", 'OK');
+                }
+                else
+                {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                    app.mobileApp.hideLoading();
+                }
+            });*/
         }
     });
     app.signupService = {

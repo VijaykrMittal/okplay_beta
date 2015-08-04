@@ -6,47 +6,34 @@
                <h2>
                     Create new account
                </h2>
-                <div class="camDv">
-                    <div class="camContDv">
-                        <a data-role="button" href="#cameraOption" data-rel="actionsheet" class="captureBtn">
-                            <img id="myImage" src="styles/images/person.png"/>
-                        </a>
-                        <ul data-role="actionsheet" id="cameraOption">
-                            <li><a href="#" data-action="cameraCap" >Camera</a></li>
-                            <li><a href="#" data-action="galleryCap" >Gallery</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <p>
-                    <input type="text" name="signupEmail" id="signupEmail" placeholder="Email" class="signupTxtFld" required/>
+                    <input type="text" name="signupfname" data-bind="value:signupfname" id="signupfname" placeholder="First Name" class="signupTxtFld"/>
                 </p>
                 <p>
-                    <input type="password" name="signupPassword" id="signupPassword" placeholder="Password" class="signupTxtFld" required/>
+                    <input type="text" name="signuplname" data-bind="value:signuplname" id="signuplname" placeholder="Last Name" class="signupTxtFld"/>
                 </p>
                 <p>
-                    <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="signupTxtFld" required/>
+                    <input type="text" name="signupEmail" data-bind="value:signupEmail" id="signupEmail" placeholder="Email" class="signupTxtFld" required/>
                 </p>
                 <p>
-                    <select name="signupAffiliated" id="signupAffiliated" class="signupTxtFld">
-                        <option>None</option>
-                        <option>School 1</option>
-                        <option>School 2</option>
-                    </select>
+                    <input type="password" name="signupPassword" data-bind="value:signupPassword" id="signupPassword" placeholder="Password" class="signupTxtFld" required/>
                 </p>
                 <p>
-                    <label><input type="radio" name="gender" id="gender" value="male" required/>Male</label>
-                    <label><input type="radio" name="gender" id="gender" value="female" required/>Female</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="signupTxtFld" required/>
                 </p>
                 <p>
-                    <input type="text" name="signupOther" id="signupOther" placeholder="Other" class="signupTxtFld"/>
+                    <input type="number" name="signupmobilenumber" data-bind="value:signupmobilenumber" id="signupmobilenumber" placeholder="Mobile Number" class="signupTxtFld"/>
                 </p>
+                
                 <p>
-                    <input type="text" name="signupName" id="signupName" placeholder="Name" class="signupTxtFld"/>
-                </p>
-                <p>
-                    <textarea class="signupTxtarea">
-                        
-                    </textarea>
+                    <span>
+                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="value:gender_male" value="male" required/>
+                        <label for="male">Male</label>
+                    </span>  
+                    <span>
+                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="value:gender_female" value="female" required/>
+                       <label for="female">Female</label> 
+                    </span>
                 </p>
             </form>
             <p>
