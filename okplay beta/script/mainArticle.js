@@ -23,6 +23,7 @@
         articleDetailAPI : function(data)
         {
             //app.mobileApp.showLoading();
+            sessionStorage.setItem('readArticle',data);
             var articleContent = new kendo.data.DataSource({
                 transport: {
                     read: {
@@ -80,6 +81,11 @@
             },5000);
             //app.mobileApp.hideLoading();
         },
+        
+        shareThisArticle : function(e)
+        {
+            app.categoryService.viewModel.shareMessageAndURL(sessionStorage.getItem('readArticle'),e['target']['context']['attributes']['data-title']['value'],"The Message");
+        }
     });
     app.mainArticleService = {
         viewModel : new mainArticleViewModel()

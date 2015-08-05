@@ -37,6 +37,7 @@
         
         categoryArticleData : function(data)
         {
+            console.log(data);
             app.categoryService.viewModel.setSelectCategory(data);
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
@@ -257,14 +258,14 @@
         {
             $('.popup').hide();
            // app.mobileApp.showLoading();
-            
             sessionStorage.setItem("catNodeId",e['currentTarget']['attributes']['data-id']['value']);
             app.mobileApp.navigate("views/articleData.html?param=articleList");
         },
         
-        shareMessageAndURL:function(id)
+        shareMessageAndURL:function(id,sub,msg)
         {
-            this.share('The message', 'The subject', null, 'http://okplay.club/node/'+id);
+            var url = "http://okplay.club/node/"+id;
+            this.share(msg, sub, null, url);
         },
         
         share : function(message, subject, image, link)

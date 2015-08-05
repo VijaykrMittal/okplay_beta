@@ -36,6 +36,7 @@
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
            // app.homeService.viewModel.categoryDataShow();
+            app.homeService.viewModel.homePageBlock();
             
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
@@ -183,6 +184,60 @@
         {
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
             app.mobileApp.navigate("views/categoryList.html?id="+e['target']['attributes']['data-id']['value']);
+        },
+        
+        browseArticle :function(e)
+        {
+            sessionStorage.setItem("categorySelectItem",e['target']['context']['attributes']['data-id']['value']);
+            app.mobileApp.navigate("views/categoryList.html?id="+e['target']['context']['attributes']['data-id']['value']);
+        },
+        
+        homePageBlock : function()
+        {
+            var homePageBLK = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: localStorage.getItem('homePageBlockAPI'),
+                        type:"GET",
+                        dataType: "json",
+                        data: { apiaction:"blocksdata"} 
+                    }
+                },
+                schema: {
+                    data: function(data)
+                    {
+                        return [data];
+                    }
+                },
+                error: function (e) {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                },
+
+            });
+            homePageBLK.fetch(function(){
+                var data = this.data();
+                if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                {
+                    app.homeService.viewModel.setHomeLayout(data[0]['data']);
+                }
+                else
+                {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                }
+                
+            });  
+        },
+        
+        setHomeLayout : function(data)
+        {
+            var html = "";
+            
+            html +=data[0];
+            html +=data[1];
+            html +=data[2];
+            $('#blockContent').html(html);
         },
         
         movetoLogin:function()

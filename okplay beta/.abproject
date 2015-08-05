@@ -3,9 +3,9 @@
   "ProjectGuid": "bb94e78f-ddee-4a5d-9c7b-252178f20241",
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.okplaybeta",
-  "DisplayName": "okplay beta",
+  "DisplayName": "okplay",
   "Author": "",
-  "Description": "okplay beta",
+  "Description": "okplay",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [

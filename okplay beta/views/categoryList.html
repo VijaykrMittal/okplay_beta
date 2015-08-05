@@ -20,6 +20,7 @@
     
     #if(imagePath !== "http://okplay.club/"){#
         <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
+          
             <img src="#:data['path']#" width="100%" height="100%"/>   
             <div class="ageGrouop">
                 # for (var i = 0; i < data['ageName'].length; i++) { #
@@ -35,6 +36,7 @@
         </div>
     #}else{#
         <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
+            
             <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
             <div class="ageGrouop">
                 # for (var i = 0; i < data['ageName'].length; i++) { #
@@ -53,15 +55,16 @@
     #if(imagePath !== "http://okplay.club/"){#               
         <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a>                     
     #}else{#
-        <a data-role="button" data-id="#:data['id'] #" data-path="#:data['path']#" class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
+        <a data-role="button" data-id="#:data['id'] #" data-title="#: data['title'] #"  class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
     #}# 
     
 </script>
 
+<!--  <span class="shadow"><img src="styles/images/shadow.png"></span>-->
 
 <script>
     function shareArticle(e)
     {
-        app.categoryService.viewModel.shareMessageAndURL(e['target']['context']['attributes']['data-id']['value']);
+        app.categoryService.viewModel.shareMessageAndURL(e['target']['context']['attributes']['data-id']['value'],e['target']['context']['attributes']['data-title']['value'],"The message");
     }
 </script>
