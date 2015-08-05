@@ -22,7 +22,11 @@
             <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
         </div>
     #}#
-    <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
+   #if(data['path'] !== "http://okplay.club/"){#
+        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
+   #}else{#
+        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtnDFT">Read More</a>
+   #}#
 </script>
 
 <script>

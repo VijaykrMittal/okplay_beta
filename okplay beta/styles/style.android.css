@@ -512,7 +512,8 @@
     #signupForm label.error{line-height: 27px;font-size: 13px;font-weight: 100;}
     
     /*Search*/
-    .searchBtn {position: absolute;top: 260px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtn {position: absolute;top: 292px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtnDFT {position: absolute;top: 260px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}
     
     /*main articleDv*/

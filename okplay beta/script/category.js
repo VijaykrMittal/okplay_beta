@@ -37,7 +37,6 @@
         
         categoryArticleData : function(data)
         {
-            console.log(data);
             app.categoryService.viewModel.setSelectCategory(data);
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
