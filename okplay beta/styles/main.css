@@ -41,7 +41,6 @@ li:after {content: none;}
 /*#signupForm p label:nth-child(1) {margin-left:-3px}
 #signupForm p label:nth-child(2) {margin-left:47px}*/
 
-.km-loader {background: #000 !important;opacity: 0.9 !important;}
 .txtclass {text-align:center}
 #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
 .articleDv{height: auto !important;}
@@ -55,6 +54,11 @@ li:after {content: none;}
 .block_s p{color: #000;font-size: 14px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
 .blkcls { text-align:center}
 
+
+/*Loader*/
+.km-loader {background-color: #FFF !important;}
+.km-loader:before {background: #C41010 !important}
+.km-flat .km-loader>*:not(h1) {background: #EACE0B !important}
 
 
 
