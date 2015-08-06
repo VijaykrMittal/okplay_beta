@@ -50,8 +50,7 @@ li:after {content: none;}
 
 /*5-08-2015*/
 
-.block_s h2 {color: #999;font-size: 17px;}
-.block_s p{color: #000;font-size: 14px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
+
 .blkcls { text-align:center}
 
 
@@ -59,6 +58,8 @@ li:after {content: none;}
 .km-loader {background-color: #FFF !important;}
 .km-loader:before {background: #C41010 !important}
 .km-flat .km-loader>*:not(h1) {background: #EACE0B !important}
+
+.bxs {  height: auto !important; }
 
 
 

@@ -20,7 +20,6 @@
     
     #if(imagePath !== "http://okplay.club/"){#
         <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
-          
             <img src="#:data['path']#" width="100%" height="100%"/>   
             <div class="ageGrouop">
                 # for (var i = 0; i < data['ageName'].length; i++) { #
@@ -35,7 +34,7 @@
             <p data-value="#: data['id'] #" class="title">#: data['title'] #</p>
         </div>
     #}else{#
-        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDv">
+        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" class="articleDvDft">
             
             <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
             <div class="ageGrouop">
@@ -53,9 +52,14 @@
     #}#
                     
     #if(imagePath !== "http://okplay.club/"){#               
-        <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a>                     
+        <div class="shareDV">
+            <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a>                     
+        </div>
+                    
     #}else{#
-        <a data-role="button" data-id="#:data['id'] #" data-title="#: data['title'] #"  class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
+        <div class="shareDVDFT">
+           <a data-role="button" data-id="#:data['id'] #" data-title="#: data['title'] #"  class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
+        </div>
     #}# 
     
 </script>

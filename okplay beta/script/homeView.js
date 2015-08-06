@@ -6,11 +6,12 @@
         
         loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
         networkStatus : true,
+        homePageData:'',
         
         show:function(e)
         {
             app.mobileApp.showLoading();
-            e.view.scroller.scrollTo(0, 0);
+           // e.view.scroller.scrollTo(0, 0);
             $('.popup').hide();
             $('.srchtxt').val('');
             
@@ -36,11 +37,12 @@
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
            // app.homeService.viewModel.categoryDataShow();
-            app.homeService.viewModel.homePageBlock();
+            
             
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
+                app.homeService.viewModel.homePageBlock();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
@@ -98,6 +100,7 @@
                 category.fetch(function(){
                     var data = this.data();
                     app.homeService.viewModel.setCategoryListData(data[0]);
+                    app.homeService.viewModel.setHomeContentdata(data[0]);
                 });
             }
             catch(e)
@@ -116,9 +119,13 @@
                     html +='<li class="select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
                 }
             }
-            
-             $('#categoryList').html(html);
+            $('#categoryList').html(html);
             kendo.bind('.popup',app.homeService.viewModel);
+        },
+        
+        setHomeContentdata : function(data)
+        {
+            this.set("homePageData",data);
         },
         
         scrollViewImage : function()
@@ -167,7 +174,7 @@
             {
                if($.isNumeric(x))
                 {
-                    html +='<li style="float: left; list-style: none; position: relative; width: 100% !important;margin-left:-51px"><img src="'+data[x]['path']+'"></li>';
+                    html +='<li><img src="'+data[x]['path']+'"></li>';
                 }
             }
             html += '</ul>';

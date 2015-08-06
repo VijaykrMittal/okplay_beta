@@ -1,7 +1,7 @@
 <!--Registration View-->
 <div data-role="view" id="signupView" data-use-native-scrolling="true" data-model="app.signupService.viewModel" data-show="app.signupService.viewModel.show">
     <div data-role="contant">
-        <div class="txtfldCont">
+        <div class="signuptxtfldCont">
             <form id="signupForm" class="frmdv">
                <h2>
                     Create new account
@@ -24,7 +24,6 @@
                 <p>
                     <input type="number" name="signupmobilenumber" data-bind="value:signupmobilenumber" id="signupmobilenumber" placeholder="Mobile Number" class="signupTxtFld"/>
                 </p>
-                
                 <p>
                     <span>
                         <input type="radio" name="gender" class="radioChk" id="gender" data-bind="value:gender_male" value="male" required/>
@@ -36,8 +35,8 @@
                     </span>
                 </p>
             </form>
-            <p>
-                <a data-role="button" data-click="app.signupService.viewModel.signupSubmit">Create new account</a>
+            <p class="signupBtn">
+                <a data-role="button" data-click="app.signupService.viewModel.signupSubmit">Sign Up</a>
             </p>
         </div>
     </div>

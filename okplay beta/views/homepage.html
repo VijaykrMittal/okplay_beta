@@ -1,8 +1,9 @@
 <!--Homepage View and categoryList template-->
 <div data-role="view" data-title="okplay" id="homepageView" data-use-native-scrolling="true" data-model="app.homeService.viewModel" data-after-show="app.homeService.viewModel.show">
     <!--Category ListData-->
-    <div id="bxs" class="bxs"></div>
+    
     <div data-role="content" class="outerDV">
+        <div id="bxs" class="bxs"></div>
         <!--<div class="browseArticle">
             <div class="browseArticle1">
                 <h3>Welcome to OK PLAY Parenting.</h3>
@@ -31,45 +32,32 @@
                 <p>We feature well-researched articles to provide you with useful and latest information about parenting. Remain connected and up to date with the latest ideas and bring up your child consciously.</p>
             </div>
         </div>-->
-        
-        <div id="blockContent">
-            
-        </div>
-        <div id="blockrightContent">
-            <ul>
-                <li>
-                    <div>
-                        <p>HEALTH</p>
-                        <p>
-                                <img src="styles/images/1.png"/>
-                        </p>
-                        <p>
-                            <a class="browseBtn" data-id="80" data-click="app.homeService.viewModel.browseArticle;" data-role="button">BROWSE ARTICLE</a>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p>FAMILY</p>
-                        <p><img src="styles/images/2.png"/></p>
-                        <p>
-                            <a class="browseBtn" data-id="77" data-click="app.homeService.viewModel.browseArticle;"  data-role="button">BROWSE ARTICLE</a>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <p>NUTRITION & WELL BEING</p>
-                        <p><img src="styles/images/3.png"/></p>
-                        <p>
-                           <a class="browseBtn" data-id="73" data-click="app.homeService.viewModel.browseArticle;"  data-role="button">BROWSE ARTICLE</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
+        <div class="homeContent">
+            <div id="blockContent">
+
+            </div>
+            <div id="blockrightContent">
+                <ul id="homepageContent" data-template="homepageContentView" data-bind="source:homePageData"></ul>
+            </div>
         </div>
     </div>
 </div>
+
+<script type="text/x-kendo-template" id="homepageContentView">
+    #if(data['img'] !== ""){#
+        <li>
+            <div>
+                <p>#:data['name']#</p>
+                <p>
+                    <img src="#:data['img']#"/>
+                </p>
+                <p>
+                    <a class="browseBtn" data-id="#:data['id']#" data-click="app.homeService.viewModel.browseArticle;" data-role="button">BROWSE ARTICLE</a>
+                </p>
+            </div>
+        </li>
+    #}#
+</script>
 
 <script type="text/x-kendo-template" id="categoryListView">
     <span data-id="#: data['id'] #" data-bind="click:categoryArticle">#: data['name'] #</span>

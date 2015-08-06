@@ -1,189 +1,5 @@
-@media (min-width:0px) and (max-width:1280px) {
-    
-    /*27-07-2015*/
-    
-    /*Layout*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
-    .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .srchDv { width:85%;height:100%;float:left}
-    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 145px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 370px;height: auto;display: none;position: absolute;top: 105px;right: 20px;z-index:99999}
-    .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 445px;padding:10px;width: 450px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
-    .nvbar a {text-decoration:none}
-    .srchbtn {position: absolute !important;;top: 71px !important;;right: 378px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
-    .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
-    
-    /*24-07-2015*/
-    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
-    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 100px;}
-    .nvbar .signPos {position: absolute;top: 13px;right: 20px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 100px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 20px;}
-    
-    /*27-06-2015*/
-   
-    
-    /*Category Design*/
-    .articleDv {width:100%;height:280px;}
-    #ageList li span{padding: 15px 210px 17px 0px !important;}
-    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
-    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
-    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
-    
-    /*Homepage*/
-    .bx-viewport {width: 100% !important;overflow: hidden;/* position: relative; */height: 320px !important;margin: 0px auto !important;margin-top: -1px !important;}
-    .bxslider li img {height:320px !important;width:100% !important}
-    .bxs{height: 310px;background:#fff}
-    
-    
-    
-    /*login Page*/
-    
-    /*23-07-2015*/
-    
-    .txtfldCont {width: 80%;margin: 0px auto;}
-    .frmdv {width:100%;}
-    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
-    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
-    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    
-    /*signup*/
-    
-    /*24-07-2015*/
-    
-    #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    
-    
-    /*main article Page*/
-    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 238px;right: 20px;z-index:99999999;background:none !important;border-style:none !important}
-    .sharebtn:active {background:none !important;color:#000 !important}
-    .sharebtn span {font-size:28px !important;}
-    
-    /*Search*/
-    .searchBtn {position: absolute;top: 230px;right: -5px;text-decoration: none;border-style: none !important;background: none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family: times;}
-    .searchBtn:active {background:none !important;color:#FFF !important}
-    
-    /*main articleDv*/
-    .mainArticleDv {width: 100%;height: 350px;}
-    
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;margin-left:35px;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 30%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 19px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left:18px;  margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 16px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 26px;font-weight: 400;padding: 0 0 20px 0;min-height: 177px;}
-    
-    #alldatasrch li {width: 33%;float: left;margin-left: 3px;}
-    #articlelist li {width: 33%;float: left;margin-left: 3px;}
-}
-
-@media (min-width:0px) and (max-width:1024px) {
-}
-
-@media screen and (max-width: 960px){
-    
-    /*27-07-2015*/
-    
-    /*Layout*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
-    .nvbar span { font-size:14px;}
-    .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .srchDv { width:85%;height:100%;float:left}
-    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 95px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 370px;height: auto;display: none;position: absolute;top: 105px;right: 20px;z-index:99999}
-    .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 295px;padding:10px;width: 385px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
-    .nvbar a {text-decoration:none}
-    .srchbtn {position: absolute !important;;top: 71px !important;;right: 272px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
-    .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
-    
-    /*24-07-2015*/
-    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
-    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 4px;right: 70px;width:110px}
-    .nvbar .signPos {position: absolute;top: 4px;right: -6px;}
-    .nvbar .mainLogPos {position: absolute;top: 4px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 4px;right: -6px;}
-    
-    /*27-06-2015*/
-   
-    
-    /*Category Design*/
-    .articleDv {width:100%;height:250px;}
-    #ageList li span{padding: 15px 210px 17px 0px !important;}
-    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
-    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
-    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
-    
-    /*Homepage*/
-    .bx-viewport {width: 100% !important;overflow: hidden;/* position: relative; */height: 275px !important;margin: 0px auto !important;margin-top: -1px !important;}
-    .bxslider li img {height:275px !important;width:100% !important}
-    
-    
-    
-    /*login Page*/
-    
-    /*23-07-2015*/
-    
-    .txtfldCont {width: 80%;margin: 0px auto;}
-    .frmdv {width:100%;}
-    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
-    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
-    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    
-    /*signup*/
-    
-    /*24-07-2015*/
-    
-    #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    
-    
-    /*main article Page*/
-    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999;background:none !important;border-style:none !important}
-    .sharebtn:active {background:none !important;color:#000 !important}
-    .sharebtn span {font-size:28px !important;}
-    
-    /*Search*/
-    .searchBtn {position: absolute;top: 207px;right: -5px;text-decoration:none;color:#FFF !important;border-style:none !important;background:none !important}
-    .searchBtn:active {background:none !important;color:#FFF !important}
-    
-    /*main articleDv*/
-    .mainArticleDv {width: 100%;height: 320px;}
-    
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;margin-left: 35px;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 30%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 17px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left: 16px;margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 15px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 22px;font-weight: 400;padding: 0 0 20px 0;min-height: 130px;margin-top: 3px;}
-    
-    #alldatasrch li {width: 33%;float: left;margin-left: 3px;}
-    #articlelist li {width: 33%;float: left;margin-left: 3px;}
-}
-
-@media (min-width:0px) and (max-width:800px) {
-}
-
-@media (min-width:0px) and (max-width:768px) {
-}
-
 @media (min-width:0px) and (max-width:640px) {
     
-    /*27-07-2015*/
-    
-    /*Layout*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
     .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -194,255 +10,96 @@
     .popup {width: 360px;height: auto;display: none;position: absolute;top: 105px;right: 14px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 190px;padding:10px;width: 280px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
-    .srchbtn {position: absolute !important;;top: 71px !important;;right: 162px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
+    .srchbtn {position: absolute !important;;top: 71px !important;right: 125px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
-    
-    /*24-07-2015*/
-    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
-    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:110px}
-    .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
-    
-    /*27-06-2015*/
-   
-    
-    /*Category Design*/
-    .articleDv {width:100%;height:250px;}
-    #ageList li span{padding: 15px 210px 17px 0px !important;}
-    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
-    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
-    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
-    
-    /*Homepage*/
-    .bx-viewport {width: 100% !important;overflow: hidden;/* position: relative; */height: 240px !important;margin: 0px auto !important;margin-top: -1px !important;}
-    .bxslider li img {height:240px !important;width:100% !important}
-    .bxs{height: 225px;background:#fff}
-    
-    
-    
-    /*login Page*/
-    
-    /*23-07-2015*/
-    
-    .txtfldCont {width: 80%;margin: 0px auto;}
-    .frmdv {width:100%;}
-    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
-    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
-    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    
-    /*signup*/
-    
-    /*24-07-2015*/
-    
-    #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    
-    
-    /*main article Page*/
-    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999;background:none !important;border-style:none !important}
-    .sharebtn:active {background:none !important;color:#000 !important}
-    .sharebtn span {font-size:28px !important;}
-    
-    /*Search*/
-    .searchBtn {position: absolute;top: 200px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
-    .searchBtn:active {background:none !important;color:#FFF !important}
-    
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;margin-left:25px;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 45%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 19px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left:18px;  margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 16px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 25px;font-weight: 400;padding: 0 0 20px 0;min-height: 107px;}
-    
-    #alldatasrch li {width: 49%;float: left;margin-left: 5px;}
-    #articlelist li {width: 49%;float: left;margin-left: 5px;}
-}
-
-@media (min-width:0px) and (max-width:630px) {
-}
-
-@media (min-width:0px) and (max-width:600px) {
-    
-    /*27-07-2015*/
-    
-    /*Layout*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
-    .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .srchDv { width:85%;height:100%;float:left}
-    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 360px;height: auto;display: none;position: absolute;top: 105px;right: 9px;z-index:99999}
-    .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 190px;padding:10px;width: 280px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
-    .nvbar a {text-decoration:none}
-    .srchbtn {position: absolute !important;;top: 71px !important;;right: 123px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
-    .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
-    
-    /*24-07-2015*/
-    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
-    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:120px}
-    .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
-    
-    /*27-06-2015*/
-   
-    
-    /*Category Design*/
-    .articleDv {width:100%;height:250px;}
-    #ageList li span{padding: 15px 210px 17px 0px !important;}
-    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
-    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
-    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
-    
-    /*Homepage*/
-    .bx-viewport {width: 100% !important;overflow: hidden;/* position: relative; */height: 235px !important;margin: 0px auto !important;margin-top: -1px !important;}
-    .bxslider li img {height:235px !important;width:100% !important}
-    .bxs{height: 225px;background:#fff}
-    
-    
-    
-    /*login Page*/
-    
-    /*23-07-2015*/
+    .nvbar .mainLogPos {position: absolute;top: 13px;right: 85px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 10px;}
+    .nvbar .logPos {position: absolute;top: 13px;right: 85px;width:130px}
+    .nvbar .signPos {position: absolute;top: 13px;right: 10px;}
+    .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
+    .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
+    .homeContent {width:100%;}
+    #blockContent {width: 65% !important;float:left;margin: 0px;}
+    #blockContent .block_s h2 {color: #999;font-size: 20px;  padding: 0 0 20px 0;}
+    #blockContent .block_s p{color: #000;font-size: 15px;line-height: 24px;font-weight: 400;padding: 0 0 20px 0;}
+    #blockrightContent {width:34% !important;float:left;background-color:#E7E7E7;margin-top:18px;}
+    #blockrightContent ul {padding:0}
+    #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
+    #blockrightContent ul li:last-child {border-bottom:none}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
+    #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
+    #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
     
     .txtfldCont {width: 80%;margin: 0px auto;margin-top: 35%;}
     .frmdv {width:100%;}
-    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
-    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
-    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    #loginForm .logTxtFld{width: 100%;height: 45px;padding-left: 7px;border: 1px solid #ccc;}
+    #loginForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
+    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    .txtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     
-    /*signup*/
-    
-    /*24-07-2015*/
-    
+    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 10%;}
+    .signuptxtfldCont .signupBtn {text-align:center}
+    .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
     
-    
-    /*main article Page*/
-    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999;background:none !important;border-style:none !important}
-    .sharebtn:active {background:none !important;color:#000 !important}
+    .articleDv {width:80%;height:auto;margin:0px auto}
+    /*.articleDv img {opacity: 0.4;filter: alpha(opacity=40);}*/
+    .articleDvDft {width:80%;height:auto;margin:0px auto}
+    .articleDv .title {position: absolute;top: -2px;left: 64px;font-size: 20px;color: #000;text-transform: uppercase;font-weight: 400;word-wrap: break-word;width: 75%;}
+    .articleDvDft .title {position: absolute;top: -2px;left: 64px;font-size: 20px;color: #fff;text-transform: uppercase;font-weight: 400;word-wrap: break-word;width: 75%;}
+    .articleDv .ageGrouop{position: absolute;left: 80px;top: 100px;font-size: 17px;color: #000;text-transform: uppercase;font-weight: 700;font-style: italic;}
+    .articleDvDft .ageGrouop{position: absolute;left: 80px;top: 100px;font-size: 17px;color: #fff;text-transform: uppercase;font-weight: 700;font-style: italic;}
+    .shareDVDFT {width: 50px;height: 50px;border: 1px solid #ccc;position: absolute;top: 368px;right: 82px;border-radius: 50%;background-color: #A3A2A2;}
+    .sharebtnDFT {width: 40px !important;height: 40px !important;color:#FFF !important;margin: 1px 0px 0px -4px;z-index: 99999999;border-style: none !important;background: url('styles/images/share-w.png') no-repeat !important;background-size: 75% 75% !important;}
+    .sharebtnDFT:active {background:none !important;color:#FFF !important;margin: 1px 0px 0px -4px !important;}
+    .sharebtnDFT span {font-size:28px !important;}
+    .shareDV {width: 50px;height: 50px;border: 1px solid #ccc;background-color: #A3A2A2;position: absolute;top: 408px;right: 82px;border-radius: 50%;background-color: #A3A2A2;}
+    .sharebtn {width: 40px !important;height: 40px !important;z-index: 99999999;border-style: none !important;  margin: 2px 0px 0px -3px;background: none !important;color: #FFF !important;}
+    .sharebtn:active {background:none !important;color: #FFF !important;}
     .sharebtn span {font-size:28px !important;}
+    .articleDvDft .article_category {position: absolute;left: 72px;bottom: 13px;font-size: 18px;color: #fff;text-transform: uppercase;font-weight: 600;padding: 0;}
+    .articleDvDft .article_category div {padding: 5px 0 5px 10px;}
+    .articleDv .article_category {position: absolute;left: 72px;bottom: 13px;font-size: 18px;color: #000;text-transform: uppercase;font-weight: 600;padding: 0;}
+    .articleDv .article_category div {padding: 5px 0 5px 10px;}
     
-    /*Search*/
-    .searchBtn {position: absolute;top: 200px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtnDFT {position: absolute;top: 368px;right: 58px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtn:active {background:none !important;color:#FFF !important}
+    .searchBtn {position: absolute;top: 408px;right: 58px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}
     
-    /*main articleDv*/
-    .mainArticleDv {width: 100%;height: 280px;}
+    .mainTempDv .shareDv {width: 100%;margin-top: 30px;margin-bottom: 30px;}
+    .mainTempDv .shareDv p {text-align:center}
+    .mainTempDv .shareDv p a {border-radius: 50%;height: 50px;width: 50px;background-color: #FFF !important;  border: 1px solid #9D9C9C;  box-shadow: 0px 0px 10px 2px #BEB61B;}
+    .mainTempDv .shareDv p a:active {border-radius: 50%;height: 50px;width: 50px;background-color: #FFF !important;  border: 1px solid #9D9C9C;  box-shadow: 0px 0px 10px 2px #BEB61B;}
+    .mainTempDv .shareDv p a.km-state-active {color:#4C5356 !important}
+    .mainTempDv .shareDv p a .km-share:after{font-size: 25px !important;  margin: 4px 0px 0px -7px !important;}
+    .mainTempDv .shareDv p a .km-share:before{font-size: 25px !important;  margin: 4px 0px 0px -6px !important;}
     
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;margin-left: 35px;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 46%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 17px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left: 16px;margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 15px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 22px;font-weight: 400;padding: 0 0 20px 0;min-height: 130px;margin-top: 3px;}
-    
-}
-
-@media (min-width:0px) and (max-width:599px) {
-}
-
-@media (min-width:0px) and (max-width:580px) {
-}
-
-@media (min-width:0px) and (max-width:533px) {
-}
-
-@media (min-width:0px) and (max-width:440px) {
-    
-    /*27-07-2015*/
-    
-    /*Layout*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
-    .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .srchDv { width:85%;height:100%;float:left}
-    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 25px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 306px;height: auto;display: none;position: absolute;top: 105px;right: 10px;z-index:99999}
-    .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 115px;padding:10px;width: 224px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
-    .nvbar a {text-decoration:none}
-    .srchbtn {position: absolute !important;;top: 71px !important;;right: 85px !important;;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
-    .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
-    
-    /*24-07-2015*/
-    .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
-    .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:110px}
-    .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
-    
-    /*27-06-2015*/
-   
-    
-    /*Category Design*/
-    .articleDv {width:100%;height:250px;}
-    #ageList li span{padding: 15px 210px 17px 0px !important;}
-    #ageList li:nth-child(3) span {padding: 15px 100px 17px 0px !important;}
-    #ageList li:nth-child(5) span{padding: 15px 120px 17px 0px !important;}
-    #ageList li, #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
-    
-    /*Homepage*/
-    .bx-viewport {width: 100% !important;overflow: hidden;/* position: relative; */height: 160px !important;margin: 0px auto !important;margin-top: -1px !important;}
-    .bxslider li img {height:160px !important;width:100% !important}
-    .bxs{height: 150px;background:#fff}
-    
-    
-    /*login Page*/
-    
-    /*23-07-2015*/
-    
-    .txtfldCont {width: 80%;margin: 0px auto;}
-    .frmdv {width:100%;}
-    #loginForm .logTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label{line-height: 27px;font-size: 13px;font-weight: 100;}
-    #loginForm h1 {text-align:center;margin-top: 60px;margin-bottom: 40px;}
-    .txtfldCont a{width: 100%;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    .txtfldCont a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
-    
-    /*signup*/
-    
-    /*24-07-2015*/
-    
-    #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
-    #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    
-    
-    /*main article Page*/
-    .sharebtn {width:40px !important;height:40px !important;position: absolute;top: 212px;right: 20px;z-index:99999999;background:none !important;border-style:none !important}
-    .sharebtn:active {background:none !important;color:#000 !important}
-    .sharebtn span {font-size:28px !important;}
-    
-    /*Search*/
-    .searchBtn {position: absolute;top: 200px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
-    .searchBtn:active {background:none !important;color:#FFF !important}
-    
-    .mainArticleDv {width: 100%;height: 270px;}
-    
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;margin-left:18px;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 100%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 19px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left:18px;  margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 16px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 25px;font-weight: 400;padding: 0 0 20px 0;min-height: 107px;}
-    
-    #alldatasrch li {width: 100%;  margin-left: 0px;}
-    #articlelist li {width: 100%;  margin-left: 0px;}
-}
-
-@media (min-width:0px) and (max-width:410px) {
+    .mainTempDv {width:98%;margin:0px auto;}
+    /*.even {background:#FFE600;}*/
+    .odd {background:#FFE;}
+    .bannerDv {width:100%;height:auto;margin-top:5px;}
+    .bannerWthcontentDv {width:100%;margin-top:25px;}
+    .bannerremContentDv {width:100%;margin-top:30px;}
+    .fstDv {width:100%;margin:0px auto;margin-top:-25px;background-color: #FFE600;}
+    .lstDv {width:100%;margin-bottom:8px;}
+    .dvWdh {width:100%}
+    .odd table, .even table {width:100% !important}
+    .bold {display: block;font-weight: 700;}
+    .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
+    .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
+    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
+    .even li,.odd li {text-align: justify;margin-left: -5px;}
+    /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
+    .articleDv .shadow img {width: 495px;height: auto;margin-left: 10px;max-width: 100%;}*/
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -543,6 +200,8 @@
     
     /*31-07-2015*/
     #blockContent {width: 60%;float:left;margin: 0px;}
+    #blockContent .block_s h2 {color: #999;font-size: 20px;  padding: 0 0 0px 0;}
+    #blockContent .block_s p{color: #000;font-size: 15px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
     #blockrightContent {width:39%;float:left;background-color:#E7E7E7;margin-top:18px;}
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
@@ -604,48 +263,5 @@
 .liveImg:hover:after, .liveImg:hover:before {
     opacity:1;
 }
-    
-}
-
-@media (min-width:0px) and (max-width:368px) {
-    
-}
-
-@media (min-width:0px) and (max-width:320px) {
-    
-    .bottom_nvbar .logo {width: 60px;height: 60px;position: absolute;top: 20px;left: 15px;background: url('./images/logo_2.png') no-repeat !important;background-size: 100% 100% !important;}
-    .nvbar .signPos {position: absolute;top: 15px;right: 2px;font-size:13px}
-    .nvbar .logPos {position: absolute;top: 15px;right: 61px;width: 106px;font-size:13px}
-    .nvbar .mainSignPos {position: absolute;top:15px;right: 2px;font-size:13px}
-    .nvbar .mainLogPos {position: absolute;top: 15px;right: 61px;font-size:13px}
-    .bottom_nvbar .srchDv {width: 85%;height: 100%;float: left;}
-    .srchbtn {position: absolute !important;top: 71px !important;right: 52px !important;width: 35px !important;height: 26px !important;border: medium none !important;background: url('./images/srch.png') no-repeat !important;}
-    .bottom_nvbar .srchDv .srchtxt {margin: 8px 10px 0px 95px;padding: 10px;width: 165px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
-    .bottom_nvbar .menuDv {width: 15%;height: 100%;float: left;}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 14px;background: url('./images/menu.png') no-repeat !important;background-size: 100% 100% !important;}
-    .popup {width: 220px;height: auto;display: none;position: absolute;top: 105px;right: 5px;z-index: 99999;}
-    
-    #loginForm h1 {text-align: center;margin-top: 45px;margin-bottom: 35px;}
-    .txtfldCont {width: 90%;margin: 0px auto;}
-    
-    .textTitle {font-weight: 100;font-size: 16px;line-height: 30px;color: #FFFFFF;font-family: times;text-shadow: #000 2px 2px 5px;}
-    .articleDv {width:100%;height:200px;}
-    .sharebtn {width: 40px !important;height: 40px !important;position: absolute;top: 160px;right: 15px;z-index: 99999999;border-style: none !important;background: none !important;}
-    .sharebtn:active {background:none !important}
-    .sharebtn span {font-size:28px !important;}
-    
-    .searchBtn {position: absolute;top: 150px;right: -8px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
-    .searchBtn:active {background:none !important;color:#FFF !important}
-    
-    .mainArticleDv {width: 100%;height: 250px;}
-    
-    /*31-07-2015*/
-    #blockContent {width: 98%;margin: 0px auto;}
-    #blockContent .blockDv1, #blockContent .blockDv2, #blockContent .blockDv3 {float: left;width: 100%;margin: 0 3% 0 0;}
-    #blockContent .blockDv1 h2, #blockContent .blockDv2 h2, #blockContent .blockDv3 h2 {color: #999;font-size: 17px;font-family: 'Lato', sans-serif;padding: 0 0 15px 0;margin: 0 0 0 0;margin-left: 16px;margin-top: 20px;}
-    #blockContent .blockDv1 p, #blockContent .blockDv2 p, #blockContent .blockDv3 p {color: #000;font-size: 15px;font-family: 'Lato', sans-serif;text-align: justify;line-height: 22px;font-weight: 400;padding: 0 0 20px 0;min-height: 130px;margin-top: 3px;}
-    
-    #alldatasrch li {width: 100%;  margin-left: 0px;}
-    #articlelist li {width: 100%;  margin-left: 0px;}
     
 }

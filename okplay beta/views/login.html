@@ -2,9 +2,9 @@
     <div data-role="content">
         <div class="txtfldCont">
             <form id="loginForm" class="frmdv">
-                <h1>
-                    User login
-                </h1>
+                <p>
+                    Please Fill the following information to Log in
+                </p>
                 <p>
                     <input type="text" name="email" data-bind="value:email" class="logTxtFld" id="email" Placeholder="E-mail Address" required/>
                 </p>
@@ -12,7 +12,7 @@
                     <input type="password" name="pwd" data-bind="value:pwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
                 </p>
             </form>
-            <p>
+            <p class="loginBtn">
                 <a data-role="button" data-click="app.loginService.viewModel.loginSubmit">Log In</a>
             </p>
         </div>
