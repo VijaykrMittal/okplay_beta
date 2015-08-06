@@ -49,6 +49,7 @@
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
     
+    .dropFld {width: 82%;height: 35px;padding-left:7px;}
     .articleDv {width:80%;height:auto;margin:0px auto}
     /*.articleDv img {opacity: 0.4;filter: alpha(opacity=40);}*/
     .articleDvDft {width:80%;height:auto;margin:0px auto}
@@ -199,6 +200,7 @@
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     
     /*31-07-2015*/
+    .dropFld {width: 90%;height: 35px;padding-left:7px;}
     #blockContent {width: 60%;float:left;margin: 0px;}
     #blockContent .block_s h2 {color: #999;font-size: 20px;  padding: 0 0 0px 0;}
     #blockContent .block_s p{color: #000;font-size: 15px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
