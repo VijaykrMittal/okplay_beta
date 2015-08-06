@@ -79,6 +79,7 @@
                         }
                     },
                     error: function (e) {
+                        app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         function () { }, "Notification", 'OK');
                     }
