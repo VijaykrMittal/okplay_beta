@@ -11,7 +11,7 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
-           // e.view.scroller.scrollTo(0, 0);
+            e.view.scroller.scrollTo(0, 0);
             $('.popup').hide();
             $('.srchtxt').val('');
             
@@ -100,7 +100,7 @@
                 category.fetch(function(){
                     var data = this.data();
                     app.homeService.viewModel.setCategoryListData(data[0]);
-                    app.homeService.viewModel.setHomeContentdata(data[0]);
+                    app.homeService.viewModel.setHomePageData(data[0]);
                 });
             }
             catch(e)
@@ -123,7 +123,7 @@
             kendo.bind('.popup',app.homeService.viewModel);
         },
         
-        setHomeContentdata : function(data)
+        setHomePageData : function(data)
         {
             this.set("homePageData",data);
         },
