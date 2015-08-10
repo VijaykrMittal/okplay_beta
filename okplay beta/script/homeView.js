@@ -15,6 +15,7 @@
             $('.popup').hide();
             $('.srchtxt').val('');
             $('.menu').unbind();
+            
             $('[data-role="view"]').unbind();
             $('[data-role="view"]#homepageView').on("click",function(e){
                 if($(e.target).hasClass('menu'))
@@ -23,26 +24,16 @@
                 }
                 else
                 {
-                   // $(e.target).preventDefault();
                     $('.popup').hide();
                 }
             });
-            
-            /*$('.menu').unbind();
-            $('.menu').on('click',function(e){
-                $('.popup').slideToggle("slow","swing");
-                $('.srchtxt').blur();
-            });*/
            
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
-           // app.homeService.viewModel.categoryDataShow();
-            
-            
+            app.homeService.viewModel.homePageBlock();
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
-                app.homeService.viewModel.homePageBlock();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
@@ -67,7 +58,6 @@
                 hhtml = '<a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>';
                 hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
             }
-            
             
             $('#mainLayoutID').html(hhtml);
             kendo.bind('.mainLayoutID',app.homeService.viewModel);
@@ -125,7 +115,8 @@
         
         setHomePageData : function(data)
         {
-            this.set("homePageData",data);
+            var that = this;
+            that.set("homePageData",data);
         },
         
         scrollViewImage : function()

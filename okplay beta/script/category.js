@@ -45,7 +45,7 @@
                $('.popup').hide();
             });
             e.view.scroller.scrollTo(0, 0);
-            
+            console.log(e['sender']['params']['id']);
             app.categoryService.viewModel.categoryArticleData(e['sender']['params']['id']);
             app.categoryService.viewModel.fetchAgeListdata();
         },
@@ -81,12 +81,13 @@
                     var data = that.data();
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
-                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
+                       app.categoryService.viewModel.setArticleListData(data[0]['data']);
                     }
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                     	function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
                     }
                 });
         },
@@ -132,10 +133,6 @@
             {
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
-                setTimeout(function(){
-                    app.mobileApp.hideLoading();
-                },6000);
-                //app.mobileApp.hideLoading();
             }
             
         },
@@ -182,9 +179,6 @@
             }
             
             $('#ageDropFld').html(html);
-            setTimeout(function(){
-                app.mobileApp.hideLoading();
-            },2000);
         },
         
         drpdownFilter:function(data)
@@ -224,7 +218,8 @@
                     }
                     else
                     {
-                       navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        app.mobileApp.hideLoading(); 
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         	function () { }, "Notification", 'OK'); 
                     }
                 });
@@ -263,6 +258,7 @@
                     }
                     else
                     {
+                       app.mobileApp.hideLoading(); 
                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         	function () { }, "Notification", 'OK'); 
                     }
@@ -274,7 +270,6 @@
         articleContentDataCall : function(e)
         {
             $('.popup').hide();
-           // app.mobileApp.showLoading();
             sessionStorage.setItem("catNodeId",e['currentTarget']['attributes']['data-id']['value']);
             app.mobileApp.navigate("views/articleData.html?param=articleList");
         },
