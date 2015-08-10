@@ -8,6 +8,21 @@
         show :function(e)
         {   
             app.mobileApp.showLoading();
+            $('.bannerDv img').attr("src",sessionStorage.getItem('mainArticleImgPath'));
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#mainArticleView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
             $('.mainTempDv').html("");
             e.view.scroller.scrollTo(0, 0);
             if(e['sender']['params']['param'] === "articleList")

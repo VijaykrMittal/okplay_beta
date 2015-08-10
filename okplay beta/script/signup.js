@@ -8,6 +8,21 @@
         {
             $('.popup').hide();
             e.view.scroller.scrollTo(0, 0);
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#signupView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
             $('.radioChk').prop('checked', false);
             signupBindingValue = kendo.observable({
                 signupfname: '',

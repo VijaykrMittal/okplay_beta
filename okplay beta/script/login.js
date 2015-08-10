@@ -9,6 +9,21 @@
         {
             $('.popup').hide();
             $('label.error').hide();
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#loginView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
             loginBindingValue = kendo.observable({
                 email: '',
                 pwd:''

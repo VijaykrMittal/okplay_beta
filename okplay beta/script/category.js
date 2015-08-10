@@ -20,10 +20,26 @@
             $('#articlelist').html("");
             
             $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#categoryArticleView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
+            /*$('.menu').unbind();
             $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");
                 $('.srchtxt').blur();
-            });
+            });*/
+            
+            
             
             $('#ageDropFld').click(function(){
                $('.popup').hide();
@@ -32,7 +48,6 @@
             
             app.categoryService.viewModel.categoryArticleData(e['sender']['params']['id']);
             app.categoryService.viewModel.fetchAgeListdata();
-             
         },
         
         categoryArticleData : function(data)
@@ -64,7 +79,6 @@
                 categoryDataSource .fetch(function(){
                     var that = this;
                     var data = that.data();
-                    console.log(data);
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                         app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -116,11 +130,11 @@
             }
             else
             {
-                setTimeout(function(){
-                    app.mobileApp.hideLoading();
-                },5000);
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
+                setTimeout(function(){
+                    app.mobileApp.hideLoading();
+                },6000);
                 //app.mobileApp.hideLoading();
             }
             

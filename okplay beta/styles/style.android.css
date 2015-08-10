@@ -168,7 +168,7 @@
     .mainTempDv {width:98%;margin:0px auto;}
     /*.even {background:#FFE600;}*/
     .odd {background:#FFE;}
-    .bannerDv {width:100%;height:auto;margin-top:5px;}
+    .bannerDv {width:98%;height:auto;margin:0px auto;margin-top:5px;}
     .bannerWthcontentDv {width:100%;margin-top:25px;}
     .bannerremContentDv {width:100%;margin-top:30px;}
     .fstDv {width:100%;margin:0px auto;margin-top:-25px;background-color: #FFE600;}

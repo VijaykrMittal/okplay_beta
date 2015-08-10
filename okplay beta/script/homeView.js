@@ -14,25 +14,25 @@
             e.view.scroller.scrollTo(0, 0);
             $('.popup').hide();
             $('.srchtxt').val('');
-            
-            /*$('.menu').unbind();
-            $('body').on("click",function(e){
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#homepageView').on("click",function(e){
                 if($(e.target).hasClass('menu'))
                 {
                     $('.popup').slideToggle();
                 }
                 else
                 {
-                    $(e.target).preventDefault();
+                   // $(e.target).preventDefault();
                     $('.popup').hide();
                 }
-            });*/
+            });
             
-            $('.menu').unbind();
+            /*$('.menu').unbind();
             $('.menu').on('click',function(e){
                 $('.popup').slideToggle("slow","swing");
                 $('.srchtxt').blur();
-            });
+            });*/
            
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();

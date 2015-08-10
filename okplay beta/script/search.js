@@ -10,6 +10,21 @@
             app.mobileApp.showLoading();
             $('p.txtclass').html("");
             $("#alldatasrch").html("");
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#searchContent').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
             e.view.scroller.scrollTo(0, 0);
             if(e['sender']['params']['keyword'] === "")
             {
