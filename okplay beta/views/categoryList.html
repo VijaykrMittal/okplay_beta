@@ -1,4 +1,4 @@
-<div data-role="view" id="categoryArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true">
+<div data-role="view" id="categoryArticleView" data-reload="true" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="false">
     <div data-role="content">
         <div id="filterDropdwn">
             <h2 class="txtclass" data-bind="text:selectCategory"></h2>
@@ -10,7 +10,7 @@
         <!--Article View-->
         <div style="margin-top: -15px;">
             <p class="noartcle" data-bind="text:dataListStatus"></p>
-            <ul id="articlelist" data-role="listview" data-template="articleView" data-bind="source:articlelistData"></ul>
+            <ul id="articlelist" data-role="listview" data-template="articleView" data-bind="source:articlelistData,visible:searchlistData" data-reload="true"></ul>
         </div>
     </div>
 </div>

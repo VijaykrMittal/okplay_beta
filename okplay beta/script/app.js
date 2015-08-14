@@ -10,16 +10,7 @@ var app = (function(global){
         window.connectionInfo = new ConnectionApp();
         window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
-        
-        if(!window.connectionInfo.checkConnection()){
-                navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
-            	if (confirmed === true || confirmed === 1) {
-            		networkStatus();
-            	}
-
-            }, 'Connection Error?', 'Retry,Cancel');
-        }
-        
+        networkStatus();
     };
     
     var networkStatus = function()

@@ -59,6 +59,9 @@ li:after {content: none;}
 .km-loader:before {background: #C41010 !important}
 .km-flat .km-loader>*:not(h1) {background: #EACE0B !important}
 
+/*13-08-2015*/
+/*.km-list>li { border-style: none !important;}*/
+
 
 
 

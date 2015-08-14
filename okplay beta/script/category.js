@@ -6,13 +6,12 @@
         articlelistData:'',
         dataListStatus:'',
         articleDetail:'',
-        searchlistData:'',
+        searchlistData:true,
         searchStatus:'',
         selectCategory:'',
         
-        show:function(e)
-        {
-            app.mobileApp.showLoading();
+        show:function()
+        { 
             $('select').val('0');
             $('.popup').hide();
             $('.srchtxt').val('');
@@ -28,42 +27,47 @@
                 }
                 else
                 {
-                   // $(e.target).preventDefault();
                     $('.popup').hide();
                 }
             });
             
-            /*$('.menu').unbind();
-            $('.menu').on('click',function(e){
-                $('.popup').slideToggle("slow","swing");
-                $('.srchtxt').blur();
-            });*/
-            
-            
-            
             $('#ageDropFld').click(function(){
                $('.popup').hide();
             });
-            e.view.scroller.scrollTo(0, 0);
-            console.log(e['sender']['params']['id']);
-            app.categoryService.viewModel.categoryArticleData(e['sender']['params']['id']);
+            $(".km-native-scroller").scrollTop(0);
+
+            app.categoryService.viewModel.categoryArticleData();
             app.categoryService.viewModel.fetchAgeListdata();
         },
         
-        categoryArticleData : function(data)
+        categoryArticleData : function()
         {
-            app.categoryService.viewModel.setSelectCategory(data);
+            app.mobileApp.showLoading();
+            dataParam =[];
+            cateID = sessionStorage.getItem('categorySelectItem');
+            if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "")
+            {
+                 ageID = ''; 
+            }
+            else
+            {
+                 ageID = sessionStorage.getItem('ageSelectItem');
+                 dataParam['ageId']=ageID;
+            }
+            dataParam['apiaction']='articlelist';
+            dataParam['catId']=cateID;
+            
+            app.categoryService.viewModel.setSelectCategory(cateID);
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
                         read: {
                             url:localStorage.getItem('articleListAPI'),
                             type:"GET",
                             dataType: "json",
-                            data: { apiaction:"articlelist",catId:data} 
+                            data: dataParam, 
                         }
                         
                     },
-                    filter: { field: "value", operator: "eq", value: data },
                     schema: {
                         data: function(data)
                         {
@@ -81,6 +85,7 @@
                     var data = that.data();
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
+                        console.log(data[0]['data']);
                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
                     }
                     else
@@ -126,13 +131,15 @@
             if(data.length ===0 || data.length === "0")
             {
                 this.set("dataListStatus","There is no article.");
-                this.set("articlelistData","");
+                this.set("searchlistData",false);
                 app.mobileApp.hideLoading();
             }
             else
             {
                 this.set("dataListStatus","");
+                 this.set("searchlistData",true);
                 this.set("articlelistData",data);
+                app.mobileApp.hideLoading();
             }
             
         },
@@ -181,90 +188,11 @@
             $('#ageDropFld').html(html);
         },
         
-        drpdownFilter:function(data)
+        drpdownFilter:function(ageID)
         {
-            app.mobileApp.showLoading();
-            if(data === 0 || data === '0')
-            {
-                var categoryAllFilter  = new kendo.data.DataSource({
-                    transport: {
-                        read: {
-                            url:localStorage.getItem('articleListAPI'),
-                            type:"GET",
-                            dataType: "json",
-                            data: { apiaction:"articlelist",catId:sessionStorage.getItem("categorySelectItem")} 
-                        }
-                        
-                    },
-                    filter: { field: "value", operator: "eq", value: data },
-                    schema: {
-                        data: function(data)
-                        {
-                        	return [data];
-                        }
-                    },
-                    error: function (e) {
-                        app.mobileApp.hideLoading();
-                    	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
-                    },
-                });
-                categoryAllFilter.fetch(function(){
-                    var that = this;
-                    var data = that.data();
-                    if(data[0]['code'] === 1 || data[0]['code'] === "1")
-                    {
-                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
-                    }
-                    else
-                    {
-                        app.mobileApp.hideLoading(); 
-                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        	function () { }, "Notification", 'OK'); 
-                    }
-                });
-            }
-            else
-            {
-                var categoryAgeFilter  = new kendo.data.DataSource({
-                    transport: {
-                        read: {
-                            url:localStorage.getItem('articleListAPI'),
-                            type:"GET",
-                            dataType: "json",
-                            data: { apiaction:"articlelist",catId:sessionStorage.getItem("categorySelectItem"),ageId:data} 
-                        }
-                        
-                    },
-                    filter: { field: "value", operator: "eq", value: data },
-                    schema: {
-                        data: function(data)
-                        {
-                        	return [data];
-                        }
-                    },
-                    error: function (e) {
-                        app.mobileApp.hideLoading();
-                    	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
-                    },
-                });
-                categoryAgeFilter.fetch(function(){
-                    var that = this;
-                    var data = that.data();
-                    if(data[0]['code'] === 1 || data[0]['code'] === "1")
-                    {
-                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
-                    }
-                    else
-                    {
-                       app.mobileApp.hideLoading(); 
-                       navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        	function () { }, "Notification", 'OK'); 
-                    }
-                    
-                });
-            }
+            
+             sessionStorage.setItem('ageSelectItem',ageID);
+             app.categoryService.viewModel.categoryArticleData();
         },
         
         articleContentDataCall : function(e)

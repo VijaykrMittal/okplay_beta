@@ -27,6 +27,12 @@
                     $('.popup').hide();
                 }
             });
+            
+            /*$('.menu').unbind();
+            $('.menu').on('click',function(e){
+                $('.popup').slideToggle("slow","swing");
+                $('.srchtxt').blur();
+            });*/
            
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
@@ -82,6 +88,7 @@
                         }
                     },
                     error: function (e) {
+                        console.log(e);
                         app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         function () { }, "Notification", 'Ok');
@@ -183,12 +190,14 @@
         categoryArticle : function(e)
         {
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
+            sessionStorage.setItem("ageSelectItem",'');
             app.mobileApp.navigate("views/categoryList.html?id="+e['target']['attributes']['data-id']['value']);
         },
         
         browseArticle :function(e)
         {
             sessionStorage.setItem("categorySelectItem",e['target']['context']['attributes']['data-id']['value']);
+            sessionStorage.setItem("ageSelectItem",'');
             app.mobileApp.navigate("views/categoryList.html?id="+e['target']['context']['attributes']['data-id']['value']);
         },
         
