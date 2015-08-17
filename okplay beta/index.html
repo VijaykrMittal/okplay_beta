@@ -31,7 +31,7 @@
         <div data-role="header" id="header">
             <div data-role="navbar" class="nvbar mainLayoutID" id="mainLayoutID"></div>
             <div class="bottom_nvbar">
-                <a data-role="button" href="views/homepage.html" class="logo"></a>
+                <a data-role="button" data-click="moveToHome" class="logo"></a>
                 <div class="srchDv">
                     <a data-role="button" class="srchbtn" data-click="srchData"></a>
                     <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>
@@ -73,6 +73,11 @@
         function movetoaccountView()
         {
             app.mobileApp.navigate("#myaccountView");
+        }
+        
+        function moveToHome()
+        {
+            app.mobileApp.navigate("views/homepage.html");
         }
     </script>
     

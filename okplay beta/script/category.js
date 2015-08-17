@@ -10,8 +10,15 @@
         searchStatus:'',
         selectCategory:'',
         
+        redirectBack:function()
+        {
+            app.mobileApp.showLoading();
+            app.categoryService.viewModel.categoryArticleData();
+            app.categoryService.viewModel.fetchAgeListdata();
+        },
         show:function()
         { 
+            app.mobileApp.showLoading();
             $('select').val('0');
             $('.popup').hide();
             $('.srchtxt').val('');
@@ -36,8 +43,7 @@
             });
             $(".km-native-scroller").scrollTop(0);
 
-            app.categoryService.viewModel.categoryArticleData();
-            app.categoryService.viewModel.fetchAgeListdata();
+            
         },
         
         categoryArticleData : function()
@@ -85,7 +91,6 @@
                     var data = that.data();
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
-                        console.log(data[0]['data']);
                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
                     }
                     else
@@ -137,8 +142,9 @@
             else
             {
                 this.set("dataListStatus","");
-                 this.set("searchlistData",true);
                 this.set("articlelistData",data);
+                this.set("searchlistData",true);
+                
                 app.mobileApp.hideLoading();
             }
             
