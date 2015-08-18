@@ -21,10 +21,10 @@
            
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
+            app.homeService.viewModel.homePageBlock();
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
-                app.homeService.viewModel.homePageBlock();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else

@@ -9,14 +9,23 @@
         searchlistData:true,
         searchStatus:'',
         selectCategory:'',
+        listDataStatus:true,
+        
         
         redirectBack:function()
         {
             app.mobileApp.showLoading();
             app.categoryService.viewModel.categoryArticleData();
             app.categoryService.viewModel.fetchAgeListdata();
+            
+            /*if(sessionStorage.getItem('ageListAPIStatus') === "null" || sessionStorage.getItem('ageListAPIStatus') === null)
+            {
+                app.categoryService.viewModel.fetchAgeListdata();
+                sessionStorage.setItem('ageListAPIStatus',true);
+            }*/
+            
         },
-        show:function()
+        show:function(e)
         { 
             app.mobileApp.showLoading();
             $('select').val('0');
@@ -42,7 +51,6 @@
                $('.popup').hide();
             });
             $(".km-native-scroller").scrollTop(0);
-
             
         },
         
@@ -89,6 +97,7 @@
                 categoryDataSource .fetch(function(){
                     var that = this;
                     var data = that.data();
+                    
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -137,6 +146,7 @@
             {
                 this.set("dataListStatus","There is no article.");
                 this.set("searchlistData",false);
+                this.set("listDataStatus",false);
                 app.mobileApp.hideLoading();
             }
             else
@@ -144,7 +154,7 @@
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
                 this.set("searchlistData",true);
-                
+                this.set("listDataStatus",true);
                 app.mobileApp.hideLoading();
             }
             
@@ -175,6 +185,15 @@
             });
             ageData.fetch(function(){
                 var data = this.data();
+                /*dataParam = [];
+                for(var x in data[0])
+                {
+                    dataAgeParam = [];
+                    dataAgeParam['id'] = data[0][x]['id'];
+                    dataAgeParam['name'] = data[0][x]['name'];
+                    dataParam[x]=dataAgeParam; 
+                }
+                console.log(dataParam);*/
                 app.categoryService.viewModel.showAgeDropDown(data[0]);
             });
         },
