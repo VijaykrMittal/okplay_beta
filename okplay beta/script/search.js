@@ -90,7 +90,9 @@
                 this.set('searchStatus',"");
                 this.set('searchlistData',data);
                 this.set('searchlistStatus',true);
-                app.mobileApp.hideLoading();
+                setTimeout(function(){
+                    app.mobileApp.hideLoading();
+                },3000);
             }
             temp.sender.reload=false;
             temp.view.reload=false;

@@ -40,7 +40,8 @@
                     $('.popup').hide();
                 }
             });
-            $(".km-native-scroller").scrollTop(0);
+            //$(".km-native-scroller").scrollTop(0);
+            e.view.scroller.scrollTo(0, 0);
         },
         
         getUserLoginStatus :function()
