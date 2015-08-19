@@ -4,10 +4,14 @@
     
     searchViewModel = kendo.data.ObservableObject.extend({
         searchlistData:'',
+        searchArticleStatus:true,
         
         show : function(e)
         {
             app.mobileApp.showLoading();
+            e.sender.reload=true;
+            e.view.reload=true;
+            temp = e;
             $('p.txtclass').html("");
             $("#alldatasrch").html("");
             
@@ -77,17 +81,18 @@
             if(data.length === 0 || data.length === '0')
             {
                 this.set('searchStatus',sessionStorage.getItem("searchKeyword")+" related search not found.");
-                this.set('searchlistData','');
+                this.set('searchArticleStatus',false);
                 app.mobileApp.hideLoading();
             }
             else
             {
-                this.set('searchlistData',data);
                 this.set('searchStatus',"");
-            }
-            setTimeout(function(){
+                this.set('searchlistData',data);
+                this.set('searchArticleStatus',true);
                 app.mobileApp.hideLoading();
-            },100000)
+            }
+            temp.sender.reload=false;
+            temp.view.reload=false;
         },
         
         readMoreArticle : function(e)

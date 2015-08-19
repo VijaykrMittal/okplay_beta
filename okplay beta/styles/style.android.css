@@ -31,7 +31,7 @@
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
     
-    .txtfldCont {width: 80%;margin: 0px auto;margin-top: 15%;}
+    .txtfldCont {width: 80%;margin: 0px auto;margin-top: 10%;}
     .frmdv {width:100%;}
     #loginForm .logTxtFld{width: 100%;height: 45px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
@@ -40,7 +40,7 @@
     .txtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .txtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 10%;}
+    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 5%;}
     .signuptxtfldCont .signupBtn {text-align:center}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}

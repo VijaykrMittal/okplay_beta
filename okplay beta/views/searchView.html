@@ -4,7 +4,7 @@
             Site Search
         </h1>
         <p class="txtclass" data-bind="text:searchStatus"></p>
-        <div id="searchalldata">
+        <div id="searchalldata" data-bind="visible:searchArticleStatus">
             <ul id="alldatasrch" data-role="listview" data-template="searchView" data-bind="source:searchlistData"></ul>
         </div>
     </div>

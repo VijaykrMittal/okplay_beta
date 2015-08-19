@@ -1,7 +1,7 @@
 (function(global){
     var categoryViewModel,
         app = global.app = global.app || {};
-    
+    dataAgeParam=[];
     categoryViewModel = kendo.data.ObservableObject.extend({
         articlelistData:'',
         dataListStatus:'',
@@ -15,27 +15,31 @@
         {
             app.mobileApp.showLoading();
             app.categoryService.viewModel.categoryArticleData();
-            app.categoryService.viewModel.fetchAgeListdata();
-            
-            /*if(sessionStorage.getItem('ageListAPIStatus') === "null" || sessionStorage.getItem('ageListAPIStatus') === null)
+            if(sessionStorage.getItem('ageListAPIStatus') === "null" || sessionStorage.getItem('ageListAPIStatus') === null)
             {
                 app.categoryService.viewModel.fetchAgeListdata();
                 sessionStorage.setItem('ageListAPIStatus',true);
-            }*/
+            }
+            else
+            {
+                var ageArray =sessionStorage.getItem('myArray');
+                app.categoryService.viewModel.showAgeDropDownbyArray(JSON.parse(ageArray));
+            }
             
         },
         show:function(e)
         { 
-            app.mobileApp.showLoading();
-            console.log(e);
-            console.log(e.sender.reload);
-            console.log(e.view.reload);
+            console.log(e.view);
+            e.sender.reload=true;
+            e.view.reload=true;
+            temp = e;
+           // app.mobileApp.showLoading();
+            $('#articlelist').html('');
             $('select').val('0');
             $('.popup').hide();
             $('.srchtxt').val('');
             
             $('#articlelist').html("");
-            
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
             $('[data-role="view"]#categoryArticleView').on("click",function(e){
@@ -53,7 +57,6 @@
                $('.popup').hide();
             });
             $(".km-native-scroller").scrollTop(0);
-            
         },
         
         categoryArticleData : function()
@@ -61,7 +64,7 @@
             app.mobileApp.showLoading();
             dataParam =[];
             cateID = sessionStorage.getItem('categorySelectItem');
-            if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "")
+            if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "" || sessionStorage.getItem('ageSelectItem') === "0" || sessionStorage.getItem('ageSelectItem') === 0)
             {
                  ageID = ''; 
             }
@@ -99,7 +102,6 @@
                 categoryDataSource .fetch(function(){
                     var that = this;
                     var data = that.data();
-                    
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -157,7 +159,8 @@
                 this.set("searchlistData",true);
                 app.mobileApp.hideLoading();
             }
-            
+            temp.sender.reload=false;
+            temp.view.reload=false;
         },
         
         fetchAgeListdata : function()
@@ -185,20 +188,12 @@
             });
             ageData.fetch(function(){
                 var data = this.data();
-                /*dataParam = [];
-                for(var x in data[0])
-                {
-                    dataAgeParam = [];
-                    dataAgeParam['id'] = data[0][x]['id'];
-                    dataAgeParam['name'] = data[0][x]['name'];
-                    dataParam[x]=dataAgeParam; 
-                }
-                console.log(dataParam);*/
-                app.categoryService.viewModel.showAgeDropDown(data[0]);
+                sessionStorage.setItem('myArray',JSON.stringify(data));
+                app.categoryService.viewModel.showAgeDropDownbyAPI(data[0]);
             });
         },
         
-        showAgeDropDown:function(data)
+        showAgeDropDownbyAPI:function(data)
         {
             var html = "";
             html = "<option value='0' data-id='0'>All Age Group</option>";
@@ -209,13 +204,26 @@
                     html +="<option value='"+data[x]['id']+"' data-id='"+data[x]['id']+"'>"+data[x]['name']+"</option>"
                 }
             }
-            
+            $('#ageDropFld').html(html);
+        },
+        
+        showAgeDropDownbyArray:function(data)
+        {
+            var html = "";
+            html = "<option value='0' data-id='0'>All Age Group</option>";
+            for(var x in data[0])
+            {
+                if($.isNumeric(x))
+                {
+                    html +="<option value='"+data[0][x]['id']+"' data-id='"+data[0][x]['id']+"'>"+data[0][x]['name']+"</option>"
+                }
+            }
             $('#ageDropFld').html(html);
         },
         
         drpdownFilter:function(ageID)
         {
-            
+            console.log(ageID);
              sessionStorage.setItem('ageSelectItem',ageID);
              app.categoryService.viewModel.categoryArticleData();
         },

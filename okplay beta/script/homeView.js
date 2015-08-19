@@ -6,32 +6,24 @@
         
         loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
         networkStatus : true,
-        homePageData:'',
+        homePageData:[],
         
         show:function(e)
         {
             app.mobileApp.showLoading();
-            e.view.scroller.scrollTo(0, 0);
-            
-            /*$('.menu').unbind();
-            $('.menu').on('click',function(e){
-                $('.popup').slideToggle("slow","swing");
-                $('.srchtxt').blur();
-            });*/
-           
+           // e.view.scroller.scrollTo(0, 0);
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
-            app.homeService.viewModel.homePageBlock();
+            $('#blockrightContent').css('background','none');
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
+                app.homeService.viewModel.homePageBlock();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
             {
-                setTimeout(function(){
-                    app.mobileApp.hideLoading();
-                },500);
+                $('#blockrightContent').css('background','#E7E7E7');
             }
             
             $('.popup').hide();
@@ -49,6 +41,7 @@
                     $('.popup').hide();
                 }
             });
+            $(".km-native-scroller").scrollTop(0);
         },
         
         getUserLoginStatus :function()
@@ -140,7 +133,6 @@
                 }
             }
             that.set("homePageData",dataParam);
-            
         },
         
         scrollViewImage : function()
@@ -206,15 +198,22 @@
         
         categoryArticle : function(e)
         {
-            app.mobileApp.showLoading();
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
-            app.mobileApp.navigate("views/categoryList.html?id="+e['target']['attributes']['data-id']['value']);
+            if(app.mobileApp.view()['element']['0']['id']==='categoryArticleView')
+            {
+                app.categoryService.viewModel.redirectBack();
+                app.categoryService.viewModel.show();
+            }
+            else
+            {
+                app.mobileApp.navigate("#categoryArticleView");
+            }
+            
         },
         
         browseArticle :function(e)
         {
-            app.mobileApp.showLoading();
             sessionStorage.setItem("categorySelectItem",e['target']['context']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
             app.mobileApp.navigate("views/categoryList.html");
@@ -255,12 +254,12 @@
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                     function () { }, "Notification", 'OK');
                 }
-                
             });  
         },
         
         setHomeLayout : function(data)
         {
+            $('#blockrightContent').css('background','#E7E7E7');
             var html = "";
             
             html +=data[0];
