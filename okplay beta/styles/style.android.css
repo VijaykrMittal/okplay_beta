@@ -213,7 +213,7 @@
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     .articleDv .shadow {position: absolute;left: 1px;width: 100%;}
-    .articleDv .shadow img {width: 93%;height: auto;margin-left: 10px;max-width: 95%;}
+    .articleDv .shadow img {width: 93%;height: auto;margin-left: 10px;max-width: 95%;z-index: 9999999;}
     .articleDvDft .shadow {position: absolute;left: 1px;width: 100%;}
     .articleDvDft .shadow img {width: 93%;height: 272px;margin-left: 10px;max-width: 95%;}
     #articlelist li {float:left;width:49%;}

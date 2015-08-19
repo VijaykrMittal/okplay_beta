@@ -1,4 +1,4 @@
-<div data-role="view" id="categoryArticleView" data-reload="false" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
+<div data-role="view" id="categoryArticleView" data-reload="true" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
     <div data-role="content">
         <div id="filterDropdwn">
             <h2 class="txtclass" data-bind="text:selectCategory"></h2>
@@ -11,67 +11,8 @@
         <div style="margin-top: -15px;">
             <p class="noartcle" data-bind="text:dataListStatus"></p>
            <div data-bind="visible:searchlistData">
-                <ul id="articlelist" data-role="listview" data-template="articleView" data-bind="source:articlelistData,visible:listDataStatus"></ul>
+                <ul id="articlelist" data-role="listview" data-template="articleView" data-bind="source:articlelistData"></ul>
            </div>
         </div>
     </div>
 </div>
-
-<script type="text/x-kendo-template" id="articleView">
-    #var imagePath = data['path']#
-    
-    #if(imagePath !== "http://okplay.club/"){#
-        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-path="#:data['path']#" class="articleDv">
-            <span class="shadow"><img src="styles/images/shadow.png"></span>
-            <img src="#:data['path']#" width="100%" height="100%"/>   
-            <div class="ageGrouop">
-                # for (var i = 0; i < data['ageName'].length; i++) { #
-                    <div class="agesTxt">#: data['ageName'][i] #</div>
-                # } #
-            </div>
-            <div class="article_category">
-                # for (var i = 0; i < data['mainCate'].length; i++) { #
-                    <div>#: data['mainCate'][i] #</div>
-                # } #
-            </div>
-            <p data-value="#: data['id'] #" class="title">#: data['title'] #</p>
-        </div>
-    #}else{#
-        <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-path="#:data['path']#" class="articleDvDft">
-            <span class="shadow"><img src="styles/images/shadow.png"></span>
-            <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
-            <div class="ageGrouop">
-                # for (var i = 0; i < data['ageName'].length; i++) { #
-                    <div class="agesTxt">#: data['ageName'][i] #</div>
-                # } #
-            </div> 
-            <div class="article_category">
-                # for (var i = 0; i < data['mainCate'].length; i++) { #
-                    <div>#: data['mainCate'][i] #</div>
-                # } #
-            </div>        
-            <p data-value="#: data['id'] #" class="title" >#: data['title'] #</p>
-        </div>
-    #}#
-                    
-    #if(imagePath !== "http://okplay.club/"){#               
-        <div class="shareDV">
-            <a data-role="button" data-id="#: data['id'] #" data-path="#:data['path']#" data-title="#: data['title'] #" class="sharebtn" data-click="shareArticle" data-icon="share"></a>                     
-        </div>
-                    
-    #}else{#
-        <div class="shareDVDFT">
-           <a data-role="button" data-id="#:data['id'] #" data-title="#: data['title'] #"  class="sharebtnDFT" data-click="shareArticle" data-icon="share"></a>                     
-        </div>
-    #}# 
-    
-</script>
-
-<!--  <span class="shadow"><img src="styles/images/shadow.png"></span>-->
-
-<script>
-    function shareArticle(e)
-    {
-        app.categoryService.viewModel.shareMessageAndURL(e['target']['context']['attributes']['data-id']['value'],e['target']['context']['attributes']['data-title']['value'],"The message");
-    }
-</script>

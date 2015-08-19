@@ -9,7 +9,6 @@
         searchlistData:true,
         searchStatus:'',
         selectCategory:'',
-        listDataStatus:true,
         
         
         redirectBack:function()
@@ -28,6 +27,9 @@
         show:function(e)
         { 
             app.mobileApp.showLoading();
+            console.log(e);
+            console.log(e.sender.reload);
+            console.log(e.view.reload);
             $('select').val('0');
             $('.popup').hide();
             $('.srchtxt').val('');
@@ -146,7 +148,6 @@
             {
                 this.set("dataListStatus","There is no article.");
                 this.set("searchlistData",false);
-                this.set("listDataStatus",false);
                 app.mobileApp.hideLoading();
             }
             else
@@ -154,7 +155,6 @@
                 this.set("dataListStatus","");
                 this.set("articlelistData",data);
                 this.set("searchlistData",true);
-                this.set("listDataStatus",true);
                 app.mobileApp.hideLoading();
             }
             
