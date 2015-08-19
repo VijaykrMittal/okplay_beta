@@ -46,7 +46,7 @@
         </header>
     </div>
     
-    <div data-role="view" id="categoryArticleView" data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
+    <div data-role="view" id="categoryArticleView"  data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
         <div data-role="content">
             <div id="filterDropdwn">
                 <h2 class="txtclass" data-bind="text:selectCategory"></h2>
@@ -69,7 +69,6 @@
         
         $(document).ready(function(){
             $('.srchbtn').on('click',function(){
-                //app.searchService.viewModel.srchDataCall($(this).next().val());
                 app.mobileApp.navigate("views/searchView.html?keyword="+$(this).next().val());
             });
         });
@@ -158,6 +157,8 @@
             app.categoryService.viewModel.shareMessageAndURL(e['target']['context']['attributes']['data-id']['value'],e['target']['context']['attributes']['data-title']['value'],"The message");
         }
     </script>
+    
+    
     
     <!--External JS Place Here-->
     <script src="script/app.js"></script>

@@ -11,7 +11,6 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
-           // e.view.scroller.scrollTo(0, 0);
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
             $('#blockrightContent').css('background','none');
@@ -216,7 +215,16 @@
         {
             sessionStorage.setItem("categorySelectItem",e['target']['context']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
-            app.mobileApp.navigate("views/categoryList.html");
+            if(app.mobileApp.view()['element']['0']['id']==='categoryArticleView')
+            {
+                app.categoryService.viewModel.redirectBack();
+                app.categoryService.viewModel.show();
+            }
+            else
+            {
+                app.mobileApp.navigate("#categoryArticleView");
+            }
+           //app.mobileApp.navigate("views/categoryList.html");
         },
         
         homePageBlock : function()

@@ -10,7 +10,6 @@
         searchStatus:'',
         selectCategory:'',
         
-        
         redirectBack:function()
         {
             app.mobileApp.showLoading();
@@ -29,11 +28,10 @@
         },
         show:function(e)
         { 
-            console.log(e.view);
             e.sender.reload=true;
             e.view.reload=true;
+            console.log(e);
             temp = e;
-           // app.mobileApp.showLoading();
             $('#articlelist').html('');
             $('select').val('0');
             $('.popup').hide();

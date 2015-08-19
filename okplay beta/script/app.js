@@ -117,31 +117,7 @@ var app = (function(global){
     }
     
     document.addEventListener('deviceready', onDeviceReady, false);
-    
-   /* if(localStorage.getItem('loginStatus') === "true" || localStorage.getItem('loginStatus') === true)
-    {
-       // alert("true");
-        var mobileApp = new kendo.mobile.Application(document.body,
-                                                                {
-                                                                    skin:'flat',
-                                                                    initial:'views/homepage.html',
-                                                                    layout:'login-layout'
-                                                                }
-        );
-    }
-    else
-    {
-        
-       // alert("false");
-        
-        var mobileApp = new kendo.mobile.Application(document.body,
-                                                                {
-                                                                    skin:'flat',
-                                                                    initial:'views/homepage.html',
-                                                                    layout:'main-layout'
-                                                                }
-        );
-    }*/
+   
     var mobileApp = new kendo.mobile.Application(document.body,
                                                             {
                                                                 skin:'flat',

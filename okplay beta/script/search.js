@@ -4,16 +4,17 @@
     
     searchViewModel = kendo.data.ObservableObject.extend({
         searchlistData:'',
-        searchArticleStatus:true,
+        searchlistStatus:true,
         
         show : function(e)
         {
             app.mobileApp.showLoading();
             e.sender.reload=true;
-            e.view.reload=true;
+            e.view.reload=true; 
             temp = e;
+            
             $('p.txtclass').html("");
-            $("#alldatasrch").html("");
+            //$("#alldatasrch").html("");
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -24,21 +25,20 @@
                 }
                 else
                 {
-                   // $(e.target).preventDefault();
                     $('.popup').hide();
                 }
             });
             
-            e.view.scroller.scrollTo(0, 0);
             if(e['sender']['params']['keyword'] === "")
             {
                 e['sender']['params']['keyword'] ="all";
             }
             sessionStorage.setItem("searchKeyword",e['sender']['params']['keyword']);
             app.searchService.viewModel.srchDataCall(e['sender']['params']['keyword']);
+            e.view.scroller.scrollTo(0, 0);
         },
         
-        srchDataCall:function(searchTxt)
+        srchDataCall:function(searchtxt)
         {
             $('.popup').hide();
             var searchContent = new kendo.data.DataSource({
@@ -47,7 +47,7 @@
                         url: localStorage.getItem('searchDataAPI'),
                         type:"GET",
                         dataType: "json", 
-                        data: { apiaction:"searchdata",keyword:searchTxt} 
+                        data: { apiaction:"searchdata",keyword:searchtxt} 
                     },
                 },
                 schema: {
@@ -65,6 +65,7 @@
             });
             searchContent.fetch(function(){
                 var data = this.data();
+                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.searchService.viewModel.setSearchData(data[0]['data']);
@@ -81,14 +82,14 @@
             if(data.length === 0 || data.length === '0')
             {
                 this.set('searchStatus',sessionStorage.getItem("searchKeyword")+" related search not found.");
-                this.set('searchArticleStatus',false);
+                this.set('searchlistStatus',false);
                 app.mobileApp.hideLoading();
             }
             else
             {
                 this.set('searchStatus',"");
                 this.set('searchlistData',data);
-                this.set('searchArticleStatus',true);
+                this.set('searchlistStatus',true);
                 app.mobileApp.hideLoading();
             }
             temp.sender.reload=false;
