@@ -2,6 +2,15 @@
     <div data-role="content">
         <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail"></div>
     </div>
+    <!--<div data-role="footer">
+        <div data-role="tabstrip" id="tabstr" style="background:#fff">
+            <div class="shareDv">
+                <p>
+                    <a data-role="button" data-icon="share" id="shareArticleContent" data-click="checkit"></a>  
+                </p>                   
+            </div>
+        </div>
+    </div>-->
 </div>
 
 <script type="text/x-kendo-template" id="articleContentView">
@@ -79,4 +88,11 @@
     #}#
         
     
+</script>
+
+<script>
+    function checkit()
+    {
+        alert("ok");
+    }
 </script>

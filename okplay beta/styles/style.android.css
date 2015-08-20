@@ -218,6 +218,10 @@
     .articleDvDft .shadow img {width: 93%;height: 272px;margin-left: 10px;max-width: 95%;}
     #articlelist li {float:left;width:49%;}
     #alldatasrch li {float:left;width:49%}
+    
+    #tabstr .shareDv {width: 100%;margin-top: 30px;margin-bottom: 30px;margin-left: 87%;}
+    #tabstr .shareDv p a {border-radius: 50%;height: 50px;width: 50px;background-color: #FFF !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;}
+    #tabstr .shareDv p a span{color: #000;font-size: 25px;padding:0px 0px 0px 2px;}
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -306,4 +310,6 @@
     #alldatasrch li {width:auto;}
     .articleDv .shadow img {width: 94%;height: auto;margin-left: 10px;max-width: 95%;}
     .articleDvDft .shadow img {width: 94%;height: 272px;margin-left: 10px;max-width: 95%;}
+    #tabstr .shareDv {width: 100%;margin-top: 0px;margin-bottom: 30px;margin-left: 84%;}
+    #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
 }
