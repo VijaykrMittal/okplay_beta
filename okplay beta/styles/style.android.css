@@ -247,7 +247,7 @@
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
-    .homeContent {width:100%;}
+    .homeContent {width:100%;display: inline-block;}
     #blockContent {width: 60% !important;float:left;margin: 0px;}
     #blockContent .block_s h2 {color: #999;font-size: 17px;  padding: 0 0 0px 0;}
     #blockContent .block_s p{color: #000;font-size: 14px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
@@ -312,4 +312,27 @@
     .articleDvDft .shadow img {width: 94%;height: 272px;margin-left: 10px;max-width: 95%;}
     #tabstr .shareDv {width: 100%;margin-top: 0px;margin-bottom: 30px;margin-left: 84%;}
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
+    
+    /*21-08-2015*/
+    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter .content1 {width: 50%;float: left;background: #818286;}
+    .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 16px;}
+    .homeFooter .content1 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;margin: 0;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-size: 13px;background: none;border: none;}
+    .homeFooter .content2 {width:50%;float: left;background: #818286;}
+    .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 16px;}
+    .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;margin: 0;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-size: 13px;background: none;border: none;}
+    .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
+    #contactusForm .contTxtfld{width: 100%;height: 35px;margin-left: 15px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea{width: 100%;margin-left: 15px;height: 120px;padding: 8px;}
+    #contactusForm .conttxtarea + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    .contactFldFrm{width: 90%;display: block;margin-bottom: 30px;}
+    .contactFldFrm h1 {margin-left: 29px;}
+    .contactSubBtn p {text-align: center;}
+    
+    .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    .contactSubBtn{margin-bottom: 50px;}
+    #aboutBody p {text-align:justify;font-size: 16px;font-weight: 400;line-height: 22px;margin-bottom: 25px;}
 }

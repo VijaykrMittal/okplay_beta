@@ -1,13 +1,34 @@
 <!--Homepage View and categoryList template-->
 <div data-role="view" data-title="okplay" id="homepageView" data-use-native-scrolling="true" data-model="app.homeService.viewModel" data-after-show="app.homeService.viewModel.show">
     <!--Category ListData-->
-    
     <div data-role="content" class="outerDV">
         <div id="bxs" class="bxs"></div>
         <div class="homeContent">
             <div id="blockContent">&nbsp;</div>
             <div id="blockrightContent">
                 <ul id="homepageContent" data-template="homepageContentView" data-bind="source:homePageData"></ul>
+            </div>
+        </div>
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -40,7 +61,7 @@
     }
 </script>
 
-
+<!--Myaccount View-->
 <div data-role="view" id="myaccountView" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.show">
     <div data-role="content">
         <div class="fldcontent">
@@ -50,3 +71,159 @@
     </div>
 </div>
 
+<!--Contact us View-->
+<div data-role="view" id="contactus" data-use-native-scrolling="true" data-model="app.contact.viewModel" data-show="app.contact.viewModel.show">
+    <div data-role="content">
+        <div class="contactFldFrm">
+            <h1 class="page-title">Contact Us</h1>
+            <form id="contactusForm">
+                <p>
+                    
+                    <input type="text" name="contect_name" id="contect_name" class="contTxtfld" placeholder="Name" required/>
+                </p>
+                <p>
+                    
+                    <input type="text" name="contect_email" id="contect_email" class="contTxtfld" placeholder="Email ID" required/>
+                </p>
+                <p>
+                    
+                    <input type="number" name="contect_number" id="contect_number" maxlength="10" class="contTxtfld" placeholder="Mobile Number" required/>
+                </p>
+                <p>
+                    
+                    <textarea placeholder="Message" name="contect_message" id="contect_message" class="conttxtarea" required></textarea>
+                </p>
+            </form>
+        </div>
+        <div class="contactSubBtn">
+            <p>
+                <a data-role="button" class="contactBtn" data-click="app.contact.viewModel.submitContact">Submit</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--about us view-->
+<div data-role="view" id="aboutus" data-model="app.contact.viewModel" data-show="app.contact.viewModel.aboutshow" data-use-native-scrolling="true">
+    <div data-role="content">
+        <h1 id="aboutTitle"></h1>
+        <div id="aboutBody"></div>
+
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--our team view-->
+<div data-role="view" id="ourteam" data-model="app.contact.viewModel" data-show="app.contact.viewModel.ourteamshow" data-use-native-scrolling="true">
+    <div data-role="content">
+        <h1 id="ourteamTitle"></h1>
+        <div id="ourteamBody"></div>
+        
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--privacyPolicy view-->
+<div data-role="view" id="privacyPolicy" data-model="app.contact.viewModel" data-show="app.contact.viewModel.privacypolicyshow" data-use-native-scrolling="true">
+    <div data-role="content">
+        <h1 id="privacyTitle"></h1>
+        <div id="privacyBody"></div>
+        
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!--termsConditionView view-->
+<div data-role="view" id="termsConditionView" data-model="app.contact.viewModel" data-show="app.contact.viewModel.termsshow" data-use-native-scrolling="true">
+    <div data-role="content">
+        <h1 id="termsTitle"></h1>
+        <div id="termsBody"></div>
+        
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@
         show :function(e)
         {   
             app.mobileApp.showLoading();
+            $('.homeFooter').css("display",'none');
             $('.bannerDv img').attr("src",sessionStorage.getItem('mainArticleImgPath'));
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -98,6 +99,7 @@
         setarticleDetail : function(data)
         {
             this.set("articleDetail",data);
+            $('.homeFooter').css("display",'block');
             setTimeout(function(){
                app.mobileApp.hideLoading();
             },5000);

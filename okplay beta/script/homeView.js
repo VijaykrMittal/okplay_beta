@@ -11,6 +11,7 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
+            $('.homeFooter').css("display",'none');
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
             $('#blockrightContent').css('background','none');
@@ -23,12 +24,14 @@
             else
             {
                 $('#blockrightContent').css('background','#E7E7E7');
+                $('.homeFooter').css("display",'block');
+                
             }
             
             $('.popup').hide();
             $('.srchtxt').val('');
-            $('.menu').unbind();
             
+            $('.menu').unbind();
             $('[data-role="view"]').unbind();
             $('[data-role="view"]#homepageView').on("click",function(e){
                 if($(e.target).hasClass('menu'))
@@ -41,6 +44,7 @@
                 }
             });
             //$(".km-native-scroller").scrollTop(0);
+            app.homeService.viewModel.footerApiCall();
             e.view.scroller.scrollTo(0, 0);
         },
         
@@ -194,6 +198,7 @@
             setTimeout(function(){
                 app.mobileApp.hideLoading();
             },2000);
+            
         },
         
         categoryArticle : function(e)
@@ -269,12 +274,94 @@
         setHomeLayout : function(data)
         {
             $('#blockrightContent').css('background','#E7E7E7');
+            $('.homeFooter').css("display",'block');
             var html = "";
             
             html +=data[0];
             html +=data[1];
             html +=data[2];
             $('#blockContent').html(html);
+        },
+        
+        footerApiCall : function()
+        {
+            var footerAPI = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: localStorage.getItem('footerContentAPI'),
+                        type:"GET",
+                        dataType: "json",
+                        data: { apiaction:"basicpagedata"} 
+                    }
+                },
+                schema: {
+                    data: function(data)
+                    {
+                        return [data];
+                    }
+                },
+                error: function (e) {
+                    app.mobileApp.hideLoading();
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                },
+
+            });
+            footerAPI.fetch(function(){
+                var data = this.data();
+                console.log(data);
+                if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                {
+                    app.homeService.viewModel.setFooterdata(data[0]['data']);
+                }
+                else
+                {
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                }
+            });  
+        },
+        
+        setFooterdata : function(data)
+        {
+            console.log(data);
+            dataFaqParam = [];
+            for(var x in data)
+            {
+                if(data[x]['title'] === ' About Us')
+                {
+                    sessionStorage.setItem('Abouttitle',data[x]['title']);
+                    sessionStorage.setItem('Aboutnid',data[x]['nid']);
+                    sessionStorage.setItem('Aboutbody',data[x]['body']);
+                }
+                
+                if(data[x]['title'] === 'Privacy Policy')
+                {
+                    sessionStorage.setItem('Privacytitle',data[x]['title']);
+                    sessionStorage.setItem('privacynid',data[x]['nid']);
+                    sessionStorage.setItem('privacybody',data[x]['body']);
+                }
+                
+                if(data[x]['title'] === 'Our Team')
+                {
+                    sessionStorage.setItem('Ourteamtitle',data[x]['title']);
+                    sessionStorage.setItem('Ourteamnid',data[x]['nid']);
+                    sessionStorage.setItem('Ourteambody',data[x]['body']);
+                }
+                
+                if(data[x]['title'] === 'Terms and conditions')
+                {
+                    sessionStorage.setItem('Termstitle',data[x]['title']);
+                    sessionStorage.setItem('Termsnid',data[x]['nid']);
+                    sessionStorage.setItem('Termsbody',data[x]['body']);
+                }
+                
+                if(data[x]['type'] === 'faq')
+                {
+                    dataFaqParam[x] = {nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']};
+                }
+            }
+            console.log(dataFaqParam);
         },
         
         movetoLogin:function()
@@ -285,7 +372,32 @@
         movetoSignup :function()
         {
             alert("movetoSignup");
-        }
+        },
+        
+        moveToContactus : function()
+        {
+            app.mobileApp.navigate("#contactus");
+        },
+        
+        moveToAboutus : function()
+        {
+            app.mobileApp.navigate("#aboutus");
+        },
+        
+        moveToOurteam : function()
+        {
+            app.mobileApp.navigate("#ourteam");
+        },
+        
+        moveToPrivacyPolicy : function()
+        {
+            app.mobileApp.navigate("#privacyPolicy");
+        },
+        
+        moveToTermsCondition : function()
+        {
+            app.mobileApp.navigate("#termsConditionView");
+        },
     });
     app.homeService = {
         viewModel : new homeViewModel()
