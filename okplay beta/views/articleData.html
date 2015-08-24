@@ -1,6 +1,15 @@
 <div data-role="view"  id="mainArticleView" data-model="app.mainArticleService.viewModel" data-show="app.mainArticleService.viewModel.show" data-use-native-scrolling="true">
     <div data-role="content">
         <div id="blokData" data-template="articleContentView" data-bind="source:articleDetail"></div>
+        
+        <div class="comments">
+            <hr/>
+            <p>
+                <a data-role="button" data-rel="modalview" href="#comment-view" class="addcom">Add Comments</a>
+            </p>
+            <p>Comments</p>
+        </div>
+        
         <div class="homeFooter">
             <div class="content1">
                 <h3 style="margin-left: 25px;">Who we are</h3>
@@ -24,15 +33,27 @@
             </div>
         </div>
     </div>
-    <!--<div data-role="footer">
-        <div data-role="tabstrip" id="tabstr" style="background:#fff">
-            <div class="shareDv">
-                <p>
-                    <a data-role="button" data-icon="share" id="shareArticleContent" data-click="checkit"></a>  
-                </p>                   
-            </div>
+</div>
+
+<div data-role="modalview" id="comment-view" style="width: 90%;">
+    <div data-role="header">
+        <div data-role="navbar" style="background-color:#21262C;color:#fff;">
+            <span>Comment</span>
+            <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
         </div>
-    </div>-->
+    </div>
+
+    <div data-role="content">
+        <p>
+            <input type="text" id="comment_text" class="commentTxtFld" data-bind="value:commentdata" placeholder="Add your comment"/>
+        </p>
+    </div>
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" data-align="right">Login</a>
+            <a data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button" data-align="right">Register</a>
+        </div>
+    </div>
 </div>
 
 <script type="text/x-kendo-template" id="articleContentView">

@@ -25,7 +25,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -72,26 +72,26 @@
 </div>
 
 <!--Contact us View-->
-<div data-role="view" id="contactus" data-use-native-scrolling="true" data-model="app.contact.viewModel" data-show="app.contact.viewModel.show">
+<div data-role="view" id="contactus" data-use-native-scrolling="true" data-model="app.contact.viewModel" data-show="app.contact.viewModel.show" data-before-show="app.contact.viewModel.showbefore">
     <div data-role="content">
         <div class="contactFldFrm">
             <h1 class="page-title">Contact Us</h1>
             <form id="contactusForm">
                 <p>
                     
-                    <input type="text" name="contect_name" id="contect_name" class="contTxtfld" placeholder="Name" required/>
+                    <input type="text" name="contect_name" data-bind="value:contect_name" id="contect_name" class="contTxtfld" placeholder="Name" required/>
                 </p>
                 <p>
                     
-                    <input type="text" name="contect_email" id="contect_email" class="contTxtfld" placeholder="Email ID" required/>
+                    <input type="text" name="contect_email" data-bind="value:contect_email" id="contect_email" class="contTxtfld" placeholder="Email ID" required/>
                 </p>
                 <p>
                     
-                    <input type="number" name="contect_number" id="contect_number" maxlength="10" class="contTxtfld" placeholder="Mobile Number" required/>
+                    <input type="number" name="contect_number" data-bind="value:contect_number" id="contect_number" maxlength="10" class="contTxtfld" placeholder="Mobile Number" required/>
                 </p>
                 <p>
                     
-                    <textarea placeholder="Message" name="contect_message" id="contect_message" class="conttxtarea" required></textarea>
+                    <textarea placeholder="Message" name="contect_message" data-bind="value:contect_message" id="contect_message" class="conttxtarea" required></textarea>
                 </p>
             </form>
         </div>
@@ -125,7 +125,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -156,7 +156,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -187,7 +187,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -219,7 +219,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -227,3 +227,42 @@
         </div>
     </div>
 </div>
+
+<!--faqsView view-->
+<div data-role="view" id="faqsView" data-model="app.contact.viewModel" data-show="app.contact.viewModel.faqshow" data-use-native-scrolling="true">
+    <div data-role="content">
+        <h2 id="faqsTitle">Frequently Asked Questions</h2>
+        <div id="faqsBody">
+            <div class="faqList">
+                
+            </div>
+            <div class="faqdata">
+                
+            </div>
+        </div>
+        
+        <div class="homeFooter">
+            <div class="content1">
+                <h3 style="margin-left: 25px;">Who we are</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToAboutus">About Us</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToOurteam">Our Team</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToPrivacyPolicy">Privacy Policy</a></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="content2">
+                <h3 style="margin-left: 25px;">CUSTOMER CARE</h3>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
+                        <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

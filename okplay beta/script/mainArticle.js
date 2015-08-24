@@ -40,6 +40,8 @@
                 alert(sessionStorage.getItem('catNodeId'));
                 app.mainArticleService.viewModel.shareThisArticle(sessionStorage.getItem('catNodeId'),sessionStorage.getItem('catNodeId'));
             });*/
+            
+            $('.comments').css('display','none');
         },
         
         articleDetailAPI : function(data)
@@ -100,6 +102,8 @@
         {
             this.set("articleDetail",data);
             $('.homeFooter').css("display",'block');
+            $('.comments').css('display','block');
+            
             setTimeout(function(){
                app.mobileApp.hideLoading();
             },5000);
@@ -108,9 +112,7 @@
         
         shareThisArticle : function(e)
         {
-            //alert("ok");
             app.categoryService.viewModel.shareMessageAndURL(sessionStorage.getItem('catNodeId'),e['target']['context']['attributes']['data-title']['value'],"The Message");
-            //app.categoryService.viewModel.shareMessageAndURL(id,title,"The Message");
         }
     });
     app.mainArticleService = {

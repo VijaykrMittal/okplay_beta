@@ -56,20 +56,14 @@ li:after {content: none;}
 
 /*Loader*/
 .km-loader {background-color: #FFF !important;}
-.km-loader:before {background: #C41010 !important}
+.km-loader:before {background: #FFF !important}
 
 /*13-08-2015*/
 /*.km-list>li { border-style: none !important;}*/
 
 
 
-/*loader*/
-.km-loader:before {background:none !important}
-.km-flat .km-loader>*:not(h1) {background:url('./images/loader.gif') no-repeat !important}
-.km-loading-left {}
-.km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
-.km-flat .km-loader .km-loading-right {font-size:0px !important;}
-.km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 42% !important;left: 40% !important;animation: none !important; -webkit-animation:none !important}
+
 
 
 

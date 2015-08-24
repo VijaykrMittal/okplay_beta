@@ -7,7 +7,7 @@
         loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
         networkStatus : true,
         homePageData:[],
-        
+        faqsData : [],
         show:function(e)
         {
             app.mobileApp.showLoading();
@@ -43,9 +43,9 @@
                     $('.popup').hide();
                 }
             });
-            //$(".km-native-scroller").scrollTop(0);
+            $(".km-native-scroller").scrollTop(0);
             app.homeService.viewModel.footerApiCall();
-            e.view.scroller.scrollTo(0, 0);
+            //e.view.scroller.scrollTo(0, 0);
         },
         
         getUserLoginStatus :function()
@@ -358,11 +358,17 @@
                 
                 if(data[x]['type'] === 'faq')
                 {
-                    dataFaqParam[x] = {nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']};
+                   // dataFaqParam[x] = {nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']};
+                    dataFaqParam.push({nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']});
                 }
+                
             }
-            console.log(dataFaqParam);
+            this.set('faqsData',dataFaqParam);
+           // console.log(dataFaqParam);
+           // localStorage["dataFaqParam"] = JSON.stringify(dataFaqParam);
         },
+        
+        
         
         movetoLogin:function()
         {
@@ -398,6 +404,11 @@
         {
             app.mobileApp.navigate("#termsConditionView");
         },
+        
+        moveToFaqs :function()
+        {
+            app.mobileApp.navigate("#faqsView");
+        }
     });
     app.homeService = {
         viewModel : new homeViewModel()

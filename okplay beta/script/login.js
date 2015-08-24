@@ -62,6 +62,7 @@
         
         loginSubmit:function()
         {
+            app.mobileApp.showLoading();
             var status = $('#loginForm').valid();
 
             if(status === false)
@@ -82,7 +83,7 @@
                     transport:{
                         read:{
                             url:localStorage.getItem('userLoginAPI'),
-                            type:'POST',
+                            type:'GET',
                             dataType:'json',
                             data:{apiaction:'userlogin',username:loginBindingValue.email,password:loginBindingValue.pwd}
                         }
@@ -101,6 +102,7 @@
                 });
                 loginDataSource.fetch(function(){
                 	var data = this.data();
+                    console.log(data);
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         app.loginService.viewModel.setUserLogindata(data[0]['data']);
@@ -124,6 +126,8 @@
         {
             localStorage.setItem('userEmail',data['mail']);
             localStorage.setItem('userName',data['name']);
+            localStorage.setItem('userid',data['userid']);
+            localStorage.setItem('status',data['status']);
             localStorage.setItem("loginStatus",true);
             app.homeService.viewModel.loginStatus=true;
             app.mobileApp.hideLoading();
@@ -134,6 +138,7 @@
         {
             localStorage.removeItem('userEmail');
             localStorage.removeItem('userName');
+            localStorage.removeItem('userid');
             localStorage.setItem("loginStatus",false);
             app.homeService.viewModel.loginStatus = false;
             app.mobileApp.navigate("views/homepage.html");
