@@ -4,10 +4,17 @@
         
         <div class="comments">
             <hr/>
-            <p>
-                <a data-role="button" data-rel="modalview" href="#comment-view" class="addcom">Add Comments</a>
-            </p>
-            <p>Comments</p>
+            <p class="txtTit">Comments</p>
+            <div class="commentfld">
+                    <p>
+                        <input type="text" name="commentbox" id="commentbox" class="commenttxtbx"/>
+                        <a data-role="button" class="commentpostbtn">Post</a>
+                    </p>
+            </div>
+            <div></div>
+            <div class="commentDataListView">
+                <!-- <ul id="commentList" data-bind="source:commentDataSource" data-template="commentViewTemplate"></ul>-->
+            </div>
         </div>
         
         <div class="homeFooter">
@@ -50,11 +57,15 @@
     </div>
     <div data-role="footer">
         <div data-role="navbar">
-            <a data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" data-align="right">Login</a>
-            <a data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button" data-align="right">Register</a>
+            <a data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" data-align="right" style="width:150px;">Post</a>
+            <a data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button" data-align="right" style="width:150px">Cancel</a>
         </div>
     </div>
 </div>
+
+<script type="text/x-kendo-template" id="commentViewTemplate">
+    
+</script>
 
 <script type="text/x-kendo-template" id="articleContentView">
     #if(data === ""){#
@@ -134,8 +145,7 @@
 </script>
 
 <script>
-    function checkit()
-    {
-        alert("ok");
+    function closeModalViewLogin() {
+        $("#comment-view").kendoMobileModalView("close");
     }
 </script>

@@ -4,6 +4,7 @@
     
     mainArticleViewModel = kendo.data.ObservableObject.extend({
         articleDetail:'',
+        commentDataSource:'',
         
         show :function(e)
         {   
@@ -85,7 +86,6 @@
             });
             articleContent.fetch(function(){
                 var data = this.data();
-                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     sessionStorage.setItem('readArticleTitle',data[0]['data']['field_first_title']);
@@ -101,13 +101,98 @@
         setarticleDetail : function(data)
         {
             this.set("articleDetail",data);
+            //this.set('commentDataSource',data['commentdata']);
+            app.mainArticleService.viewModel.setcommenthtml(data['commentdata']);
             $('.homeFooter').css("display",'block');
             $('.comments').css('display','block');
             
             setTimeout(function(){
                app.mobileApp.hideLoading();
             },5000);
-            //app.mobileApp.hideLoading();
+        },
+        
+        setcommenthtml : function(data)
+        {
+            console.log(data);
+            
+            var commentHtml ='';
+            var commentInnerHtml = '';
+            parentArray = [];
+            if(data.length === 0)
+            {
+                commentHtml ='<h4>There is no comments</h4>';
+            }
+            else
+            {
+                commentHtml = '<ul style="list-style-type:none;margin-left:-40px">';
+                var className = 'root';
+                var i= 0;
+                for(var x in data)
+                {
+                    
+                    if($.isNumeric(x))
+                    {
+                        
+                        
+                        if(data[x]['pid']=== '0')
+                        {   
+                            i= 0;
+                            var className = 'root';
+                        }
+                        else
+                        {
+                             i++;
+                            var className = 'root-'+i;
+                            
+                        }
+                        
+                        var date = new Date(Number(data[x]['created'])*1000);
+                            mid = "AM";
+                            hours = date.getHours();
+                            tempHours = hours;
+                            if(tempHours >= 12)
+                            {
+                                tempHours = hours-12;
+                                mid = 'PM';
+                            }
+                            
+                            if(tempHours === 0)
+                            {
+                                tempHours = 12;
+                            }
+                        
+                        if(data[x]['u_uid'] === 0 || data[x]['u_uid'] === '0')
+                        {
+                            username = 'Anonymous';
+                        }
+                        else
+                        {
+                                username = data[x]['name'];
+                        }
+                        
+                        
+                        commentHtml +='<li>';
+                        commentHtml += '<div class="'+className+'" id="rootId'+data[x]['cid']+'" style="width:100%;display: inline-block;margin-bottom:15px;">';
+                        commentHtml += '<div style="width:30%;float:left">';
+                        commentHtml += '<ul style="list-style-type:none;margin-left:-35px"><li><img src="styles/images/user-face.png" style="width:80px;height:80px;border-radius:50%"/></li><li><span style="font-size:13px">'+username+'</span></li></ul>';
+                        commentHtml += '</div>';
+                        commentHtml += '<div style="width:70%;float:left">';
+                        commentHtml += '<div style="width:100%;display: inline-block;margin: 20px 0px 0px 0px;">';
+                        commentHtml += '<div style="width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;">'+data[x]['subject']+'</div>';
+                        commentHtml += '<div style="width:100%;margin-top:15px;display: inline-block;">';
+                        commentHtml += '<span style="width:50%;float:left;font-size:13px">'+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+tempHours+':'+date.getMinutes()+' '+mid+'</span>';
+                        commentHtml += '<ul style="float:left;width:50%;list-style:none;"><li style="float:left;margin:0px 20px 0px 0px"><input type="button" style="border:none;background:none" data-role="button" value="Reply" data-rel="modalview" href="#comment-view"/></li><li style="display:none">like</li></ul>';
+                        commentHtml += '</div>';
+                        commentHtml += '</div>';
+                        commentHtml += '</div>';
+                        commentHtml += '</div>';
+                        commentHtml +='</li>';
+                    }
+                }
+                commentHtml += '</ul>';
+            }
+            
+            $('.commentDataListView').html(commentHtml);
         },
         
         shareThisArticle : function(e)

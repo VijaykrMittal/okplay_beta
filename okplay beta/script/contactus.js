@@ -204,7 +204,7 @@
                     faqdataHtml += '<div class="faqQuest">';
                     faqListhtml +='<li><a id="'+data[i]['nid']+'" name="'+data[i]['nid']+'">"'+data[i]['title']+'"</a></li>';
                     faqdataHtml += '<span>';
-                    faqdataHtml += '<a href="#">"'+data[i]['title']+'"</a>';
+                    faqdataHtml += '<a>"'+data[i]['title']+'"</a>';
                     faqdataHtml += '</span>';
                     faqdataHtml += '</div>';
                     faqdataHtml += '<div class="faqAnswer">';
