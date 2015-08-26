@@ -137,6 +137,7 @@ var app = (function(global){
     localStorage.setItem("homePageBlockAPI","http://okplay.club/mobileapi/homepageblocks");
     localStorage.setItem("footerContentAPI","http://okplay.club/mobileapi/basicpagedata");
     localStorage.setItem("contactusAPI","http://okplay.club/mobileapi/savecontactus");
+    localStorage.setItem("commentAPI","http://okplay.club/mobileapi/savecommentdata");
     return{
       mobileApp : mobileApp
     };

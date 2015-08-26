@@ -101,8 +101,8 @@
         readMoreArticle : function(e)
         {
             $('.popup').hide();
-            sessionStorage.setItem("srchNodeId",e['target']['context']['attributes']['data-id']['value']);
-            app.mobileApp.navigate("views/articleData.html?param=searchList");
+            sessionStorage.setItem("catNodeId",e['target']['context']['attributes']['data-id']['value']);
+            app.mobileApp.navigate("views/articleData.html");
         }
     });
     app.searchService = {

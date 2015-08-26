@@ -6,10 +6,12 @@
             <hr/>
             <p class="txtTit">Comments</p>
             <div class="commentfld">
+                <form id="rootForm">
                     <p>
-                        <input type="text" name="commentbox" id="commentbox" class="commenttxtbx"/>
-                        <a data-role="button" class="commentpostbtn">Post</a>
+                        <input type="text" name="commentbox" data-bind="value:rootCommentdata" id="commentbox" class="commenttxtbx"/>
                     </p>
+                </form>
+               <a data-role="button" data-click="app.mainArticleService.viewModel.postRootComment" class="commentpostbtn">Post</a>
             </div>
             <div></div>
             <div class="commentDataListView">
@@ -33,7 +35,7 @@
                 <div class="content">
                     <ul class="menu">
                         <li class="first leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToTermsCondition">Terms &amp; Conditions</a></li>
-                        <li class="leaf"><a data-role="button" title="">FAQs</a></li>
+                        <li class="leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToFaqs">FAQs</a></li>
                         <li class="last leaf"><a data-role="button" data-click="app.homeService.viewModel.moveToContactus" title="">Contact Us</a></li>
                     </ul>
                 </div>
@@ -42,29 +44,33 @@
     </div>
 </div>
 
-<div data-role="modalview" id="comment-view" style="width: 90%;">
+<div data-role="modalview" id="comment-view" style="width: 90%;" data-model="app.mainArticleService.viewModel" data-before-open="app.mainArticleService.viewModel.modalViewOpen">
     <div data-role="header">
-        <div data-role="navbar" style="background-color:#21262C;color:#fff;">
+        <div data-role="navbar" class="modalnvbar">
             <span>Comment</span>
             <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
         </div>
     </div>
 
     <div data-role="content">
-        <p>
-            <input type="text" id="comment_text" class="commentTxtFld" data-bind="value:commentdata" placeholder="Add your comment"/>
-        </p>
+        <form id="replyForm">
+            <p>
+                <input type="text" id="comment_text"  class="commentTxtFld" data-bind="value:replycommentdata" placeholder="Add your comment"/>
+            </p>
+        </form>
     </div>
     <div data-role="footer">
         <div data-role="navbar">
-            <a data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" data-align="right" style="width:150px;">Post</a>
-            <a data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button" data-align="right" style="width:150px">Cancel</a>
+            <a id="modalview-post-button" type="button" data-role="button" data-click="app.mainArticleService.viewModel.postReplyComment" data-align="right">Post</a>
         </div>
     </div>
 </div>
 
-<script type="text/x-kendo-template" id="commentViewTemplate">
-    
+<script>
+    function check()
+    {
+        alert("open");
+    }
 </script>
 
 <script type="text/x-kendo-template" id="articleContentView">

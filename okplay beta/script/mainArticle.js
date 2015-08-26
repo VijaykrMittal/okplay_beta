@@ -1,6 +1,7 @@
 (function(global){
     var mainArticleViewModel,
         app = global.app = global.app || {};
+    var replyBindingValue,rootCommentBindingValue;
     
     mainArticleViewModel = kendo.data.ObservableObject.extend({
         articleDetail:'',
@@ -11,6 +12,7 @@
             app.mobileApp.showLoading();
             $('.homeFooter').css("display",'none');
             $('.bannerDv img').attr("src",sessionStorage.getItem('mainArticleImgPath'));
+            
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
             $('[data-role="view"]#mainArticleView').on("click",function(e){
@@ -26,21 +28,14 @@
             });
             
             $('.mainTempDv').html("");
-            e.view.scroller.scrollTo(0, 0);
-            if(e['sender']['params']['param'] === "articleList")
-            {
-                app.mainArticleService.viewModel.articleDetailAPI(sessionStorage.getItem("catNodeId"));
-            }
-            else
-            {
-                app.mainArticleService.viewModel.articleDetailAPI(sessionStorage.getItem("srchNodeId"));
-            }
+            $(".km-native-scroller").scrollTop(0);
+            app.mainArticleService.viewModel.articleDetailAPI(sessionStorage.getItem("catNodeId"));
             
-            /*$('#shareArticleContent').click(function(){
-                alert(sessionStorage.getItem('readArticleTitle'));
-                alert(sessionStorage.getItem('catNodeId'));
-                app.mainArticleService.viewModel.shareThisArticle(sessionStorage.getItem('catNodeId'),sessionStorage.getItem('catNodeId'));
-            });*/
+            rootCommentBindingValue = kendo.observable({
+                rootCommentdata: '',
+            });
+
+            kendo.bind($('#rootForm'), rootCommentBindingValue);
             
             $('.comments').css('display','none');
         },
@@ -86,6 +81,7 @@
             });
             articleContent.fetch(function(){
                 var data = this.data();
+                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     sessionStorage.setItem('readArticleTitle',data[0]['data']['field_first_title']);
@@ -116,7 +112,7 @@
             console.log(data);
             
             var commentHtml ='';
-            var commentInnerHtml = '';
+            
             parentArray = [];
             if(data.length === 0)
             {
@@ -124,7 +120,7 @@
             }
             else
             {
-                commentHtml = '<ul style="list-style-type:none;margin-left:-40px">';
+                commentHtml = '<ul>';
                 var className = 'root';
                 var i= 0;
                 for(var x in data)
@@ -172,16 +168,16 @@
                         
                         
                         commentHtml +='<li>';
-                        commentHtml += '<div class="'+className+'" id="rootId'+data[x]['cid']+'" style="width:100%;display: inline-block;margin-bottom:15px;">';
-                        commentHtml += '<div style="width:30%;float:left">';
-                        commentHtml += '<ul style="list-style-type:none;margin-left:-35px"><li><img src="styles/images/user-face.png" style="width:80px;height:80px;border-radius:50%"/></li><li><span style="font-size:13px">'+username+'</span></li></ul>';
+                        commentHtml += '<div class="'+className+'" id="rootId'+data[x]['cid']+'">';
+                        commentHtml += '<div class="leftDv">';
+                        commentHtml += '<ul><li><img src="styles/images/user-face.png" class="imgcls"/></li><li><span>'+username+'</span></li></ul>';
                         commentHtml += '</div>';
-                        commentHtml += '<div style="width:70%;float:left">';
-                        commentHtml += '<div style="width:100%;display: inline-block;margin: 20px 0px 0px 0px;">';
-                        commentHtml += '<div style="width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;">'+data[x]['subject']+'</div>';
-                        commentHtml += '<div style="width:100%;margin-top:15px;display: inline-block;">';
-                        commentHtml += '<span style="width:50%;float:left;font-size:13px">'+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+tempHours+':'+date.getMinutes()+' '+mid+'</span>';
-                        commentHtml += '<ul style="float:left;width:50%;list-style:none;"><li style="float:left;margin:0px 20px 0px 0px"><input type="button" style="border:none;background:none" data-role="button" value="Reply" data-rel="modalview" href="#comment-view"/></li><li style="display:none">like</li></ul>';
+                        commentHtml += '<div class="rightDv">';
+                        commentHtml += '<div class="innerDv">';
+                        commentHtml += '<div class="commentTxt">'+data[x]['subject']+'</div>';
+                        commentHtml += '<div class="creatDv">';
+                        commentHtml += '<span>'+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+tempHours+':'+date.getMinutes()+' '+mid+'</span>';
+                        commentHtml += '<ul><li class="repli"><input type="button" class="replycls" data-cid="'+data[x]['cid']+'" data-role="button" value="Reply" data-rel="modalview" href="#comment-view"/></li><li style="display:none">like</li></ul>';
                         commentHtml += '</div>';
                         commentHtml += '</div>';
                         commentHtml += '</div>';
@@ -198,6 +194,144 @@
         shareThisArticle : function(e)
         {
             app.categoryService.viewModel.shareMessageAndURL(sessionStorage.getItem('catNodeId'),e['target']['context']['attributes']['data-title']['value'],"The Message");
+        },
+        
+        modalViewOpen:function(e)
+        {
+            e.preventDefault();
+            sessionStorage.setItem('replyPID',e['target']['context']['attributes']['data-cid'].value);
+            if(app.homeService.viewModel.loginStatus === false || app.homeService.viewModel.loginStatus === 'false')
+            {
+                navigator.notification.confirm('For comment post you need to login first.', function (confirmed) {
+                	if (confirmed === true || confirmed === 1) {
+                		app.mobileApp.navigate("views/login.html");
+                	}
+                }, 'Notification', 'Ok,Cancel');
+            }
+            else
+            {
+                $("#comment-view").kendoMobileModalView("open");
+                replyBindingValue = kendo.observable({
+                replycommentdata: '',
+                });
+
+                kendo.bind($('#replyForm'), replyBindingValue);
+            }
+        },
+        
+        postReplyComment : function()
+        {
+            if(app.homeService.viewModel.loginStatus === false || app.homeService.viewModel.loginStatus === 'false')
+            {
+                navigator.notification.confirm('For comment post you need to login first.', function (confirmed) {
+                	if (confirmed === true || confirmed === 1) {
+                		app.mobileApp.navigate("views/login.html");
+                	}
+                }, 'Notification', 'Ok,Cancel');
+            }
+            else
+            {
+                if(replyBindingValue.replycommentdata === "")
+                {
+                    navigator.notification.alert("Please enter your comment.",function () { }, "Notification", 'OK');
+                }
+                else
+                {
+                    dataParam = [];
+                    dataParam['commentdata'] = replyBindingValue.replycommentdata;
+                    dataParam['nid'] = sessionStorage.getItem('catNodeId');
+                    dataParam['pid'] = sessionStorage.getItem('replyPID');
+                    dataParam['cid'] = 0;
+                    dataParam['userid'] = localStorage.getItem('userid');
+                    dataParam['apiaction'] = 'savecommentdata';
+                    /*alert("subject : "+dataParam['commentData']);
+                    alert("nodeId : "+dataParam['nodeId']);
+                    alert("pid : "+dataParam['pid']);
+                    alert("cid : "+dataParam['cid']);
+                    alert("userid : "+dataParam['userid']);
+                    app.mainArticleService.viewModel.show();*/
+                    app.mainArticleService.viewModel.commentRootReply(dataParam);
+                    console.log(dataParam);
+                    $("#comment-view").kendoMobileModalView("close");
+                }
+            }
+        },
+        
+        postRootComment :function()
+        {
+            if(app.homeService.viewModel.loginStatus === false || app.homeService.viewModel.loginStatus === 'false')
+            {
+                navigator.notification.confirm('For comment post you need to login first.', function (confirmed) {
+                	if (confirmed === true || confirmed === 1) {
+                		app.mobileApp.navigate("views/login.html");
+                	}
+                }, 'Notification', 'Ok,Cancel');
+            }
+            else
+            {
+                if(rootCommentBindingValue.rootCommentdata === "")
+                {
+                    navigator.notification.alert("Please enter your comment.",function () { }, "Notification", 'OK');
+                }
+                else
+                {
+                    dataParam = [];
+                    dataParam['commentdata'] = rootCommentBindingValue.rootCommentdata;
+                    dataParam['nid'] = sessionStorage.getItem('catNodeId');
+                    dataParam['pid'] = 0;
+                    dataParam['cid'] = 0;
+                    dataParam['userid'] = localStorage.getItem('userid');
+                    dataParam['apiaction'] = 'savecommentdata';
+                    app.mainArticleService.viewModel.commentRootReply(dataParam);
+                    /*alert("subject : "+dataParam['commentData']);
+                    alert("nodeId : "+dataParam['nodeId']);
+                    alert("pid : "+dataParam['pid']);
+                    alert("cid : "+dataParam['cid']);
+                    alert("userid : "+dataParam['userid']);
+                    app.mainArticleService.viewModel.show();*/
+                    console.log(dataParam);
+                }
+            }
+        },
+        
+        commentRootReply : function(data)
+        {
+            console.log(data);
+            app.mobileApp.showLoading();
+            var commentPost = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: localStorage.getItem('commentAPI'),
+                        type:"POST",
+                        dataType: "json", 
+                        data: data
+                    }
+                },
+                schema: {
+                    data: function(data)
+                    {
+                        return [data];
+                    }
+                },
+                error: function (e) {
+                    app.mobileApp.hideLoading();
+                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Notification", 'OK');
+                },
+
+            });
+            commentPost.fetch(function(){
+                var data = this.data();
+                console.log(data);
+                if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                {
+                    app.mainArticleService.viewModel.show();
+                }
+                else
+                {
+                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
+                }
+            });
         }
     });
     app.mainArticleService = {

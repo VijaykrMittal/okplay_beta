@@ -131,6 +131,7 @@
             localStorage.setItem("loginStatus",true);
             app.homeService.viewModel.loginStatus=true;
             app.mobileApp.hideLoading();
+            app.homeService.viewModel.getUserLoginStatus();
             app.mobileApp.navigate("views/homepage.html");
         },
         
@@ -141,6 +142,7 @@
             localStorage.removeItem('userid');
             localStorage.setItem("loginStatus",false);
             app.homeService.viewModel.loginStatus = false;
+             app.homeService.viewModel.getUserLoginStatus();
             app.mobileApp.navigate("views/homepage.html");
             app.homeService.viewModel.show();
         },

@@ -175,9 +175,23 @@
         
         faqshow : function()
         {
-            console.log();
+            $('.popup').hide();
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#faqsView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                    $('.popup').hide();
+                }
+            });
+            
             var data = app.homeService.viewModel.faqsData;
-            console.log(data);
+            
             var faqListhtml = '';
             faqListhtml = '<div class="faqList">';
             faqListhtml += '<ul>';
@@ -185,10 +199,8 @@
             {
                 if($.isNumeric(i))
                 {
-                   // console.log(data[x]);
                     faqListhtml +='<li><a data-id="'+data[i]['nid']+'" href="#'+data[i]['nid']+'">"'+data[i]['title']+'"</a></li>';
                 }
-                //
             }
             faqListhtml +='</ul>';
             faqListhtml += '</div>';
@@ -202,19 +214,19 @@
                 if($.isNumeric(i))
                 {
                     faqdataHtml += '<div class="faqQuest">';
-                    faqListhtml +='<li><a id="'+data[i]['nid']+'" name="'+data[i]['nid']+'">"'+data[i]['title']+'"</a></li>';
+                    faqListhtml +='<li><a id="'+data[i]['nid']+'" name="'+data[i]['nid']+'">'+data[i]['title']+'</a></li>';
                     faqdataHtml += '<span>';
-                    faqdataHtml += '<a>"'+data[i]['title']+'"</a>';
+                    faqdataHtml += '<a>'+data[i]['title']+'</a>';
                     faqdataHtml += '</span>';
                     faqdataHtml += '</div>';
                     faqdataHtml += '<div class="faqAnswer">';
-                    faqdataHtml += '<p>"'+data[i]['body']+'"</p>';
+                    faqdataHtml += '<p>'+data[i]['body']+'</p>';
                     faqdataHtml += '</div>';
                 }
                 
             }
             $('.faqdata').html(faqdataHtml);
-          
+            $(".km-native-scroller").scrollTop(0);
         },
         
         submitContact : function()

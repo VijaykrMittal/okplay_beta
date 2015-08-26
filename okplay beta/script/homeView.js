@@ -11,10 +11,14 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
+            
             $('.homeFooter').css("display",'none');
+            $('#blockrightContent').css('background','none');
+            
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
-            $('#blockrightContent').css('background','none');
+            app.homeService.viewModel.footerApiCall();
+            
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
@@ -44,7 +48,7 @@
                 }
             });
             $(".km-native-scroller").scrollTop(0);
-            app.homeService.viewModel.footerApiCall();
+            
             //e.view.scroller.scrollTo(0, 0);
         },
         
@@ -63,7 +67,7 @@
                 hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
             }
             
-            $('#mainLayoutID').html(hhtml);
+            $('.mainLayoutID').html(hhtml);
             kendo.bind('.mainLayoutID',app.homeService.viewModel);
         },
         
@@ -309,7 +313,6 @@
             });
             footerAPI.fetch(function(){
                 var data = this.data();
-                console.log(data);
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.homeService.viewModel.setFooterdata(data[0]['data']);
@@ -324,7 +327,6 @@
         
         setFooterdata : function(data)
         {
-            console.log(data);
             dataFaqParam = [];
             for(var x in data)
             {
@@ -358,17 +360,12 @@
                 
                 if(data[x]['type'] === 'faq')
                 {
-                   // dataFaqParam[x] = {nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']};
                     dataFaqParam.push({nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']});
                 }
                 
             }
             this.set('faqsData',dataFaqParam);
-           // console.log(dataFaqParam);
-           // localStorage["dataFaqParam"] = JSON.stringify(dataFaqParam);
         },
-        
-        
         
         movetoLogin:function()
         {
