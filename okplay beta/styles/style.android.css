@@ -315,7 +315,7 @@
     .sharebtnDFT {width: 40px !important;height: 40px !important;color:#FFF !important;margin: 1px 0px 0px -4px;z-index: 99999999;border-style: none !important;background: url('styles/images/share-w.png') no-repeat !important;background-size: 75% 75% !important;}
     .sharebtnDFT:active {background:none !important;color:#FFF !important;margin: 1px 0px 0px -4px !important;}
     .sharebtnDFT span {font-size:25px !important;}
-    .searchBtnDFT {position: absolute;top: 259px;right: -7px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtnDFT {position: absolute;top: 224px;right: -7px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}
     .searchBtn {position: absolute;top: 290px;right: -7px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}

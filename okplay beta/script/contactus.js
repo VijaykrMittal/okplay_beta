@@ -235,7 +235,7 @@
 
             if(status === false)
             return status;
-            console.log(localStorage.getItem('uid'));
+            
             if (!window.connectionInfo.checkConnection()) {
                 navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
                     if (confirmed === true || confirmed === 1) {
@@ -261,7 +261,7 @@
                 {
                     dataParam['userid'] = localStorage.getItem('userid');
                 }
-                console.log(dataParam);
+                app.mobileApp.showLoading();
                 var contactDataSource = new kendo.data.DataSource({
                     transport:{
                         read:{
@@ -285,8 +285,6 @@
                 });
                 contactDataSource.fetch(function(){
                 	var data = this.data();
-                    console.log(data);
-                    
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         navigator.notification.alert("Thank you, your submission has been received.",
@@ -300,6 +298,7 @@
         setblankContactForm : function()
         {
             app.contact.viewModel.showbefore();
+            app.mobileApp.hideLoading();
         }
     });
     app.contact = {
