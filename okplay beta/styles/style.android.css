@@ -360,7 +360,7 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     #contactusForm .contTxtfld{width: 100%;height: 35px;margin-left: 15px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
-    #contactusForm .conttxtarea{width: 100%;margin-left: 15px;height: 120px;padding: 8px;}
+    #contactusForm .conttxtarea{width: 100%;margin-left: 15px;  padding: 5px 0px 75px 8px;padding: 8px;}
     #contactusForm .conttxtarea + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
     .contactFldFrm{width: 90%;display: block;margin-bottom: 30px;}
     .contactFldFrm h1 {margin-left: 29px;}
@@ -399,7 +399,7 @@
     
     
     /*26-08-2015*/
-    .faqQuest{font-size: 18px;font-weight: 700;padding: 0 15px 6px;text-align:justify;color:#000}
+    .faqQuest{font-size: 18px;font-weight: 600;padding: 0 15px 6px;text-align:justify;color:#3D3D3D}
     .faqAnswer p{font-size: 16px;font-weight: 400;line-height: 22px;margin-bottom: 25px;text-align:justify}
     
     .commentDataListView {width:100%;height:auto;}
@@ -437,4 +437,7 @@
     #comment-view .modalnvbar {background-color:#21262C;color:#fff;}
     #modalview-post-button{width:110px;background-color: #80CFF6;color: #000;  margin-right: 7px}
     .default,.logindft{display:none}
+    
+    .footerShareBtn {  border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .footerShareBtn .km-share:after {font-size: 25px !important;margin: 1px 0px 0px -7px !important;}
 }

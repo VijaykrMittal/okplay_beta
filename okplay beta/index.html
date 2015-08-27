@@ -46,7 +46,7 @@
         </header>
     </div>
     
-    <div data-role="view" id="categoryArticleView"  data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
+    <div data-role="view" id="categoryArticleView"  data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="false" data-before-show="app.categoryService.viewModel.redirectBack">
         <div data-role="content">
             <div id="filterDropdwn">
                 <h2 class="txtclass" data-bind="text:selectCategory"></h2>
@@ -103,7 +103,7 @@
         #var imagePath = data['path']#
         
         #if(imagePath !== "http://okplay.club/"){#
-            <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-path="#:data['path']#" class="articleDv">
+            <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-title="#: data['title'] #" data-path="#:data['path']#" class="articleDv">
                 <span class="shadow"><img src="styles/images/shadow.png"></span>
                 <img src="#:data['path']#" width="100%" height="100%"/>   
                 <div class="ageGrouop">
@@ -119,7 +119,7 @@
                 <p data-value="#: data['id'] #" class="title">#: data['title'] #</p>
             </div>
         #}else{#
-            <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-path="#:data['path']#" class="articleDvDft">
+            <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-title="#: data['title'] #" data-path="#:data['path']#" class="articleDvDft">
                 <span class="shadow"><img src="styles/images/shadow.png"></span>
                 <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
                 <div class="ageGrouop">

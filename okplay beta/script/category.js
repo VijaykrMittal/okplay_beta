@@ -101,6 +101,7 @@
                 categoryDataSource .fetch(function(){
                     var that = this;
                     var data = that.data();
+                    console.log(data);
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                        app.categoryService.viewModel.setArticleListData(data[0]['data']);
@@ -231,6 +232,7 @@
         {
             $('.popup').hide();
             sessionStorage.setItem("catNodeId",e['currentTarget']['attributes']['data-id']['value']);
+            sessionStorage.setItem("cattitle",e['currentTarget']['attributes']['data-title']['value']);
             app.mobileApp.navigate("views/articleData.html");
         },
         

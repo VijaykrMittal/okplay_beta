@@ -37,7 +37,7 @@ li:after {content: none;}
 #signupForm .camDv .camContDv .captureBtn img{border-radius: 50%;width:110px !important;height:110px !important}
 .articleTit {font-size: 18px;color: #FFF;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times}
 .blankarticleTit {font-size: 18px;color: #FFF;margin: 16px;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;}
-#signupForm h2 {text-align:center}
+#signupForm h2 {text-align:center;font-family: 'Lato', sans-serif;}
 /*#signupForm p label:nth-child(1) {margin-left:-3px}
 #signupForm p label:nth-child(2) {margin-left:47px}*/
 

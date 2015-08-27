@@ -193,7 +193,7 @@
         
         shareThisArticle : function(e)
         {
-            app.categoryService.viewModel.shareMessageAndURL(sessionStorage.getItem('catNodeId'),e['target']['context']['attributes']['data-title']['value'],"The Message");
+            app.categoryService.viewModel.shareMessageAndURL(sessionStorage.getItem('catNodeId'),sessionStorage.getItem('cattitle'),"The Message");
         },
         
         modalViewOpen:function(e)

@@ -8,7 +8,7 @@
             <div class="commentfld">
                 <form id="rootForm">
                     <p>
-                        <input type="text" name="commentbox" data-bind="value:rootCommentdata" id="commentbox" class="commenttxtbx"/>
+                        <input type="text" name="commentbox" data-bind="value:rootCommentdata" id="commentbox" class="commenttxtbx" placeholder="Add your comment"/>
                     </p>
                 </form>
                <a data-role="button" data-click="app.mainArticleService.viewModel.postRootComment" class="commentpostbtn">Post</a>
@@ -40,6 +40,12 @@
                     </ul>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div data-role="footer">
+        <div data-role="navbar" style="height:55px;border:none;background:#fff !important">
+             <a data-role="button" class="footerShareBtn" data-icon="share" data-align="right" data-click="app.mainArticleService.viewModel.shareThisArticle"></a>
         </div>
     </div>
 </div>
@@ -107,11 +113,11 @@
                         #=data['field_fifth_text_area']#
                     </div>
                 </div>
-                <div class="shareDv">
+                <!--<div class="shareDv">
                    <p>
                       <a data-role="button" data-icon="share" data-title="#:data['field_first_title']#" data-click="app.mainArticleService.viewModel.shareThisArticle"></a>  
                    </p>                     
-                </div>
+                </div>-->
             #}else{#
                 <div class="bannerremContentDv">
                     <div class="even fstDv">
@@ -138,11 +144,11 @@
                         #=data['field_fifth_text_area']#
                     </div>
                 </div>
-                <div class="shareDv">
+                <!--<div class="shareDv">
                    <p>
                       <a data-role="button" data-icon="share" data-title="#:data['field_first_title']#" data-click="app.mainArticleService.viewModel.shareThisArticle"></a>  
                    </p>                   
-                </div>
+                </div>-->
             #}#
         </div>
     #}#

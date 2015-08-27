@@ -1,5 +1,5 @@
 <!--Search View-->
-<div data-role="view" id="searchContent" data-use-native-scrolling="true" data-model="app.searchService.viewModel" data-show="app.searchService.viewModel.show">
+<div data-role="view" id="searchContent" data-use-native-scrolling="false" data-model="app.searchService.viewModel" data-show="app.searchService.viewModel.show">
     <div data-role="content">
         <h1 class="txtclass">
             Site Search
@@ -26,8 +26,8 @@
         </div>
     #}#
    #if(data['path'] !== "http://okplay.club/"){#
-        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtn">Read More</a>
+        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" data-title="#:data['title']#" class="searchBtn">Read More</a>
    #}else{#
-        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" class="searchBtnDFT">Read More</a>
+        <a data-role="button" data-click="app.searchService.viewModel.readMoreArticle" data-id="#:data['id']#" data-title="#:data['title']#" class="searchBtnDFT">Read More</a>
    #}#
 </script>

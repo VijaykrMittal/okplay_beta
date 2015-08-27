@@ -102,6 +102,7 @@
         {
             $('.popup').hide();
             sessionStorage.setItem("catNodeId",e['target']['context']['attributes']['data-id']['value']);
+            sessionStorage.setItem("cattitle",e['target']['context']['attributes']['data-title']['value']);
             app.mobileApp.navigate("views/articleData.html");
         }
     });

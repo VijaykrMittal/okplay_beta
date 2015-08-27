@@ -83,6 +83,7 @@
                 	return false;
                 }
             });
+            $(".km-native-scroller").scrollTop(0);
         },
         
         aboutshow:function()
