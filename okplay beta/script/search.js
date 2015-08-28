@@ -36,6 +36,7 @@
             sessionStorage.setItem("searchKeyword",e['sender']['params']['keyword']);
             app.searchService.viewModel.srchDataCall(e['sender']['params']['keyword']);
             e.view.scroller.scrollTo(0, 0);
+          //  $("#searchContent").find(".km-scroll-container").css("-webkit-transform", "");
         },
         
         srchDataCall:function(searchtxt)

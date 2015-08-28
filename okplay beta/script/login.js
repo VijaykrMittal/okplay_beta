@@ -62,7 +62,6 @@
         
         loginSubmit:function()
         {
-            app.mobileApp.showLoading();
             var status = $('#loginForm').valid();
 
             if(status === false)

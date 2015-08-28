@@ -24,13 +24,13 @@
                 <p>
                     <input type="number" name="signupmobilenumber" maxlength="10" data-bind="value:signupmobilenumber" id="signupmobilenumber" placeholder="Mobile Number" class="signupTxtFld"/>
                 </p>
-                <p>
+                <p class="genderP">
                     <span>
-                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="value:gender_male" value="male" required/>
+                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="checked:gendermale" value="male" required/>
                         <label for="male">Male</label>
                     </span>  
                     <span>
-                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="value:gender_female" value="female" required/>
+                        <input type="radio" name="gender" class="radioChk" id="gender" data-bind="checked:genderfemale" value="female" required/>
                        <label for="female">Female</label> 
                     </span>
                 </p>
