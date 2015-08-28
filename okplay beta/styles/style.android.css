@@ -161,7 +161,7 @@
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
     .genderP {position:relative}
-    .genderP label[for=gender] {  position: absolute;top: 25px;width: 152px;margin-left: -16px;}
+    .genderP label[for=gender] {  position: absolute;top: 25px;width: 300px;margin-left: -16px;}
     
     .dropFld {width: 70%;height: 35px;padding-left:7px;}
     .articleDv {width:100%;height:auto;margin:0px auto}

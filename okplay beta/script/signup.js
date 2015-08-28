@@ -23,15 +23,17 @@
                 }
             });
             
-           // $('.radioChk').prop('checked', false);
+            $('#gendermale').prop('checked', false);
+            $('#genderfemale').prop('checked', false);
+            $('#confirmPassword').val('');
             signupBindingValue = kendo.observable({
                 signupfname: '',
                 signuplname:'',
                 signupEmail:'',
                 signupPassword:'',
                 signupmobilenumber:'',
-                gendermale:'',
-                genderfemale:''
+                gendermale:false,
+                genderfemale:false
             });
             
             kendo.bind($('#signupForm'), signupBindingValue);
@@ -91,8 +93,8 @@
             dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
             
             console.log(dataParam);
-            
-            var dataSource = new kendo.data.DataSource({
+            app.loginService.viewModel.setUserLogindata(dataParam);
+            /*var dataSource = new kendo.data.DataSource({
             transport: {
                 read: {
                         url: localStorage.getItem("userSignupAPI"),
@@ -135,7 +137,7 @@
                     function () { }, "Notification", 'OK');
                     app.mobileApp.hideLoading();
                 }
-            });
+            });*/
         },
         
     });
