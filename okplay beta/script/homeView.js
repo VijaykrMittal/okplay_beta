@@ -14,7 +14,7 @@
             
             $('.homeFooter').css("display",'none');
             $('#blockrightContent').css('background','none');
-            
+            $('.listCategory').removeClass("highlightColor");
             app.homeService.viewModel.getUserLoginStatus();
             app.homeService.viewModel.scrollViewImage();
             app.homeService.viewModel.footerApiCall();
