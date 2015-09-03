@@ -12,8 +12,8 @@
         
         redirectBack:function()
         {
-            $(".km-native-scroller").scrollTop(0);
-           // $("#categoryArticleView").find(".km-scroll-container").css("-webkit-transform", "");
+           // $(".km-native-scroller").scrollTop(0);
+            $("#categoryArticleView").find(".km-scroll-container").css("-webkit-transform", "");
             app.mobileApp.showLoading();
             app.categoryService.viewModel.categoryArticleData();
             if(sessionStorage.getItem('ageListAPIStatus') === "null" || sessionStorage.getItem('ageListAPIStatus') === null)
@@ -31,7 +31,6 @@
         },
         show:function(e)
         { 
-            
             e.sender.reload=true;
             e.view.reload=true;
             temp = e;

@@ -41,12 +41,12 @@
                 </div>
             </div>
             <div class="popup">
-                <div class="km-listview-wrapper"><ul id="categoryList"  class="categoryList km-widget km-listview km-list"></ul></div>
+                <div class="km-listview-wrapper"><ul id="categoryList" data-role="listview"  class="categoryList km-widget km-listview km-list"></ul></div>
             </div>
         </header>
     </div>
     
-    <div data-role="view" id="categoryArticleView"  data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="true" data-before-show="app.categoryService.viewModel.redirectBack">
+    <div data-role="view" id="categoryArticleView"  data-model="app.categoryService.viewModel" data-show="app.categoryService.viewModel.show" data-use-native-scrolling="false" data-before-show="app.categoryService.viewModel.redirectBack">
         <div data-role="content">
             <div id="filterDropdwn">
                 <h2 class="txtclass" data-bind="text:selectCategory"></h2>
@@ -70,6 +70,13 @@
         $(document).ready(function(){
             $('.srchbtn').on('click',function(){
                 app.mobileApp.navigate("views/searchView.html?keyword="+$(this).next().val());
+            });
+            
+            $('.srchtxt').on('keyup',function(e){
+                if(e.keyCode === 13)
+                {
+                    app.mobileApp.navigate("views/searchView.html?keyword="+$(this).val());
+                }
             });
         });
         

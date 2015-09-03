@@ -115,7 +115,7 @@
             {
                if($.isNumeric(x))
                 {
-                    html +='<li class="select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                    html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
                 }
             }
             $('#categoryList').html(html);
@@ -189,7 +189,7 @@
             {
                if($.isNumeric(x))
                 {
-                    html +='<li><img src="'+data[x]['path']+'"></li>';
+                    html +='<li><img src="'+data[x]['path']+'" class="bannerheight"></li>';
                 }
             }
             html += '</ul>';
@@ -207,8 +207,12 @@
         
         categoryArticle : function(e)
         {
+            console.log(e);
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
+            $('.listCategory').removeClass("highlightColor");
+            $('.select'+e['target']['attributes']['data-id']['value']).addClass("highlightColor");
+            
             if(app.mobileApp.view()['element']['0']['id']==='categoryArticleView')
             {
                 app.categoryService.viewModel.redirectBack();
@@ -225,6 +229,7 @@
         {
             sessionStorage.setItem("categorySelectItem",e['target']['context']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
+            
             if(app.mobileApp.view()['element']['0']['id']==='categoryArticleView')
             {
                 app.categoryService.viewModel.redirectBack();
