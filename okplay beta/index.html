@@ -75,6 +75,7 @@
             $('.srchtxt').on('keyup',function(e){
                 if(e.keyCode === 13)
                 {
+                    $(".srchtxt").blur();
                     app.mobileApp.navigate("views/searchView.html?keyword="+$(this).val());
                 }
             });
@@ -111,7 +112,7 @@
         
         #if(imagePath !== "http://okplay.club/"){#
             <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-title="#: data['title'] #" data-path="#:data['path']#" class="articleDv">
-                <span class="shadow"><img src="styles/images/shadow.png"></span>
+                <span class="shadow"><img src="styles/images/shadow.png" width="100%" height="100%"></span>
                 <img src="#:data['path']#" width="100%" height="100%"/>   
                 <div class="ageGrouop">
                     # for (var i = 0; i < data['ageName'].length; i++) { #
@@ -127,7 +128,7 @@
             </div>
         #}else{#
             <div data-bind="click:articleContentDataCall" data-id="#: data['id'] #" data-title="#: data['title'] #" data-path="#:data['path']#" class="articleDvDft">
-                <span class="shadow"><img src="styles/images/shadow.png"></span>
+                <span class="shadow"><img src="styles/images/shadow.png" width="100%" height="100%"></span>
                 <img src="styles/images/no-image.jpg" width="100%" height="100%"/> 
                 <div class="ageGrouop">
                     # for (var i = 0; i < data['ageName'].length; i++) { #

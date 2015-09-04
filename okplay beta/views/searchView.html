@@ -14,13 +14,13 @@
 <script type="text/x-kendo-template" id="searchView">
     #if(data['path'] !== "http://okplay.club/"){#
         <div class="articleDv">
-            <span class="shadow"><img src="styles/images/shadow.png"></span>
+            <span class="shadow"><img src="styles/images/shadow.png" width="100%" height="100%"></span>
             <img src="#:data['path']#" width="100%" height="100%"/>        
             <p data-value="#: data['id'] #" class="textTitle blankarticleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
         </div>
     #}else{#
         <div data-id="#: data['id'] #" class="articleDvDft">
-            <span class="shadow"><img src="styles/images/shadow.png"></span>
+            <span class="shadow"><img src="styles/images/shadow.png" width="100%" height="100%"></span>
             <img src="styles/images/no-image.jpg" width="100%" height="100%"/>    
             <p data-value="#: data['id'] #" class="textTitle articleTit" style="position: absolute;top: 0px;">#: data['title'] #</p>
         </div>

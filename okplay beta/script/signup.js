@@ -37,7 +37,6 @@
             });
             
             kendo.bind($('#signupForm'), signupBindingValue);
-            
             $('#signupForm').validate({
                 rules:{
                     signupEmail:{

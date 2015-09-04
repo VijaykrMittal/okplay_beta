@@ -62,6 +62,7 @@
         
         loginSubmit:function()
         {
+            
             var status = $('#loginForm').valid();
 
             if(status === false)

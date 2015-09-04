@@ -129,8 +129,9 @@
     .nvbar .logPos {position: absolute;top: 13px;right: 85px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 10px;}
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
+    .bannerheight {height:196px}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
-    .homeContent {width:100%;display: inline-block;}
+    .homeContent {width:100%;display: inline-block;margin-top: -20px;}
     #blockContent {width: 65% !important;float:left;margin: 0px;}
     #blockContent .block_s h2 {color: #999;font-size: 20px;  padding: 0 0 20px 0;}
     #blockContent .block_s p{color: #000;font-size: 15px;line-height: 24px;font-weight: 400;padding: 0 0 20px 0;}
@@ -141,7 +142,7 @@
     #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
-    #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;}
+    #categoryList li {padding:10px !important;background:url('./images/trp_bg.png') !important;color:#FFF !important;border-color: #000000 !important;border:none !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
     
     .txtfldCont {width: 80%;margin: 0px auto;margin-top: 35%;}
     .frmdv {width:100%;}
@@ -152,7 +153,7 @@
     .txtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .txtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 10%;}
+    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 25%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:45px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
@@ -176,7 +177,7 @@
     .sharebtnDFT {width: 40px !important;height: 40px !important;color:#FFF !important;margin: 1px 0px 0px -4px;z-index: 99999999;border-style: none !important;background: url('styles/images/share-w.png') no-repeat !important;background-size: 75% 75% !important;}
     .sharebtnDFT:active {background:none !important;color:#FFF !important;margin: 1px 0px 0px -4px !important;}
     .sharebtnDFT span {font-size:20px !important;}
-    .shareDV {width: 40px;height: 40px;border: 1px solid #ccc;background-color: #A3A2A2;position: absolute;top: 235px;right: 20px;border-radius: 50%;background-color: #A3A2A2;}
+    .shareDV {width: 40px;height: 40px;border: 1px solid #ccc;background-color: #A3A2A2;position: absolute;top: 250px;right: 10px;border-radius: 50%;background-color: #A3A2A2;}
     .sharebtn {width: 40px !important;height: 40px !important;z-index: 99999999;border-style: none !important;  margin: 2px 0px 0px -4px;background: none !important;color: #FFF !important;}
     .sharebtn:active {background:none !important;color: #FFF !important;}
     .sharebtn span {font-size:20px !important;}
@@ -185,9 +186,9 @@
     .articleDv .article_category {position: absolute;left: 20px;bottom: 13px;font-size: 16px;color: #FFF;text-transform: uppercase;font-weight: 600;padding: 0;}
     .articleDv .article_category div {padding: 5px 0 5px 10px;}
     
-    .searchBtnDFT {position: absolute;top: 224px;right: 0px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtnDFT {position: absolute;top: 224px;right: -5px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}
-    .searchBtn {position: absolute;top: 225px;right: 0px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
+    .searchBtn {position: absolute;top: 240px;right: -15px;text-decoration:none;border-style:none !important;background:none !important;font-weight: bold;font-size: 18px;color: #FFF !important;margin: 16px;text-shadow: 2px 2px 6px #000000;font-family:times;}
     .searchBtn:active {background:none !important;color:#FFF !important}
     
     .mainTempDv .shareDv {width: 100%;margin-top: 30px;margin-bottom: 30px;}
@@ -215,11 +216,15 @@
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     .articleDv .shadow {position: absolute;left: 1px;width: 100%;}
-    .articleDv .shadow img {width: 93%;height: auto;margin-left: 10px;max-width: 95%;z-index: 9999999;}
+    /*.articleDv .shadow img {width: 93%;height: auto;margin-left: 10px;max-width: 95%;z-index: 9999999;}*/
+    .articleDv .shadow img {width: 100%;height: auto;margin-left: 0px;max-width: 100%;z-index: 9999999;}
+    #articlelist li {padding:0px 0px !important}
     .articleDvDft .shadow {position: absolute;left: 1px;width: 100%;}
     .articleDvDft .shadow img {width: 93%;height: 272px;margin-left: 10px;max-width: 95%;}
-    #articlelist li {float:left;width:49%;}
-    #alldatasrch li {float:left;width:49%}
+    #articlelist {display:inline-block !important}
+    #articlelist li {float:left;width:49.3%;margin-left:3px}
+    #alldatasrch {display:inline-block}
+    #alldatasrch li {float:left;width:49.3%;margin-left:3px;border-style:none !important;border-width:0px 0px 0px 0px !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important;padding:0px 0px !important}
     
     #tabstr .shareDv {width: 100%;margin-top: 30px;margin-bottom: 30px;margin-left: 87%;}
     #tabstr .shareDv p a {border-radius: 50%;height: 50px;width: 50px;background-color: #FFF !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;}
@@ -239,8 +244,8 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {margin-left:70px}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:63% !important;margin:0px auto !important}
     #contactusForm .contTxtfld{width: 100%;height: 35px;margin:0px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
-    #contactusForm .conttxtarea{width: 100%;margin-left: 15px;height: 120px;padding: 8px;border: 1px solid #ccc;}
+    #contactusForm .contTxtfld + label{line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea{width: 100%;height: 120px;padding: 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin-left: 15px;line-height: 30px;font-size: 15px;font-weight: 200;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 25%;margin-bottom: 30px;}
     .contactFldFrm h1 {text-align: center;font-family: 'Lato', sans-serif;}
@@ -259,7 +264,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 13% !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 8% !important;position: absolute !important;top: 43.5% !important;left: 45.5% !important;animation: none !important; -webkit-animation:none !important}
     
     /*28-08-2015*/
     
@@ -271,6 +276,57 @@
     #termsBody li {text-align:justify;font-weight: 400;} 
     .faqQuest{font-size: 18px;font-weight: 600;padding: 0 15px 6px;text-align:justify;color:#3D3D3D}
     .faqAnswer p{font-size: 16px;font-weight: 400;line-height: 22px;margin-bottom: 25px;text-align:justify}
+    
+    .footerShareBtn {  color:#000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .footerShareBtn .km-share:after {font-size: 25px !important;margin: 1px 0px 0px -7px !important;}
+    .footerShareBtn .km-share:before {color:#000 !important;font-size: 25px !important;margin: 1px 0px 0px -7px !important;}
+    .footerShareBtn:active{color:#000 !important}
+    
+    #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
+    #comment-view .commentTxtFld .addcom {background:none;border:none}
+    #comment-view .commentTxtFld .addcom:active{background:none;border:none}
+    #comment-view .modalnvbar {background-color:#21262C;color:#fff;}
+    #modalview-post-button{width:110px;background-color: #80CFF6;color: #000;  margin-right: 7px}
+    .modalnvbar .closemodalview {border:none !important;color:#fff !important;background:none !important}
+    .modalnvbar .closemodalview:active {border:none !important;color:#fff !important;background:none !important}
+    .comments .txtTit{font-size:25px;text-align:center}
+    .commentfld {width:100%;height:auto;display: inline-block;}
+    .commentfld .commenttxtbx {width:100%;padding: 10px 0px 120px 4px;border: 1px solid #ccc;}
+    .commentfld .commentpostbtn {margin: 15px 0px 15px 0px;float: right;width: 90px;color:#000;background-color:#80CFF6;font-weight:600;border-radius:10px;margin-right: 15px;}
+    .commentfld .commentpostbtn:active {background-color:#80CFF6;font-weight:600;color:#000}
+    .commentDataListView h4 {text-align:center}
+    
+    .commentDataListView {width:100%;height:auto;}
+    .commentDataListView ul {list-style-type:none;margin-left:-40px}
+    .commentDataListView ul .root{width:100%;display: inline-block;margin-bottom:15px;}
+    .root .leftDv {width:30%;float:left}
+    .root .leftDv ul {list-style-type:none;margin-left:-15px}
+    .root .leftDv ul .imgcls {width:80px;height:80px;border-radius:50%}
+    .root .leftDv ul li span{font-size:13px}
+    .root .rightDv {width:70%;float:left}
+    .root .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
+    .root .rightDv .innerDv .commentTxt {width:96%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
+    .root .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
+    .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
+    .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left: -60px;}
+    
+    .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
+    .root-1 .leftDv {width:30%;float:left}
+    .root-1 .leftDv ul {list-style-type:none;margin-left:0px}
+    .root-1 .leftDv ul .imgcls {width:80px;height:80px;border-radius:50%}
+    .root-1 .leftDv ul li span{font-size:13px}
+    .root-1 .rightDv {width:70%;float:left}
+    .root-1 .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
+    .root-1 .rightDv .innerDv .commentTxt {width:96%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
+    .root-1 .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
+    .root-1 .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root-1 .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
+    .root-1 .rightDv .innerDv .creatDv ul li {float:left;margin:0px 20px 0px 0px}
+    .root-1 .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none}
+    
+    .root-1 .rightDv .innerDv .creatDv ul li:nth-child(1) {display:none}
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -298,8 +354,8 @@
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     
     /*3-09-2015*/
-    .bannerheight {height:140px}
-    .homeContent {width:100%;display: inline-block;margin-top: -15px;}
+    .bannerheight {height:155px}
+    .homeContent {width:100%;display: inline-block;margin-top: -20px;}
     #blockContent {width: 60% !important;float:left;margin: 0px;}
     #blockContent .block_s h2 {color: #999;font-size: 17px;  padding: 0 0 0px 0;}
     #blockContent .block_s p{color: #000;font-size: 16px;line-height: 24px;font-weight: 400;padding: 0 0 10px 0;}
@@ -362,9 +418,10 @@
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
     .articleDv .shadow img {width: 495px;height: auto;margin-left: 10px;max-width: 100%;}*/
     .dropFld {width: 100%;height: 35px;padding-left:7px;}
-    
-    #articlelist li {width:auto;}
-    #alldatasrch li {width:auto;}
+    #articlelist {display:inline-block}
+    #articlelist li {border:none !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important;width:auto;padding:.5em .7em !important}
+    #alldatasrch {display:inline-block}
+    #alldatasrch li {border:none !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important;width:auto;padding:.5em .7em !important}
     .articleDv .shadow img {width: 94%;height: auto;margin-left: 10px;max-width: 95%;}
     .articleDvDft .shadow img {width: 94%;height: 272px;margin-left: 10px;max-width: 95%;}
     #tabstr .shareDv {width: 100%;margin-top: 0px;margin-bottom: 30px;margin-left: 84%;}
@@ -417,7 +474,7 @@
     /*25-08-2015*/
     .comments .txtTit{font-size:25px;text-align:center}
     .commentfld {width:100%;height:auto;display: inline-block;}
-    .commentfld .commenttxtbx {width:100%;padding: 10px 0px 60px 4px;}
+    .commentfld .commenttxtbx {width:100%;padding: 10px 0px 60px 4px;border: 1px solid #ccc;}
     .commentfld .commentpostbtn {margin: 15px 0px 15px 0px;float: right;width: 90px;color:#000;background-color:#80CFF6;font-weight:600;border-radius:10px;margin-right: 15px;}
     .commentfld .commentpostbtn:active {background-color:#80CFF6;font-weight:600;color:#000}
     .commentDataListView h4 {text-align:center}
@@ -440,8 +497,8 @@
     .root .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
     .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
-    .root .rightDv .innerDv .creatDv ul li {float:left;margin:0px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none}
+    .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -460,7 +517,10 @@
     .root-1 .rightDv .innerDv .creatDv ul li:nth-child(1) {display:none}
     
     #comment-view .modalnvbar {background-color:#21262C;color:#fff;}
+    .modalnvbar .closemodalview {border:none !important;color:#fff !important;background:none !important}
+    .modalnvbar .closemodalview:active {border:none !important;color:#fff !important;background:none !important}
     #modalview-post-button{width:110px;background-color: #80CFF6;color: #000;  margin-right: 7px}
+    
     .default,.logindft{display:none}
     
     .footerShareBtn {  color:#000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
@@ -468,6 +528,6 @@
     .footerShareBtn .km-share:before {color:#000 !important;font-size: 25px !important;margin: 1px 0px 0px -7px !important;}
     .footerShareBtn:active{color:#000 !important}
     
-    
+   
     
 }

@@ -56,8 +56,8 @@ li:after {content: none;}
 
 
 /*Loader*/
-.km-loader {background-color: #080505 !important;}
-.km-loader:before {background: #FFF !important}
+.km-loader {background-color: #FFF !important;}
+.km-loader:before {background: none !important}
 
 /*13-08-2015*/
 /*.km-list>li { border-style: none !important;}*/
