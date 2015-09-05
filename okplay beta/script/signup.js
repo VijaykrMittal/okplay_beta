@@ -17,7 +17,7 @@
         {
             
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             e.view.scroller.scrollTo(0, 0);
             $('label.error').hide();
             

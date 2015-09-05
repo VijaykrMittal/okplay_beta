@@ -37,7 +37,7 @@
             
             $('#articlelist').html('');
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             $('#articlelist').html("");
             
             $('.menu').unbind();

@@ -33,7 +33,7 @@
             }
             
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();

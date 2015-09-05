@@ -33,8 +33,15 @@
             <div class="bottom_nvbar">
                 <a data-role="button" data-click="moveToHome" class="logo"></a>
                 <div class="srchDv">
-                    <a data-role="button" class="srchbtn" data-click="srchData"></a>
-                    <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>
+                    <!--<a data-role="button" class="srchbtn" data-click="srchData"></a>
+                    <input type="text" class="srchtxt" placeholder="Search..." name="search" id="search" value=""/>-->
+                   <div class="searchBtnDv">
+                       <a data-role="button" data-icon="search" class="searchbtn"></a>
+                   </div>
+                   <div class="searchtxtDv">
+                        <input type="text" placeholder="Search..." class="searchTxtbox"/>
+                   </div>
+                    
                 </div>
                 <div class="menuDv">
                     <a data-role="button" id="menubtn" class="menu"></a>
@@ -68,11 +75,10 @@
     <script >
         
         $(document).ready(function(){
-            $('.srchbtn').on('click',function(){
-                app.mobileApp.navigate("views/searchView.html?keyword="+$(this).next().val());
+            $('.searchbtn').on('click',function(){
+                app.mobileApp.navigate("views/searchView.html?keyword="+$(this).parent().next().children().val());
             });
-            
-            $('.srchtxt').on('keyup',function(e){
+            $('.searchTxtbox').on('keyup',function(e){
                 if(e.keyCode === 13)
                 {
                     $(".srchtxt").blur();
