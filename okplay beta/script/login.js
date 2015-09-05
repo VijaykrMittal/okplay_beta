@@ -1,10 +1,12 @@
 (function(global){
     var loginViewModel,
         app = global.app = global.app || {};
-    var loginBindingValue;
     
     loginViewModel = kendo.data.ObservableObject.extend({
         email:'',
+        loginemail:'',
+        loginpwd:'',
+        
         show : function()
         {
             $('.popup').hide();
@@ -23,13 +25,6 @@
                     $('.popup').hide();
                 }
             });
-            
-            loginBindingValue = kendo.observable({
-                email: '',
-                pwd:''
-            });
-
-            kendo.bind($('#loginForm'), loginBindingValue);
             
             $('#loginForm').validate({
                 rules:{
@@ -78,6 +73,9 @@
             }
             else
             {
+                var username = this.get('loginemail'),
+                    password = this.get('loginpwd');
+                
                 app.mobileApp.showLoading();
                 var loginDataSource = new kendo.data.DataSource({
                     transport:{
@@ -85,7 +83,7 @@
                             url:localStorage.getItem('userLoginAPI'),
                             type:'GET',
                             dataType:'json',
-                            data:{apiaction:'userlogin',username:loginBindingValue.email,password:loginBindingValue.pwd}
+                            data:{apiaction:'userlogin',username:username,password:password}
                         }
                     },
                     schema: {
@@ -122,6 +120,14 @@
             }
         },
         
+        checkEnterLogin:function(e)
+        {
+            if (e.keyCode === 13) {
+                $(e.target).blur();
+                app.loginService.viewModel.loginSubmit();
+            }
+        },
+        
         setUserLogindata : function(data)
         {
             localStorage.setItem('userEmail',data['mail']);
@@ -137,12 +143,15 @@
         
         userLogout : function()
         {
+            this.set('loginemail','');
+            this.set('loginpwd','');
             localStorage.removeItem('userEmail');
             localStorage.removeItem('userName');
             localStorage.removeItem('userid');
             localStorage.setItem("loginStatus",false);
             app.homeService.viewModel.loginStatus = false;
-             app.homeService.viewModel.getUserLoginStatus();
+            app.signupService.viewModel.resetSignupFld();
+            app.homeService.viewModel.getUserLoginStatus();
             app.mobileApp.navigate("views/homepage.html");
             app.homeService.viewModel.show();
         },

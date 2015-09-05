@@ -1,19 +1,19 @@
 <div data-role="view" id="loginView" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.show" data-use-native-scrolling="true">
     <div data-role="content">
         <div class="txtfldCont">
-            <form id="loginForm" class="frmdv">
+            <form id="loginForm" class="frmdv" data-bind="events: { keyup: checkEnterLogin }">
                 <p>
                     Please Fill the following information to Log in
                 </p>
                 <p>
-                    <input type="text" name="email" data-bind="value:email" class="logTxtFld" id="email" Placeholder="E-mail Address" required/>
+                    <input type="text" name="email" data-bind="value:loginemail" class="logTxtFld" id="email" Placeholder="E-mail Address" required/>
                 </p>
                 <p>
-                    <input type="password" name="pwd" data-bind="value:pwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
+                    <input type="password" name="pwd" data-bind="value:loginpwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
                 </p>
             </form>
             <p class="loginBtn">
-                <a data-role="button" data-click="app.loginService.viewModel.loginSubmit">Log In</a>
+                <a data-role="button" data-bind="click:loginSubmit">Log In</a>
             </p>
         </div>
     </div>

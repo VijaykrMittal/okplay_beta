@@ -1,13 +1,24 @@
 (function(global){
     var signupViewModel,
         app = global.app = global.app || {};
-    var signupBindingValue;
-    signupViewModel = kendo.data.ObservableObject.extend({
+    
+        signupViewModel = kendo.data.ObservableObject.extend({
+            
+        signupfname:'',
+        signuplname:'',
+        signupEmail:'',
+        signupPassword:'',
+        confirmPassword:'',
+        signupmobilenumber:'',
+        gendermale:false,
+        genderfemale:false,
         
         show : function(e)
         {
+            
             $('.popup').hide();
             e.view.scroller.scrollTo(0, 0);
+            $('label.error').hide();
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -23,20 +34,6 @@
                 }
             });
             
-            $('#gendermale').prop('checked', false);
-            $('#genderfemale').prop('checked', false);
-            $('#confirmPassword').val('');
-            signupBindingValue = kendo.observable({
-                signupfname: '',
-                signuplname:'',
-                signupEmail:'',
-                signupPassword:'',
-                signupmobilenumber:'',
-                gendermale:false,
-                genderfemale:false
-            });
-            
-            kendo.bind($('#signupForm'), signupBindingValue);
             $('#signupForm').validate({
                 rules:{
                     signupEmail:{
@@ -84,22 +81,21 @@
             if(status === false)
             return status;
             
-            dataParam['firstname'] = signupBindingValue.signupfname; 
-            dataParam['lastname'] = signupBindingValue.signuplname; 
-            dataParam['email'] = signupBindingValue.signupEmail; 
-            dataParam['password'] = signupBindingValue.signupPassword; 
-            dataParam['mobilenumber'] = signupBindingValue.signupmobilenumber; 
+            dataParam['firstname'] = this.get('signupfname'); 
+            dataParam['lastname'] = this.get('signuplname'); 
+            dataParam['email'] = this.get('signupEmail'); 
+            dataParam['password'] = this.get('signupPassword'); 
+            dataParam['mobilenumber'] = this.get('signupmobilenumber'); 
             dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
+            dataParam['apiaction'] = 'usersignup';
             
-            console.log(dataParam);
-            app.loginService.viewModel.setUserLogindata(dataParam);
-            /*var dataSource = new kendo.data.DataSource({
+            var dataSource = new kendo.data.DataSource({
             transport: {
                 read: {
                         url: localStorage.getItem("userSignupAPI"),
                         type:"POST",
                         dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
-                        data: { apiaction:"usersignup",email:dataParam['email'],password:dataParam['password'],fname:dataParam['firstname'],lname:dataParam['lastname'],mobile:dataParam['mobilenumber'],gender:dataParam['gender']}
+                        data: dataParam
                 }
             },
             schema: {
@@ -121,8 +117,6 @@
                 app.mobileApp.showLoading();
                 if(data[0]['code'] === "1" || data[0]['code'] === 1)
                 {
-                    console.log(data[0]);
-                    //app.mobileApp.navigate("views/homepage.html");
                     app.loginService.viewModel.setUserLogindata(data[0]['data']);
                 }
                 else if(data[0]['code'] === "2" || data[0]['code'] === 2)
@@ -136,7 +130,27 @@
                     function () { }, "Notification", 'OK');
                     app.mobileApp.hideLoading();
                 }
-            });*/
+            });
+        },
+            
+        checkEnterSubmit:function(e)
+        {
+            if (e.keyCode === 13) {
+                $(e.target).blur();
+                app.signupService.viewModel.signupSubmit();
+            }
+        },
+        
+        resetSignupFld:function()
+        {
+            this.set('signupfname','');
+            this.set('signuplname','');
+            this.set('signupEmail','');
+            this.set('signupPassword','');
+            this.set('confirmPassword','');
+            this.set('signupmobilenumber','');
+            $('#gendermale').prop('checked', false);
+            $('#genderfemale').prop('checked', false);
         },
         
     });

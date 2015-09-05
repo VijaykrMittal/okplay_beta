@@ -6,20 +6,16 @@
         
         title:'',
         bodyContent:'',
+        contect_name:'',
+        contect_email:'',
+        contect_number:'',
+        contect_message:'',
         
-        showbefore : function()
-        {
-          contactBindingValue = kendo.observable({
-                contect_name:'',
-                contect_email:'',
-                contect_number:'',
-                contect_message:'',
-            });
-            kendo.bind($('#contactusForm'), contactBindingValue);  
-        },
         show : function()
         {
             $('.popup').hide();
+            $('.srchtxt').val('');
+            $('label.error').hide();
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -90,6 +86,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
+            $('.srchtxt').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -112,6 +109,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
+            $('.srchtxt').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -134,6 +132,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
+            $('.srchtxt').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -156,6 +155,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
+            $('.srchtxt').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -177,6 +177,7 @@
         faqshow : function()
         {
             $('.popup').hide();
+            $('.srchtxt').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -249,10 +250,10 @@
             {
                 dataParam = {};
                 dataParam['apiaction'] = 'savecontactus';
-                dataParam['name'] = contactBindingValue.contect_name;
-                dataParam['email'] = contactBindingValue.contect_email;
-                dataParam['phone'] = contactBindingValue.contect_number;
-                dataParam['message'] = contactBindingValue.contect_message;
+                dataParam['name'] = this.get('contect_name');
+                dataParam['email'] = this.get('contect_email');
+                dataParam['phone'] = this.get('contect_number');
+                dataParam['message'] = this.get('contect_message');
                 
                 if(localStorage.getItem('userid') === "" || localStorage.getItem('userid') === null)
                 {
@@ -263,6 +264,7 @@
                     dataParam['userid'] = localStorage.getItem('userid');
                 }
                 app.mobileApp.showLoading();
+                
                 var contactDataSource = new kendo.data.DataSource({
                     transport:{
                         read:{
@@ -296,9 +298,20 @@
             }
         },
         
+        EnterContactUs:function(e)
+        {
+            if (e.keyCode === 13) {
+                $(e.target).blur();
+                app.contact.viewModel.submitContact();
+            }
+        },
+        
         setblankContactForm : function()
         {
-            app.contact.viewModel.showbefore();
+            this.set('contect_name','');
+            this.set('contect_email','');
+            this.set('contect_number','');
+            this.set('contect_message','');
             app.mobileApp.hideLoading();
         }
     });

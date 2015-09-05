@@ -2,7 +2,7 @@
 <div data-role="view" id="signupView" data-use-native-scrolling="true" data-model="app.signupService.viewModel" data-show="app.signupService.viewModel.show">
     <div data-role="contant">
         <div class="signuptxtfldCont">
-            <form id="signupForm" class="frmdv">
+            <form id="signupForm" class="frmdv" data-bind="events: { keyup: checkEnterSubmit }">
                <h2>
                     Create new account
                </h2>
@@ -19,7 +19,7 @@
                     <input type="password" name="signupPassword" data-bind="value:signupPassword" id="signupPassword" placeholder="Password" class="signupTxtFld" required/>
                 </p>
                 <p>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="signupTxtFld" required/>
+                    <input type="password" name="confirmPassword" data-bind="value:confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="signupTxtFld" required/>
                 </p>
                 <p>
                     <input type="number" name="signupmobilenumber" maxlength="10" data-bind="value:signupmobilenumber" id="signupmobilenumber" placeholder="Mobile Number" class="signupTxtFld"/>
@@ -36,7 +36,7 @@
                 </p>
             </form>
             <p class="signupBtn">
-                <a data-role="button" data-click="app.signupService.viewModel.signupSubmit">Sign Up</a>
+                <a data-role="button" data-bind="click:signupSubmit">Sign Up</a>
             </p>
         </div>
     </div>
