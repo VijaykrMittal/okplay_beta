@@ -10,6 +10,7 @@
         show : function()
         {
             $('.popup').hide();
+            $('.srchtxt').val('');
             $('label.error').hide();
             
             $('.menu').unbind();
