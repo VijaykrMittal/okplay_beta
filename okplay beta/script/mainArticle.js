@@ -202,7 +202,7 @@
             e.preventDefault();
             sessionStorage.setItem('replyPID',e['target']['context']['attributes']['data-cid'].value);
             
-            if(app.homeService.viewModel.loginStatus === false || app.homeService.viewModel.loginStatus === 'false')
+            if(app.homeService.viewModel.loginStatus === false || app.homeService.viewModel.loginStatus === 'false' || app.homeService.viewModel.loginStatus === null || app.homeService.viewModel.loginStatus === 'null')
             {
                 navigator.notification.confirm('For comment post you need to login first.', function (confirmed) {
                 	if (confirmed === true || confirmed === 1) {

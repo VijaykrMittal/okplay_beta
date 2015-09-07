@@ -320,6 +320,7 @@
                 var data = this.data();
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
+                    console.log(data[0]['data']);
                     app.homeService.viewModel.setFooterdata(data[0]['data']);
                 }
                 else
@@ -356,7 +357,7 @@
                     sessionStorage.setItem('Ourteambody',data[x]['body']);
                 }
                 
-                if(data[x]['title'] === 'Terms and conditions')
+                if(data[x]['title'] === 'Terms and Conditions')
                 {
                     sessionStorage.setItem('Termstitle',data[x]['title']);
                     sessionStorage.setItem('Termsnid',data[x]['nid']);

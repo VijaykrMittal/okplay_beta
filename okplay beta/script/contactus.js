@@ -169,7 +169,7 @@
                     $('.popup').hide();
                 }
             });
-            
+            console.log(sessionStorage.getItem('Termstitle'));
             $('#termsTitle').html(sessionStorage.getItem('Termstitle'));
             $('#termsBody').html(sessionStorage.getItem('Termsbody'));
         },
