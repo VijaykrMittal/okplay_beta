@@ -294,6 +294,12 @@
                         function () { }, "Notification", 'OK');
                         app.contact.viewModel.setblankContactForm();
                     }
+                    else
+                    {
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
                 });
             }
         },

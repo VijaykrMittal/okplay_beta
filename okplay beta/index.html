@@ -81,7 +81,7 @@
             $('.searchTxtbox').on('keyup',function(e){
                 if(e.keyCode === 13)
                 {
-                    $(".srchtxt").blur();
+                    $(".searchTxtbox").blur();
                     app.mobileApp.navigate("views/searchView.html?keyword="+$(this).val());
                 }
             });
