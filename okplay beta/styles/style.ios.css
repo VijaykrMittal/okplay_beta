@@ -7,7 +7,7 @@
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
-    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:0px;border: 1px solid #ccc;border-left: none;height:32px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
+    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:1px;border: 1px solid #ccc;border-left: none;height:31px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn span {font-size: 20px;margin: -3px 0px 0px -7px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn.km-state-active {color:#4C5356 !important}
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
@@ -22,9 +22,9 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:130px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 80px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
+    .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
@@ -50,7 +50,7 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 65%;margin: 0px auto;margin-top: 10%;}
+    .txtfldCont {width: 65%;margin: 0px auto;margin-top: 17%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
@@ -59,7 +59,7 @@
     #loginForm label.error {font-size:14px}
     
     /*signup*/
-    .signuptxtfldCont {width: 65%;margin: 0px auto;margin-top: 4%;}
+    .signuptxtfldCont {width: 65%;margin: 0px auto;margin-top: 8%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
@@ -173,7 +173,7 @@
     /*25-08-2015*/
     .comments .txtTit{font-size:25px;text-align:center}
     .commentfld {width:100%;height:auto;display: inline-block;}
-    .commentfld .commenttxtbx {width:100%;padding: 10px 0px 60px 4px;border: 1px solid #ccc;}
+    .commentfld .commenttxtbx {width:100%;padding: 10px 0px 100px 4px;border: 1px solid #ccc;}
     .commentfld .commentpostbtn {margin: 15px 0px 15px 0px;float: right;width: 90px;color:#000;background-color:#80CFF6;font-weight:600;border-radius:10px;margin-right: 15px;}
     .commentfld .commentpostbtn:active {background-color:#80CFF6;font-weight:600;color:#000}
     .commentDataListView h4 {text-align:center}
@@ -240,7 +240,7 @@
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
-    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:0px;border: 1px solid #ccc;border-left: none;height:32px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
+    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:1px;border: 1px solid #ccc;border-left: none;height:31px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn span {font-size: 22px;margin: -3px 0px 0px -7px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn.km-state-active {color:#4C5356 !important}
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
@@ -255,9 +255,9 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:130px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 80px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
-    .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
+    .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
@@ -283,7 +283,7 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 85%;margin: 0px auto;margin-top: 8%;}
+    .txtfldCont {width: 85%;margin: 0px auto;margin-top: 32%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
@@ -292,7 +292,7 @@
     #loginForm label.error {font-size:14px}
     
     /*signup*/
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 4%;}
+    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 20%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
@@ -1396,14 +1396,14 @@
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
-    .bottom_nvbar .srchDv { width:85%;height:100%;float:left;display:inline-block;padding: 6px 0px 0px 0px;}
-    .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
+    .bottom_nvbar .srchDv { width:83%;height:100%;float:left;display:inline-block;padding: 6px 0px 0px 0px;}
+    .bottom_nvbar .srchDv .searchBtnDv {width:15%;float:right;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:0px;border: 1px solid #ccc;border-left: none;height:32px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn span {font-size: 20px;margin: -3px 0px 0px -5px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn.km-state-active {color:#4C5356 !important}
-    .bottom_nvbar .srchDv .searchtxtDv {width:60%;float:right;}
+    .bottom_nvbar .srchDv .searchtxtDv {width:52%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
-    .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
+    .bottom_nvbar .menuDv { width:16%;height:100%;float:left}
     .bottom_nvbar .menuDv .menu {width: 28px;height: 30px;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}

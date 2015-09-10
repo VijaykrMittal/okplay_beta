@@ -15,7 +15,8 @@
         
         show : function(e)
         {
-            
+            $('#gendermale').prop('checked', false);
+            $('#genderfemale').prop('checked', false);
             $('.popup').hide();
             $('.searchTxtbox').val('');
             e.view.scroller.scrollTo(0, 0);

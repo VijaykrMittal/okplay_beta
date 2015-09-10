@@ -238,8 +238,8 @@
         
         shareMessageAndURL:function(id,sub,msg)
         {
-            var url = "http://okplay.club/node/"+id;
-            this.share(msg, sub, null, url);
+           var url = "http://okplay.club/node/"+id;
+           app.categoryService.viewModel.share(msg, sub, null, url);
         },
         
         share : function(message, subject, image, link)
@@ -248,7 +248,7 @@
         },
         
         onSuccess: function(msg) {
-            console.log('SocialSharing success: ' + msg);
+            alert('SocialSharing success: ' + msg);
         },
 
         onError: function(msg) {
