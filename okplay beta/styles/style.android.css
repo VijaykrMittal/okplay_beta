@@ -229,6 +229,8 @@
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
     
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
 }
 
 @media (min-width:0px) and (max-width:1024px) {
@@ -462,11 +464,15 @@
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
     
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
 }
 
 @media (min-width:0px) and (max-width:960px) {
     .homeFooter .content1 ul li {list-style: none;padding: 0 0 5px 0;}
     .homeFooter .content2 ul li {list-style: none;padding: 0 0 3px 0;}
+    
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
 }   
 
 @media (min-width:0px) and (max-width:800px) {
@@ -699,6 +705,8 @@
     
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
+    
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
 }
 
@@ -933,6 +941,8 @@
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
     
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
 }
 
 @media (min-width:0px) and (max-width:640px) {
@@ -1165,6 +1175,8 @@
     
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
+    
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
 }
 
@@ -1400,6 +1412,8 @@
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
     
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
 }
 
 @media (min-width:0px) and (max-width:440px) {
@@ -1626,6 +1640,8 @@
     
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 25px;width: 300px;left:20px;margin-left: -16px;}
+    
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
 }
 
@@ -1854,10 +1870,14 @@
     .genderP {position:relative}
     .genderP label[for=gender] {  position: absolute;top: 25px;width: 300px;left:20px;margin-left: -16px;}
     
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
 }
 
 @media (min-width:0px) and (max-width:360px) {
     
     .homeFooter .content1 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
+    
+    #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
 }

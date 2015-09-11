@@ -7,7 +7,8 @@ var app = (function(global){
     
     var onDeviceReady = function()
     {
-        //alert(window.screen.width);
+        console.log(window.device.platform);
+       // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
