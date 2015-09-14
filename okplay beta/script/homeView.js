@@ -7,7 +7,9 @@
         loginStatus:(localStorage.getItem("loginStatus") !== false) ?  localStorage.getItem("loginStatus") : false,
         networkStatus : true,
         homePageData:[],
-        faqsData : [],
+        faqsData : '',
+        faqsDataArray:[],
+        scrollImage:[],
         show:function(e)
         {
             app.mobileApp.showLoading();
@@ -15,21 +17,22 @@
             $('.homeFooter').css("display",'none');
             $('#blockrightContent').css('background','none');
             $('.listCategory').removeClass("highlightColor");
+            
             app.homeService.viewModel.getUserLoginStatus();
-            app.homeService.viewModel.scrollViewImage();
-            app.homeService.viewModel.footerApiCall();
             
             if(sessionStorage.getItem('SliderCategoryAPIStatus') === "null" || sessionStorage.getItem('SliderCategoryAPIStatus') === null)
             {
                 app.homeService.viewModel.categoryDataShow();
                 app.homeService.viewModel.homePageBlock();
+                app.homeService.viewModel.scrollViewImage();
+                app.homeService.viewModel.footerApiCall();
                 sessionStorage.setItem('SliderCategoryAPIStatus',true);
             }
             else
             {
+                app.homeService.viewModel.setScrollViewDatabyArray(app.homeService.viewModel.scrollImage);
                 $('#blockrightContent').css('background','#E7E7E7');
                 $('.homeFooter').css("display",'block');
-                
             }
             
             $('.popup').hide();
@@ -90,7 +93,6 @@
                         }
                     },
                     error: function (e) {
-                        console.log(e);
                         app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         function () { }, "Notification", 'Ok');
@@ -172,6 +174,15 @@
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.homeService.viewModel.setScrollViewData(data[0]['data']);
+                    
+                    for(var x in data[0]['data'])
+                    {
+                        if($.isNumeric(x))
+                        {
+                            app.homeService.viewModel.scrollImage.push({path:data[0]['data'][x]['path']});
+                        }
+                    }
+                    
                 }
                 else
                 {
@@ -205,9 +216,31 @@
             
         },
         
+        setScrollViewDatabyArray:function(data)
+        {
+            var html = '<ul class="bxslider">';
+            for(var x in data)
+            {
+               if($.isNumeric(x))
+                {
+                    html +='<li><img src="'+data[x]['path']+'" class="bannerheight"></li>';
+                }
+            }
+            html += '</ul>';
+            
+            $('#bxs').html(html);
+            $('.bxslider').bxSlider({
+                mode:'fade'
+            });
+            
+            setTimeout(function(){
+                app.mobileApp.hideLoading();
+            },2000);
+            
+        },
+        
         categoryArticle : function(e)
         {
-            console.log(e);
             sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
             sessionStorage.setItem("ageSelectItem",'');
             $('.listCategory').removeClass("highlightColor");
@@ -320,7 +353,6 @@
                 var data = this.data();
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
-                    console.log(data[0]['data']);
                     app.homeService.viewModel.setFooterdata(data[0]['data']);
                 }
                 else
@@ -333,7 +365,7 @@
         
         setFooterdata : function(data)
         {
-            dataFaqParam = [];
+           // dataFaqParam = [];
             for(var x in data)
             {
                 if(data[x]['title'] === ' About Us')
@@ -366,11 +398,11 @@
                 
                 if(data[x]['type'] === 'faq')
                 {
-                    dataFaqParam.push({nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']});
+                    app.homeService.viewModel.faqsDataArray.push({nid:data[x]['nid'],body:data[x]['body'],title:data[x]['title']});
                 }
                 
             }
-            this.set('faqsData',dataFaqParam);
+            this.set('faqsData',app.homeService.viewModel.faqsDataArray);
         },
         
         movetoLogin:function()

@@ -8,11 +8,12 @@ var app = (function(global){
     var onDeviceReady = function()
     {
         console.log(window.device.platform);
-       // alert(window.screen.width);
+       //alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
-        window.camera = new cameraFunction(); 
+        //window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
-        networkStatus();
+        sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
+       // networkStatus();
     };
     
     var networkStatus = function()
@@ -48,7 +49,6 @@ var app = (function(global){
                     return false;
                 }
             }
-
             return true;
         }
     }
