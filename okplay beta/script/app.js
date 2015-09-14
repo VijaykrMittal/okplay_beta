@@ -12,7 +12,8 @@ var app = (function(global){
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
-        sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
+        window.connectionInfo.checkConnection()
+        //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
        // networkStatus();
     };
     
@@ -48,6 +49,7 @@ var app = (function(global){
                 {
                     return false;
                 }
+                alert(states[networkState]);
             }
             return true;
         }

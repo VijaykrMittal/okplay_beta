@@ -12,6 +12,7 @@
         scrollImage:[],
         show:function(e)
         {
+            alert(navigator.connection);
             app.mobileApp.showLoading();
             
             $('.homeFooter').css("display",'none');
