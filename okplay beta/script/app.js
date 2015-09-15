@@ -49,7 +49,6 @@ var app = (function(global){
                 {
                     return false;
                 }
-                alert(states[networkState]);
             }
             return true;
         }
