@@ -62,7 +62,7 @@
                 messages:{
                     contect_email:{
                         contect_email: "Please enter valid email.",
-                        required: "E-mail field is required."
+                        required: "E-mail ID field is required."
                     },
                     contect_name:{
                         required:"Name field is required."

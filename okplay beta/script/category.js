@@ -248,11 +248,11 @@
         },
         
         onSuccess: function(msg) {
-            alert('SocialSharing success: ' + msg);
+            console.log('SocialSharing success: ' + msg);
         },
 
         onError: function(msg) {
-            alert('SocialSharing error: ' + msg);
+            console.log('SocialSharing error: ' + msg);
         }
     });
     app.categoryService = {

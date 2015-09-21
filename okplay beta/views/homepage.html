@@ -1,7 +1,7 @@
 <!--Homepage View and categoryList template-->
 <div data-role="view" data-title="okplay" id="homepageView" data-use-native-scrolling="true" data-model="app.homeService.viewModel" data-after-show="app.homeService.viewModel.show">
     <!--Category ListData-->
-    <div data-role="content" class="outerDV">
+    <div data-role="content" class="outerDV mainContDv">
         <div id="bxs" class="bxs"></div>
         <div class="homeContent">
             <div id="blockContent">&nbsp;</div>
@@ -48,7 +48,7 @@
                     <img src="#:data['img']#"/>
                 </p>
                 <p>
-                    <a class="browseBtn" data-id="#:data['id']#" data-click="app.homeService.viewModel.browseArticle" data-role="button">BROWSE ARTICLE</a>
+                    <a class="browseBtn" data-id="#:data['id']#" data-click="app.homeService.viewModel.browseArticle" data-role="button">BROWSE ARTICLES</a>
                 </p>
             </div>
         </li>

@@ -7,7 +7,7 @@ var app = (function(global){
     
     var onDeviceReady = function()
     {
-        console.log(window.device.platform);
+        console.log(window.device);
        //alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 

@@ -3,7 +3,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -13,7 +13,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:20%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-right: 10px;float:right;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-right: 10px;float:right;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -38,7 +38,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -238,7 +238,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -248,7 +248,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:20%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-right: 10px;float:right;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-right: 10px;float:right;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -273,7 +273,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -480,7 +480,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -490,7 +490,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:20%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -515,7 +515,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -715,7 +715,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -725,7 +725,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:20%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -750,7 +750,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -950,7 +950,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:85%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -960,7 +960,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:60%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -985,7 +985,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -1185,7 +1185,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:85%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -1195,7 +1195,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:60%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 52px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
@@ -1220,7 +1220,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {width:90%;margin-left: 8px;border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 15px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 15px;}
     
@@ -1421,7 +1421,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:85%;height:100%;float:left;display:inline-block;padding: 6px 0px 0px 0px;}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -1431,7 +1431,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:60%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
@@ -1455,7 +1455,7 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
+    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;text-transform: uppercase;}
     #blockrightContent ul li p:last-child {width:90%;margin-left: 8px;}
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
@@ -1650,7 +1650,7 @@
     /*Homepage*/
     .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
-    .bottom_nvbar .logo { width: 65px;height: 65px;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
+    .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:85%;height:100%;float:left;display:inline-block;padding: 6px 0px 0px 0px;}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
@@ -1660,7 +1660,7 @@
     .bottom_nvbar .srchDv .searchtxtDv {width:60%;float:right;}
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
-    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
+    .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
     .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
@@ -1684,9 +1684,9 @@
     #blockrightContent ul {padding:0}
     #blockrightContent ul li{text-align: center; list-style: none;border-bottom: 1px solid #fff;}
     #blockrightContent ul li:last-child {border-bottom:none}
-    #blockrightContent ul li p:first-child {font-size: 18px;font-weight: bold;}
-    #blockrightContent ul li p:last-child {width:94%;margin-left: 8px;}
-    #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
+    #blockrightContent ul li p:first-child {font-size: 16px;font-weight: bold;text-transform: uppercase;}
+    #blockrightContent ul li p:last-child {width:95%;margin-left: 8px;}
+    #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;margin-left: -8px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
     #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
@@ -1705,7 +1705,7 @@
     /*signup*/
     .signuptxtfldCont {width: 95%;margin: 0px auto;margin-top: 8%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
-    .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
+    .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 18px !important;font-weight: bold !important;line-height: 25px;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
@@ -1849,7 +1849,7 @@
     .root-1 .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
     .root-1 .rightDv .innerDv .commentTxt {width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
     .root-1 .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
-    .root-1 .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root-1 .rightDv .innerDv .creatDv span {width:55%;float:left;font-size:13px}
     .root-1 .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root-1 .rightDv .innerDv .creatDv ul li {float:left;margin:0px 20px 0px 0px}
     .root-1 .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none}
@@ -1871,6 +1871,9 @@
     .genderP label[for=gender] {  position: absolute;top: 25px;width: 300px;left:20px;margin-left: -16px;}
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
+    /*21-09-2015*/
+    .outerDV {width:100%;overflow:scroll}
     
 }
 
