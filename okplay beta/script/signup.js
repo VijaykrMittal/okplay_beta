@@ -86,8 +86,8 @@
             dataParam['firstname'] = this.get('signupfname'); 
             dataParam['lastname'] = this.get('signuplname'); 
             dataParam['email'] = this.get('signupEmail'); 
-            dataParam['password'] = this.get('signupPassword'); 
             dataParam['mobilenumber'] = this.get('signupmobilenumber'); 
+            dataParam['password'] = this.get('signupPassword');
             dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
             dataParam['apiaction'] = 'usersignup';
             
@@ -117,6 +117,7 @@
                 
             	var data = this.data();
                 app.mobileApp.showLoading();
+                console.log(data);
                 if(data[0]['code'] === "1" || data[0]['code'] === 1)
                 {
                     app.loginService.viewModel.setUserLogindata(data[0]['data']);

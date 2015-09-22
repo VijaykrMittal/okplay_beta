@@ -196,7 +196,7 @@
         showAgeDropDownbyAPI:function(data)
         {
             var html = "";
-            html = "<option value='0' data-id='0'>All Age Group</option>";
+            html = "<option value='0' data-id='0'>All Age Groups</option>";
             for(var x in data)
             {
                 if($.isNumeric(x))

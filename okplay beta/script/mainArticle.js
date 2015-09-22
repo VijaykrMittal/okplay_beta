@@ -116,7 +116,7 @@
             parentArray = [];
             if(data.length === 0)
             {
-                commentHtml ='<h4>There is no comments</h4>';
+                commentHtml ='<h4>There are no comments</h4>';
             }
             else
             {

@@ -45,7 +45,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -56,7 +56,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 65%;margin: 0px auto;margin-top: 8%;}
@@ -66,7 +66,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -104,7 +104,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -129,27 +129,27 @@
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;padding: 0 0 5px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-family: 'Lato', sans-serif;font-weight: 400;font-size: 16px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-family: 'Lato', sans-serif;font-weight: 400;font-size: 16px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;padding: 0 0 3px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-family: 'Lato', sans-serif;font-weight: 400;font-size: 16px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-family: 'Lato', sans-serif;font-weight: 400;font-size: 16px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 65%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -231,6 +231,10 @@
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 82px;}
+    .line2 {position: absolute;top: 17px;right: 80px;}
+    
 }
 
 @media (min-width:0px) and (max-width:768px) {
@@ -257,7 +261,7 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 80px;width:130px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
@@ -280,7 +284,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -291,7 +295,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 20%;}
@@ -301,7 +305,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -339,7 +343,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -364,27 +368,27 @@
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 2px;}
     .homeFooter .content1 ul li {list-style: none;padding: 0 0 5px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 2px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 3px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -466,9 +470,22 @@
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 82px;}
+    .line2 {position: absolute;top: 17px;right: 80px;}
+    
 }
 
 @media (min-width:0px) and (max-width:740px) {
+    
+    .nvbar .logPos {position: absolute;top: 13px;right: 65px;width:130px}
+    .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 82px;}
+    .line2 {position: absolute;top: 17px;right: 78px;}
 }
 
 @media (min-width:0px) and (max-width:670px) {
@@ -495,7 +512,7 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:130px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 62px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
@@ -518,7 +535,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -529,7 +546,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 4%;}
@@ -539,7 +556,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -577,7 +594,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -602,27 +619,27 @@
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;padding: 0 0 5px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 3px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -703,6 +720,10 @@
     .genderP label[for=gender] {  position: absolute;top: 0px;width: 300px;left:165px;margin-left: -16px;}
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 82px;}
+    .line2 {position: absolute;top: 17px;right: 75px;}
     
 }
 
@@ -730,7 +751,7 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:130px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 60px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
@@ -753,7 +774,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -764,7 +785,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 25%;}
@@ -774,7 +795,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -812,7 +833,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -837,28 +858,28 @@
     .homeFooter .content1 .contentInner1 {width:220px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;padding: 0 0 5px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:220px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 3px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 14px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -940,6 +961,10 @@
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
     
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 80px;}
+    .line2 {position: absolute;top: 17px;right: 75px;}
+    
 }
 
 @media (min-width:0px) and (max-width:480px) {
@@ -967,7 +992,7 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:110px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
@@ -988,7 +1013,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -999,7 +1024,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 15%;}
@@ -1009,7 +1034,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -1047,7 +1072,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -1070,26 +1095,26 @@
     .homeFooter .content1 .contentInner1 {width:200px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:200px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 95%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -1170,6 +1195,10 @@
     .genderP label[for=gender] {  position: absolute;top: 25px;width: 300px;left:20px;margin-left: -16px;}
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 82px;}
+    .line2 {position: absolute;top: 17px;right: 75px;}
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -1195,7 +1224,7 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 70px;width:110px}
+    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
@@ -1216,7 +1245,7 @@
     #blockrightContent .browseBtn {background-color: #FDD003;color: #333;font-weight: 700;font-size: 12px;}
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 700;font-size: 12px;}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -1227,7 +1256,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 95%;margin: 0px auto;margin-top: 8%;}
@@ -1237,7 +1266,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -1275,7 +1304,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -1298,26 +1327,26 @@
     .homeFooter .content1 .contentInner1 {width:190px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:190px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 13px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 7%;margin-bottom: 15px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 16px;font-family: 'Lato', sans-serif}
@@ -1400,6 +1429,10 @@
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
        .blankarticleTit {font-size: 18px;color: #FFF;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;position: absolute;top: 0px;left: 6px;font-weight: 400;word-wrap: break-word;width: 88%;}
     
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 80px;}
+    .line2 {position: absolute;top: 17px;right: 75px;}
+    
 }
 
 @media (min-width:0px) and (max-width:320px) {
@@ -1449,7 +1482,7 @@
     #blockrightContent .browseBtn:active {background-color: #FDD003 !important;color: #333 !important;font-weight: 600;font-size: 10px;}
     .outerDV {width:100%;overflow:scroll}
     
-    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
+    #categoryList li {padding: 10px !important;background: url('./images/trp_bg.png') !important;text-transform: uppercase;color: #FFF !important;border-color: #000000 !important;border: none !important;box-shadow: inset 0 0px 0 !important;-webkit-box-shadow: inset 0 0px 0 !important;}
     #categoryList li.highlightColor {background-color:#4E4E4E !important}
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
@@ -1460,7 +1493,7 @@
     .txtfldCont .loginBtn {text-align:center}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
-    #loginForm label.error {font-size:14px}
+    #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
     .signuptxtfldCont {width: 95%;margin: 0px auto;margin-top: 8%;}
@@ -1470,7 +1503,7 @@
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
     #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
-    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 200;}
+    #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
     
     
@@ -1508,7 +1541,7 @@
     .bold {display: block;font-weight: 700;}
     .fstDv h3 {text-align:center;color:#333;font-family: 'Lato', sans-serif;background-color: #FFE600;/*display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
     .odd h2 {text-align: center;color: #FFE600;font-family: 'Lato', sans-serif;/*background-color: #FFE600;display: inline-block;*/font-weight: 400;font-size: 22px;/*padding: 5px 50px;*/line-height:32px;text-transform: uppercase;}
-    .even h2 {text-align:center;color:#FFF;font-family: times;}
+    .even h2 {text-align:center;color:#000;font-family: times;}
     .even p,.odd p {font-family: 'Lato', sans-serif;line-height: 21px;text-align: justify;}
     .even li,.odd li {text-align: justify;margin-left: -5px;}
     /*.articleDv .shadow {position: absolute;left: 64px;width: 100%;}
@@ -1531,26 +1564,26 @@
     .homeFooter .content1 .contentInner1 {width:190px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content1 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 12px;background: none;border: none;}
+    .homeFooter .content1 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 12px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content2 {width:50%;float: left;background: #818286;}
     .homeFooter .content2 .contentInner2 {width:190px;text-align:left;margin:auto;}
     .homeFooter .content2 ul {margin:0 0 0 0;padding:0 0 0 4px;}
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
-    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 12px;background: none;border: none;}
+    .homeFooter .content2 ul li a {text-decoration:none;color: #f3f4f8;font-weight: 400;font-family: 'Lato', sans-serif;font-size: 12px;background: none;border: none;text-transform: capitalize;font-size: 15px;}
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;font-size:15px}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
-    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;font-weight: 200;}
+    #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 7%;margin-bottom: 15px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
     .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
-    #aboutBody p,#privacyBody p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 12px;font-family: 'Lato', sans-serif}
+    #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 12px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
     #termsBody h3 {font-family: 'Lato', sans-serif}
     #termsBody p {text-align:justify;font-weight: 400;line-height: 22px;font-size: 12px;font-family: 'Lato', sans-serif}
@@ -1633,5 +1666,9 @@
     #faqsTitle,#aboutTitle,#termsTitle,#ourteamTitle,#privacyTitle {font-size:21px}
     #filterDropdwn h2 {font-weight: 400;font-size: 30px;color: #7e7e7e;}
     .blankarticleTit {font-size: 18px;color: #FFF;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;position: absolute;top: 0px;left: 6px;font-weight: 400;word-wrap: break-word;width: 88%;}
+    
+    /*22-09-2015*/
+    .line1 {position: absolute;top: 17px;right: 73px;}
+    .line2 {position: absolute;top: 17px;right: 68px;}
     
 }

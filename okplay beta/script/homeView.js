@@ -61,13 +61,15 @@
             
             if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
             {
-                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="removebtn logPos" data-align="right"><span>MY ACCOUNT &nbsp;&nbsp;&nbsp;</span></a>';
-                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="removebtn signPos" data-align="right">LOGOUT</a>';
+                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="accountPos" data-align="right"><span>MY ACCOUNT</span></a>';
+              //  hhtml +='<span class="line2">/</span>';
+                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
             }
             else
             {
-                hhtml = '<a data-role="button" data-click="movetoLogin" class="removebtn mainLogPos" data-align="right"><span>LOGIN &nbsp;&nbsp;&nbsp;</span></a>';
-                hhtml += '<a data-role="button" data-click="movetoSignup" class="removebtn mainSignPos" data-align="right">REGISTER</a>';
+                hhtml = '<a data-role="button" data-click="movetoLogin" class="loginPos" data-align="right"><span>LOGIN</span></a>';
+               // hhtml +='<span class="line1">/</span>';
+                hhtml += '<a data-role="button" data-click="movetoSignup" class="registerPos" data-align="right"><span>REGISTER</span></a>';
             }
             
             $('.mainLayoutID').html(hhtml);
@@ -100,6 +102,7 @@
                 });
                 category.fetch(function(){
                     var data = this.data();
+                    console.log(data);
                     app.homeService.viewModel.setCategoryListData(data[0]);
                     app.homeService.viewModel.setHomePageData(data[0]);
                 });
@@ -126,6 +129,8 @@
         
         setHomePageData : function(data)
         {
+            console.log("right content");
+            console.log(data);
             var that = this;
             dataParam = [];
             dataParamInner = [];
@@ -304,6 +309,8 @@
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.homeService.viewModel.setHomeLayout(data[0]['data']);
+                    console.log("BLOCK");
+                    console.log(data[0]['data']);
                 }
                 else
                 {
@@ -353,6 +360,8 @@
                 var data = this.data();
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
+                    console.log("FOOTER");
+                    console.log(data[0]['data']);
                     app.homeService.viewModel.setFooterdata(data[0]['data']);
                 }
                 else
@@ -387,6 +396,13 @@
                     sessionStorage.setItem('Ourteamtitle',data[x]['title']);
                     sessionStorage.setItem('Ourteamnid',data[x]['nid']);
                     sessionStorage.setItem('Ourteambody',data[x]['body']);
+                }
+                
+                if(data[x]['title'] === 'Disclaimer')
+                {
+                    localStorage.setItem('Disclaimertitle',data[x]['title']);
+                    localStorage.setItem('Disclaimernid',data[x]['nid']);
+                    localStorage.setItem('Disclaimerbody',data[x]['body']);
                 }
                 
                 if(data[x]['title'] === 'Terms and Conditions')
@@ -433,6 +449,11 @@
         moveToPrivacyPolicy : function()
         {
             app.mobileApp.navigate("#privacyPolicy");
+        },
+        
+        moveToDisclaimer : function()
+        {
+            app.mobileApp.navigate("#disclaimer");
         },
         
         moveToTermsCondition : function()

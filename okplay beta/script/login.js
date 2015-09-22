@@ -51,7 +51,26 @@
                 }
             });
             
-            /*myaccount view*/
+           
+        },
+        
+        Loginshow:function()
+        {
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#myaccountView').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
+             /*myaccount view*/
             $('#username').text(localStorage.getItem('userName'));
             $('#useremail').text(localStorage.getItem('userEmail'));
         },

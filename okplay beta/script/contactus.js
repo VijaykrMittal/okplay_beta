@@ -69,7 +69,7 @@
                     },
                     contect_number:{
                         required:"Mobile number field is required.",
-                        phoneNumber:'Please enter 10 digit mobile number'
+                        phoneNumber:'Please do not enter more than 10 characters.'
                     },
                     contect_message:{
                         required:"Message field is required."
@@ -149,6 +149,29 @@
             
             $('#privacyTitle').html(sessionStorage.getItem('Privacytitle'));
             $('#privacyBody').html(sessionStorage.getItem('privacybody'));
+        },
+        
+        disclaimerShow:function()
+        {
+            $(".km-native-scroller").scrollTop(0);
+            $('.popup').hide();
+            $('.srchtxt').val('');
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#privacyPolicy').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                    $('.popup').hide();
+                }
+            });
+            
+            $('#disclaimerTitle').html(localStorage.getItem('Disclaimertitle'));
+            $('#disclaimerBody').html(localStorage.getItem('Disclaimerbody'));
         },
         
         termsshow:function()
