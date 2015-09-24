@@ -171,7 +171,7 @@
                         commentHtml +='<li>';
                         commentHtml += '<div class="'+className+'" id="rootId'+data[x]['cid']+'">';
                         commentHtml += '<div class="leftDv">';
-                        commentHtml += '<ul><li><img src="styles/images/user-face.png" class="imgcls"/></li><li><span>'+username+'</span></li></ul>';
+                        commentHtml += '<ul><li><img src="styles/images/user-face.png" class="imgcls"/></li><li class="userclass"><span>'+username+'</span></li></ul>';
                         commentHtml += '</div>';
                         commentHtml += '<div class="rightDv">';
                         commentHtml += '<div class="innerDv">';
@@ -296,44 +296,62 @@
             }
         },
         
+        checkPostEnter:function(e)
+        {
+            if (e.keyCode === 13) {
+                alert("ok");
+            }
+        },
+        
         commentRootReply : function(data)
         {
-            console.log(data);
-            app.mobileApp.showLoading();
-            var commentPost = new kendo.data.DataSource({
-                transport: {
-                    read: {
-                        url: localStorage.getItem('commentAPI'),
-                        type:"POST",
-                        dataType: "json", 
-                        data: data
+            if (!window.connectionInfo.checkConnection()) {
+                navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
+                    if (confirmed === true || confirmed === 1) {
+                        app.mainArticleService.viewModel.commentRootReply();
                     }
-                },
-                schema: {
-                    data: function(data)
-                    {
-                        return [data];
-                    }
-                },
-                error: function (e) {
-                    app.mobileApp.hideLoading();
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-                },
 
-            });
-            commentPost.fetch(function(){
-                var data = this.data();
-                console.log(data);
-                if(data[0]['code'] === 1 || data[0]['code'] === '1')
-                {
-                    app.mainArticleService.viewModel.show();
-                }
-                else
-                {
-                    navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
-                }
-            });
+                }, 'Connection Error?', 'Retry,Cancel');
+            }
+            else
+            {
+                app.mobileApp.showLoading();
+                var commentPost = new kendo.data.DataSource({
+                    transport: {
+                        read: {
+                            url: localStorage.getItem('commentAPI'),
+                            type:"POST",
+                            dataType: "json", 
+                            data: data
+                        }
+                    },
+                    schema: {
+                        data: function(data)
+                        {
+                            return [data];
+                        }
+                    },
+                    error: function (e) {
+                        app.mobileApp.hideLoading();
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                    },
+
+                });
+                commentPost.fetch(function(){
+                    var data = this.data();
+                    console.log(data);
+                    if(data[0]['code'] === 1 || data[0]['code'] === '1')
+                    {
+                        app.mainArticleService.viewModel.show();
+                    }
+                    else
+                    {
+                        navigator.notification.alert('Server not responding properly,Please try again',function(){},"Notification","OK");
+                    }
+                });
+            }
+            
         }
     });
     app.mainArticleService = {

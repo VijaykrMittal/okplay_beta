@@ -59,7 +59,7 @@
     .txtfldCont {width: 65%;margin: 0px auto;margin-top: 10%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
-    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont .loginBtn {text-align:center;margin-top: -20px;}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -70,7 +70,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -130,7 +130,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
@@ -145,15 +145,15 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
-    .contactFldFrm{width: 65%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
+    .contactFldFrm{width: 65%;display: block;margin: 0px auto;margin-top: 4%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
-    .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    .contactSubBtn .contactBtn {width: 35%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
     #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
@@ -241,6 +241,22 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 78px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width: 105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:65%;height:auto;margin:0px auto;margin-top: 15%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
 }
 
 @media (min-width:0px) and (max-width:1024px) {
@@ -301,10 +317,10 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 65%;margin: 0px auto;margin-top: 10%;}
+    .txtfldCont {width: 65%;margin: 0px auto;margin-top: 6%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
-    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont .loginBtn {text-align:center;margin-top: -20px;}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -315,7 +331,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -375,7 +391,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
@@ -390,7 +406,7 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -499,6 +515,22 @@
     .homeFooter .content2 ul li {list-style: none;padding: 0 0 3px 0;}
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:65%;height:auto;margin:0px auto;margin-top: 12%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
 }   
 
 @media (min-width:0px) and (max-width:800px) {
@@ -573,7 +605,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -633,7 +665,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 6px;}
@@ -648,7 +680,7 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -744,6 +776,22 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 78px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: -45px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:80%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
 }
 
 @media (min-width:0px) and (max-width:768px) {
@@ -818,7 +866,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -878,7 +926,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:250px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
@@ -893,7 +941,7 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -989,6 +1037,22 @@
     .line1 {position: absolute;top: 16px;right: 80px;}
     .line2 {position: absolute;top: 16px;right: 75px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: -45px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
 }
 
 @media (min-width:0px) and (max-width:640px) {
@@ -1058,12 +1122,12 @@
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 25%;}
+    .signuptxtfldCont {width: 85%;margin: 0px auto;margin-top: 25%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1123,7 +1187,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:200px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
@@ -1138,15 +1202,15 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
-    .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
+    .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 8%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
-    .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    .contactSubBtn .contactBtn {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
     #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
@@ -1234,6 +1298,22 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 78px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:94%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
 }
 
 @media (min-width:0px) and (max-width:600px) {
@@ -1297,18 +1377,18 @@
     .txtfldCont {width: 85%;margin: 0px auto;margin-top: 28%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
-    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont .loginBtn {text-align:center;margin-top: -25px;}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 25%;}
+    .signuptxtfldCont {width: 85%;margin: 0px auto;margin-top: 15%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1368,7 +1448,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:220px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 5px;}
@@ -1384,11 +1464,11 @@
     .homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
-    .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
+    .contactFldFrm{width: 85%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
@@ -1480,6 +1560,30 @@
     .line1 {position: absolute;top: 17px;right: 90px;}
     .line2 {position: absolute;top: 17px;right: 75px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:94%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0%;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width: 106px;}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:85%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:14px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 15px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    /*24-09-2015*/
+    /*#forgotpwdForm p {text-align:center}*/
+    
+    #termsBody h3{margin: 0 0 10px 15px !important;padding: 0 !important;}
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;}
+    #categoryDiscrip p {font-size:18px;text-align: justify;}
+    #categoryDiscrip p br {display:none !important}
+    
 }
 
 @media (min-width:0px) and (max-width:440px) {
@@ -1537,7 +1641,7 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 85%;margin: 0px auto;margin-top: 28%;}
+    .txtfldCont {width: 90%;margin: 0px auto;margin-top: 28%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
@@ -1546,12 +1650,12 @@
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
-    .signuptxtfldCont {width: 80%;margin: 0px auto;margin-top: 15%;}
+    .signuptxtfldCont {width: 90%;margin: 0px auto;margin-top: 7%;}
     .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1609,7 +1713,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:200px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 6px;}
@@ -1623,11 +1727,11 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
-    .contactFldFrm{width: 95%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
+    .contactFldFrm{width: 95%;display: block;margin: 0px auto;margin-top: 8%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
@@ -1719,6 +1823,22 @@
     .line1 {position: absolute;top: 16px;right: 80px;}
     .line2 {position: absolute;top: 16px;right: 73px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:92%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:90%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 60%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -1737,7 +1857,7 @@
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
     .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 266px;height: auto;display: none;position: absolute;top: 105px;right: 12px;z-index:99999}
+    .popup {width: 266px;display: none;position: absolute;top: 105px;right: 12px;z-index:99999;height: 300px !important;overflow: scroll;}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
     .srchbtn {position: absolute !important;top: 71px !important;right: 63px !important;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
@@ -1776,21 +1896,21 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 95%;margin: 0px auto;margin-top: 28%;}
+    .txtfldCont {width: 95%;margin: 0px auto;margin-top: 25%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
-    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont .loginBtn {text-align:center;margin-top: -27px;}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
     /*signup*/
-    .signuptxtfldCont {width: 95%;margin: 0px auto;margin-top: 8%;}
-    .signuptxtfldCont .signupBtn {text-align:center;margin-top:40px}
+    .signuptxtfldCont {width: 95%;margin: 0px auto;margin-top: 0px;}
+    .signuptxtfldCont .signupBtn {text-align:center;margin-top:20px}
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 18px !important;font-weight: bold !important;line-height: 25px;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1848,7 +1968,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:185px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 6px;}
@@ -1862,8 +1982,8 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
-    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 14px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 7%;margin-bottom: 15px;}
@@ -1916,11 +2036,11 @@
     .root .rightDv {width:70%;float:left}
     .root .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
     .root .rightDv .innerDv .commentTxt {width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
-    .root .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
-    .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root .rightDv .innerDv .creatDv {width:100%;margin-top:17px;display: inline-block;}
+    .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px;margin-left: 10px;}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -1961,6 +2081,26 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 74px;}
     
+    /*23-09-2015*/
+    
+    #loginForm .forgotpargph {width:92%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    /*terms and condn*/
+    
+    /*24-09-2015*/
+    #termsBody h3{margin: 0 0 15px 15px !important;padding: 0 !important;}
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;}
 }
 
 @media (min-width:0px) and (max-width:360px) {
@@ -1969,6 +2109,7 @@
     .homeFooter .content2 ul li {list-style: none;font-size: 16px;padding: 0 0 8px 0;}
     
     #filterDropdwn h2 {font-weight: 400;font-size: 35px;color: #7e7e7e;}
+    .forgotpwdDV .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
 }
 
 @media (min-width:0px) and (max-width:320px) {
@@ -2043,7 +2184,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -2101,7 +2242,7 @@
     #tabstr .shareDv p a span {color: #000;font-size: 28px;padding: 2px;}
     
     /*21-08-2015*/
-    .homeFooter {width:100%;background:#818286;overflow: hidden;}
+    .homeFooter {width:100%;background:#818286;overflow: hidden;margin-top: 20px;}
     .homeFooter .content1 {width: 50%;float: left;background: #818286;}
     .homeFooter .content1 .contentInner1 {width:190px;text-align:left;margin:auto;}
     .homeFooter .content1 ul {margin:0 0 0 0;padding:0 0 0 4px;}
@@ -2115,7 +2256,7 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;font-size:15px}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}

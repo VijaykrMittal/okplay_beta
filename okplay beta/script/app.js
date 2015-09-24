@@ -8,7 +8,7 @@ var app = (function(global){
     var onDeviceReady = function()
     {
         console.log(window.device);
-       //alert(window.screen.width);
+      // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
@@ -141,6 +141,7 @@ var app = (function(global){
     localStorage.setItem("footerContentAPI","http://okplay.club/mobileapi/basicpagedata");
     localStorage.setItem("contactusAPI","http://okplay.club/mobileapi/savecontactus");
     localStorage.setItem("commentAPI","http://okplay.club/mobileapi/savecommentdata");
+    localStorage.setItem("forgotpasswordAPI","http://okplay.club/mobileapi/forgotpass");
     return{
       mobileApp : mobileApp
     };

@@ -15,9 +15,31 @@
                 <p>
                     <input type="password" name="pwd" data-bind="value:loginpwd" class="logTxtFld" id="pwd" Placeholder="Password" required/>
                 </p>
+                <p class="forgotpargph">
+                    <a href="#forgotpwd" class="forgotpwd">Forgot Passsword?</a>
+                </p>
             </form>
             <p class="loginBtn">
                 <a data-role="button" data-bind="click:loginSubmit">Log In</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--Forgot password-->
+<div data-role="view" id="forgotpwd" data-model="app.loginService.viewModel" data-show="app.loginService.viewModel.forgotPasswordShow">
+    <div data-role="content">
+        <div class="forgotpwdDV">
+           <h2 style="text-align:center">
+                   Request new password
+           </h2>
+            <form id="forgotpwdForm" data-bind="events: { keyup: checkEnterforgot}">
+                <p>
+                    <input type="text" name="email" class="forTxtFld" data-bind="value:forgotEmail" id="email" Placeholder="E-mail Address" required/>
+                </p>
+            </form>
+            <p class="forgotBtn">
+                <a data-role="button" data-bind="click:forgotPasswordSubmit">E-mail new password</a>
             </p>
         </div>
     </div>

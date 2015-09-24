@@ -102,6 +102,7 @@
                 });
                 category.fetch(function(){
                     var data = this.data();
+                    console.log("category");
                     console.log(data);
                     app.homeService.viewModel.setCategoryListData(data[0]);
                     app.homeService.viewModel.setHomePageData(data[0]);
@@ -116,11 +117,43 @@
         setCategoryListData :function(data)
         {
             var html = "";
+            var i=0;
+            var j=0;
             for(var x in data)
             {
                if($.isNumeric(x))
                 {
-                    html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                    if(data[x]['cate']==='main')
+                    {
+                        if(i===0)
+                        {
+                            html +='<li style="background-color: #4E4E4E !important;">Category</li>';
+                            html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-cate="'+data[x]['cate']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                            localStorage.setItem(data[x]['name']+'_description',data[x]['description']);
+                            i++;
+                        }
+                        else
+                        {
+                            html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-cate="'+data[x]['cate']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                            localStorage.setItem(data[x]['name']+'_description',data[x]['description']);
+                        }
+                    }
+                    else
+                    {
+                        if(j===0)
+                        {
+                            html +='<li style="background-color: #4E4E4E !important;">Age</li>';
+                            html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-cate="'+data[x]['cate']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                            localStorage.setItem(data[x]['name']+'_description',data[x]['description']);
+                            j++;
+                        }
+                        else
+                        {
+                            html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-cate="'+data[x]['cate']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
+                            localStorage.setItem(data[x]['name']+'_description',data[x]['description']);
+                        }
+                    }
+                    //html +='<li class="listCategory select'+data[x]['id']+'" data-id="'+data[x]['id']+'" data-cate="'+data[x]['cate']+'" data-bind="click:categoryArticle">'+data[x]["name"]+'</li>';
                 }
             }
             $('#categoryList').html(html);
@@ -137,14 +170,16 @@
             var i =0;
             for(var x in data)
             {
-                if(data[x]['img'] !== ""){
-
-                    dataParamInner = [];
-                    dataParamInner['id'] = data[x]['id'];
-                    dataParamInner['name'] = data[x]['name'];
-                    dataParamInner['img'] = data[x]['img'];
-                    dataParam[i]=dataParamInner; 
-                    i++;
+                if(data[x]['cate'] === 'main')
+                {
+                    if(data[x]['img'] !== ""){
+                        dataParamInner = [];
+                        dataParamInner['id'] = data[x]['id'];
+                        dataParamInner['name'] = data[x]['name'];
+                        dataParamInner['img'] = data[x]['img'];
+                        dataParam[i]=dataParamInner; 
+                        i++;
+                    }
                 }
             }
             that.set("homePageData",dataParam);
@@ -246,10 +281,22 @@
         
         categoryArticle : function(e)
         {
-            sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
-            sessionStorage.setItem("ageSelectItem",'');
-            $('.listCategory').removeClass("highlightColor");
-            $('.select'+e['target']['attributes']['data-id']['value']).addClass("highlightColor");
+            console.log(e);
+            if(e['target']['attributes']['data-cate']['value'] === "main")
+            {
+                sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
+                sessionStorage.setItem("ageSelectItem",'');
+                //$('.listCategory').removeClass("highlightColor");
+               // $('.select'+e['target']['attributes']['data-id']['value']).addClass("highlightColor");
+            }
+            else
+            {
+                sessionStorage.setItem("categorySelectItem",'');
+                sessionStorage.setItem("ageSelectItem",e['target']['attributes']['data-id']['value']);
+                sessionStorage.setItem('lastSelectAge',e['target']['attributes']['data-id']['value']);
+                //$('.listCategory').removeClass("highlightColor");
+               // $('.select'+e['target']['attributes']['data-id']['value']).addClass("highlightColor");
+            }
             
             if(app.mobileApp.view()['element']['0']['id']==='categoryArticleView')
             {
@@ -260,7 +307,6 @@
             {
                 app.mobileApp.navigate("#categoryArticleView");
             }
-            
         },
         
         browseArticle :function(e)

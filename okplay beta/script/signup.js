@@ -36,6 +36,14 @@
                 }
             });
             
+            $('#signupmobilenumber').keypress(function(e){
+                var valid = (e.which>=48 && e.which<=57)
+                if(!valid)
+                {
+                    e.preventDefault();
+                }
+            });
+            
             $('#signupForm').validate({
                 rules:{
                     signupEmail:{
@@ -83,57 +91,76 @@
             if(status === false)
             return status;
             
-            dataParam['firstname'] = this.get('signupfname'); 
-            dataParam['lastname'] = this.get('signuplname'); 
-            dataParam['email'] = this.get('signupEmail'); 
-            dataParam['mobilenumber'] = this.get('signupmobilenumber'); 
-            dataParam['password'] = this.get('signupPassword');
-            dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
-            dataParam['apiaction'] = 'usersignup';
-            
-            var dataSource = new kendo.data.DataSource({
-            transport: {
-                read: {
-                        url: localStorage.getItem("userSignupAPI"),
-                        type:"POST",
-                        dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
-                        data: dataParam
-                }
-            },
-            schema: {
-                data: function(data)
-            	{
-                	return [data];
-            	}
-            },
-            error: function (e) {
-            	 app.mobileApp.hideLoading();
-                 navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-            },
+            if (!window.connectionInfo.checkConnection()) {
+                navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
+                    if (confirmed === true || confirmed === 1) {
+                        app.signupService.viewModel.signupSubmit();
+                    }
 
-            });
-            dataSource.fetch(function(){
+                }, 'Connection Error?', 'Retry,Cancel');
+            }
+            else
+            {
+                dataParam['firstname'] = this.get('signupfname'); 
+                dataParam['lastname'] = this.get('signuplname'); 
+                dataParam['email'] = this.get('signupEmail'); 
+                dataParam['mobilenumber'] = this.get('signupmobilenumber'); 
+                dataParam['password'] = this.get('signupPassword');
+                dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
+                dataParam['apiaction'] = 'usersignup';
                 
-            	var data = this.data();
                 app.mobileApp.showLoading();
-                console.log(data);
-                if(data[0]['code'] === "1" || data[0]['code'] === 1)
-                {
-                    app.loginService.viewModel.setUserLogindata(data[0]['data']);
-                }
-                else if(data[0]['code'] === "2" || data[0]['code'] === 2)
-                {
-                    navigator.notification.alert("Some field is missing.",
-                    function () { }, "Notification", 'OK');
-                }
-                else
-                {
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
-                    app.mobileApp.hideLoading();
-                }
-            });
+                var dataSource = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                            url: localStorage.getItem("userSignupAPI"),
+                            type:"POST",
+                            dataType: "json", // "jsonp" is required for cross-domain requests; use "json" for same-domain requests
+                            data: dataParam
+                    }
+                },
+                schema: {
+                    data: function(data)
+                	{
+                    	return [data];
+                	}
+                },
+                error: function (e) {
+                	 app.mobileApp.hideLoading();
+                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                },
+
+                });
+                dataSource.fetch(function(){
+                    
+                	var data = this.data();
+                    
+                    console.log(data);
+                    if(data[0]['code'] === "1" || data[0]['code'] === 1)
+                    {
+                        app.loginService.viewModel.setUserLogindata(data[0]['data']);
+                    }
+                    else if(data[0]['code'] === "2" || data[0]['code'] === 2)
+                    {
+                        navigator.notification.alert("Some field is missing.",
+                        function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
+                    else if(data[0]['code'] === "5" || data[0]['code'] === 5)
+                    {
+                        navigator.notification.alert("Email ID already exist.",
+                        function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
+                    else
+                    {
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                        
+                    }
+                });
+            }
         },
             
         checkEnterSubmit:function(e)

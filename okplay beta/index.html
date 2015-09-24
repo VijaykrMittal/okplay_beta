@@ -59,6 +59,7 @@
         <div data-role="content">
             <div id="filterDropdwn">
                 <h2 class="txtclass" data-bind="text:selectCategory"></h2>
+                <div id="categoryDiscrip"></div>
                 <p id="age-dropdown">
                     <select class="dropFld" id="ageDropFld" onchange="app.categoryService.viewModel.drpdownFilter(this.options[this.selectedIndex].getAttribute('data-id'));"></select>
                 </p>

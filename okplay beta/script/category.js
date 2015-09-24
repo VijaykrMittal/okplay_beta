@@ -63,7 +63,9 @@
             app.mobileApp.showLoading();
             dataParam =[];
             cateID = sessionStorage.getItem('categorySelectItem');
-            if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "" || sessionStorage.getItem('ageSelectItem') === "0" || sessionStorage.getItem('ageSelectItem') === 0)
+            ageID = sessionStorage.getItem('ageSelectItem');
+            
+            /*if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "" || sessionStorage.getItem('ageSelectItem') === "0" || sessionStorage.getItem('ageSelectItem') === 0)
             {
                  ageID = ''; 
             }
@@ -71,11 +73,30 @@
             {
                  ageID = sessionStorage.getItem('ageSelectItem');
                  dataParam['ageId']=ageID;
-            }
-            dataParam['apiaction']='articlelist';
-            dataParam['catId']=cateID;
+            }*/
             
-            app.categoryService.viewModel.setSelectCategory(cateID);
+            if(sessionStorage.getItem('ageSelectItem') === null || sessionStorage.getItem('ageSelectItem') === "" || sessionStorage.getItem('ageSelectItem') === "0" || sessionStorage.getItem('ageSelectItem') === 0)
+            {
+                 dataParam['ageId'] = '';
+                 dataParam['catId']=cateID;
+            }
+            else
+            {
+                dataParam['ageId'] = sessionStorage.getItem('ageSelectItem');
+                dataParam['catId']='';
+            }
+            
+            dataParam['apiaction']='articlelist';
+            console.log(dataParam);
+            if(ageID === "")
+            {
+                app.categoryService.viewModel.setSelectCategory(cateID);
+            }
+            else
+            {
+               app.categoryService.viewModel.setSelectCategory(ageID); 
+            }
+            
             var categoryDataSource  = new kendo.data.DataSource({
                     transport: {
                         read: {
@@ -121,26 +142,72 @@
             if(id === "80")
             {
                 that.set("selectCategory","Health");
+                $('#categoryDiscrip').html(localStorage.getItem('Health_description'));
             }
             else if(id === "72")
             {
                 that.set("selectCategory","Mental development");
+                $('#categoryDiscrip').html(localStorage.getItem('Mental Development_description'));
             }
             else if(id === "73")
             {
                 that.set("selectCategory","Nutrition");
+                $('#categoryDiscrip').html(localStorage.getItem('Nutrition_description'));
             }
             else if(id === "82")
             {
                 that.set("selectCategory","Education");
+                $('#categoryDiscrip').html(localStorage.getItem('Education_description'));
             }
             else if(id=== "75")
             {
                 that.set("selectCategory","Play time");
+                $('#categoryDiscrip').html(localStorage.getItem('Play Time_description'));
             }
             else if(id=== "77")
             {
                 that.set("selectCategory","Family");
+                $('#categoryDiscrip').html(localStorage.getItem('Family_description'));
+            }
+            else if(id=== "23")
+            {
+                that.set("selectCategory","Pre-natal");
+                $('#categoryDiscrip').html(localStorage.getItem('Pre-natal_description'));
+            }
+            else if(id === "25")
+            {
+                that.set("selectCategory","0 to 3 months");
+                $('#categoryDiscrip').html(localStorage.getItem('0 to 3 months_description'));
+            }
+            else if(id === "26")
+            {
+                that.set("selectCategory","3 to 12 months");
+                $('#categoryDiscrip').html(localStorage.getItem('3 to 12 months_description'));
+            }
+            else if(id === "27")
+            {
+                that.set("selectCategory","1 to 3 years");
+                $('#categoryDiscrip').html(localStorage.getItem('1 to 3 years_description'));
+            }
+            else if(id === "28")
+            {
+                that.set("selectCategory","3 to 5 years");
+                $('#categoryDiscrip').html(localStorage.getItem('3 to 5 years_description'));
+            }
+            else if(id === "29")
+            {
+                that.set("selectCategory","5 to 7 years");
+                $('#categoryDiscrip').html(localStorage.getItem('5 to 7 years_description'));
+            }
+            else if(id === "230")
+            {
+                that.set("selectCategory","7 to 10 years");
+                $('#categoryDiscrip').html(localStorage.getItem('7 to 10 years_description'));
+            }
+            else if(id === "231")
+            {
+                that.set("selectCategory","10 to 12 years");
+                $('#categoryDiscrip').html(localStorage.getItem('10 to 12 years_description'));
             }
         },
         
@@ -224,7 +291,16 @@
         
         drpdownFilter:function(ageID)
         {
-             sessionStorage.setItem('ageSelectItem',ageID);
+            if(ageID === 0 || ageID === '0')
+            {
+                tmp = sessionStorage.getItem('lastSelectAge');
+                sessionStorage.setItem('ageSelectItem',tmp);
+            }
+            else
+            {
+                sessionStorage.setItem('ageSelectItem',ageID);
+            }
+            
              app.categoryService.viewModel.categoryArticleData();
         },
         

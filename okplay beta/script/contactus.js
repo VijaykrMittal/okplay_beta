@@ -30,6 +30,14 @@
                 }
             });
             
+            $('#contect_number').keypress(function(e){
+                var valid = (e.which>=48 && e.which<=57)
+                if(!valid)
+                {
+                    e.preventDefault();
+                }
+            });
+            
             $.validator.addMethod("phoneNumber", function(phone_number, element) {
                 phone_number = phone_number.replace(/\s+/g, "");
                 return this.optional(element) || phone_number.length > 9 &&
@@ -69,7 +77,7 @@
                     },
                     contect_number:{
                         required:"Mobile number field is required.",
-                        phoneNumber:'Please do not enter more than 10 characters.'
+                        phoneNumber:'Please enter 10 digit mobile number.'
                     },
                     contect_message:{
                         required:"Message field is required."
@@ -86,7 +94,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -109,7 +117,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -132,7 +140,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -155,7 +163,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -178,7 +186,7 @@
         {
             $(".km-native-scroller").scrollTop(0);
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -192,7 +200,7 @@
                     $('.popup').hide();
                 }
             });
-            console.log(sessionStorage.getItem('Termstitle'));
+           // console.log(sessionStorage.getItem('Termstitle'));
             $('#termsTitle').html(sessionStorage.getItem('Termstitle'));
             $('#termsBody').html(sessionStorage.getItem('Termsbody'));
         },
@@ -200,7 +208,7 @@
         faqshow : function()
         {
             $('.popup').hide();
-            $('.srchtxt').val('');
+            $('.searchTxtbox').val('');
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();

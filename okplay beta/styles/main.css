@@ -9,7 +9,7 @@ li:after {content: none;}
 
 /*7-8-2015*/
 #category-dropdown {text-align:center;display:none;margin-top: 50px;}
-#age-dropdown {text-align:center;/*margin-top: 50px;*/}
+#age-dropdown {text-align:center;margin-top: 5%;}
 
 
 /*8-8-2015*/
@@ -64,6 +64,13 @@ li:after {content: none;}
 
 /*22-09-2015*/
 .genderCls {color:#000 !important}
+
+/*24-09-2015*/
+    #termsBody h3{margin: 0 0 15px 15px !important;padding: 0 !important;}
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;}
+
+
+
 
 
 

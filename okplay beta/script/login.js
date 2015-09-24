@@ -6,6 +6,7 @@
         email:'',
         loginemail:'',
         loginpwd:'',
+        forgotEmail:'',
         
         show : function()
         {
@@ -54,7 +55,52 @@
            
         },
         
-        Loginshow:function()
+        forgotPasswordShow:function()
+        {
+            app.loginService.viewModel.resetfld();
+            $('.popup').hide();
+            $('.searchTxtbox').val('');
+            $('label.error').hide();
+            
+            $('.menu').unbind();
+            $('[data-role="view"]').unbind();
+            $('[data-role="view"]#forgotpwd').on("click",function(e){
+                if($(e.target).hasClass('menu'))
+                {
+                    $('.popup').slideToggle();
+                }
+                else
+                {
+                   // $(e.target).preventDefault();
+                    $('.popup').hide();
+                }
+            });
+            
+            $('#forgotpwdForm').validate({
+                rules:{
+                    email:{
+                        email:true,
+                        required:true
+                    }
+                },
+                messages:{
+                    email:{
+                        email: "Please enter valid email.",
+                        required: "E-mail field is required."
+                    }
+                },
+                submitHandler: function(form) {
+                	return false;
+                }
+            });
+        },
+        
+        resetfld:function()
+        {
+          this.set('forgotEmail','');  
+        },
+        
+        myAcccountshow:function()
         {
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
@@ -77,7 +123,6 @@
         
         loginSubmit:function()
         {
-           // app.mobileApp.showLoading();
             var status = $('#loginForm').valid();
 
             if(status === false)
@@ -120,7 +165,6 @@
                 });
                 loginDataSource.fetch(function(){
                 	var data = this.data();
-                    console.log(data);
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         app.loginService.viewModel.setUserLogindata(data[0]['data']);
@@ -145,6 +189,79 @@
             if (e.keyCode === 13) {
                 $(e.target).blur();
                 app.loginService.viewModel.loginSubmit();
+            }
+        },
+        
+        forgotPasswordSubmit:function()
+        {
+            var status = $('#forgotpwdForm').valid();
+
+            if(status === false)
+            return status;
+            
+            if (!window.connectionInfo.checkConnection()) {
+                navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
+                    if (confirmed === true || confirmed === 1) {
+                        app.loginService.viewModel.loginSubmit();
+                    }
+
+                }, 'Connection Error?', 'Retry,Cancel');
+            }
+            else
+            {
+                var emailAdd = this.get('forgotEmail');
+                
+                app.mobileApp.showLoading();
+                var forgotDataSource = new kendo.data.DataSource({
+                    transport:{
+                        read:{
+                            url:localStorage.getItem('forgotpasswordAPI'),
+                            type:'POST',
+                            dataType:'json',
+                            data:{apiaction:'userforgotpass',email:emailAdd}
+                        }
+                    },
+                    schema: {
+                        data: function(data)
+                        {
+                            return [data];
+                        }
+                    },
+                    error: function (e) {
+                        app.mobileApp.hideLoading();
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                    }
+                });
+                forgotDataSource.fetch(function(){
+                	var data = this.data();
+                    console.log(data);
+                    if(data[0]['code'] === "1" || data[0]['code'] === 1)
+                    {
+                        navigator.notification.alert("Further instraction have been sent to your e-mail address.",function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                        app.mobileApp.navigate("views/login.html");
+                    }
+                    else if(data[0]['code'] === "5" || data[0]['code'] === 5)
+                    {
+                        navigator.notification.alert("Email Id does not exist.",function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
+                    else
+                    {
+                        navigator.notification.alert("ok",
+                        function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
+                });
+            }
+        },
+        
+        checkEnterforgot:function(e)
+        {
+            if (e.keyCode === 13) {
+                $(e.target).blur();
+                app.loginService.viewModel.forgotPasswordSubmit();
             }
         },
         
