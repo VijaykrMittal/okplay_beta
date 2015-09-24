@@ -349,6 +349,7 @@
             this.set('contect_email','');
             this.set('contect_number','');
             this.set('contect_message','');
+            $('#contect_message').val('')
             app.mobileApp.hideLoading();
         }
     });
