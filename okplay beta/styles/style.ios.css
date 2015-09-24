@@ -22,10 +22,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 80px;width:130px}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 80px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 104px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:auto}
@@ -64,7 +70,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -139,7 +145,7 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -235,6 +241,24 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 80px;}
     
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width: 105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:65%;height:auto;margin:0px auto;margin-top: 15%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:768px) {
@@ -261,10 +285,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:130px}
+   /* .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:auto}
@@ -292,7 +322,7 @@
     .txtfldCont {width: 85%;margin: 0px auto;margin-top: 32%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
-    .txtfldCont .loginBtn {text-align:center}
+    .txtfldCont .loginBtn {text-align:center;margin-top: -20px;}
     #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -303,7 +333,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -378,15 +408,15 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
-    .contactFldFrm{width: 90%;display: block;margin: 0px auto;margin-top: 15%;margin-bottom: 25px;}
+    .contactFldFrm{width: 85%;display: block;margin: 0px auto;margin-top: 5%;margin-bottom: 25px;}
     .contactFldFrm h1 {text-align:center;font-family: 'Lato', sans-serif;}
     .contactSubBtn p {text-align: center;}
     
-    .contactSubBtn .contactBtn {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    .contactSubBtn .contactBtn {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .contactSubBtn{margin-bottom: 50px;}
     #aboutBody p,#privacyBody p,#disclaimer p {text-align:justify;font-weight: 400;line-height: 22px;margin-bottom: 25px;font-size: 16px;font-family: 'Lato', sans-serif}
     #privacyBody ul{list-style: none;padding: 10px 15px;margin: 0 0px 0 0;}    
@@ -474,6 +504,26 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 80px;}
     
+    /*24-09-2015*/
+    
+    #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:85%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:740px) {
@@ -512,10 +562,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 62px;width:130px}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 62px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:auto}
@@ -554,7 +610,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -629,7 +685,7 @@
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -725,6 +781,12 @@
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 75px;}
     
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+     
+    
 }
 
 @media (min-width:0px) and (max-width:570px) {
@@ -751,10 +813,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 60px;width:130px}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 60px;width:130px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 95px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:auto}
@@ -793,7 +861,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -869,7 +937,7 @@
     .homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
     
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -965,6 +1033,25 @@
     .line1 {position: absolute;top: 17px;right: 80px;}
     .line2 {position: absolute;top: 17px;right: 75px;}
     
+    /*24-09-2015*/
+    #loginForm .forgotpargph {width:94%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0%;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width: 106px;}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:85%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:14px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 15px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:480px) {
@@ -992,10 +1079,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:130px}
@@ -1032,7 +1125,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1104,7 +1197,7 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -1199,6 +1292,25 @@
     /*22-09-2015*/
     .line1 {position: absolute;top: 17px;right: 82px;}
     .line2 {position: absolute;top: 17px;right: 75px;}
+    
+    /*24-09-2015*/
+    #loginForm .forgotpargph {width:92%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:90%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 60%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -1224,10 +1336,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 78px;width:110px}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:130px}
@@ -1264,7 +1382,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1336,7 +1454,7 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -1433,6 +1551,22 @@
     .line1 {position: absolute;top: 17px;right: 80px;}
     .line2 {position: absolute;top: 17px;right: 75px;}
     
+    /*24-09-2015*/
+    #loginForm .forgotpargph {width:92%;display:inline-block;margin-top: -6px;}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    .forgotpwdDV h2 {font-family:'Lato', sans-serif}
+    #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
+    .forgotpwdDV .forgotBtn {text-align:center}
+    #forgotpwdForm .forTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
+    #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
+    .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
+    
+    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
 }
 
 @media (min-width:0px) and (max-width:320px) {
@@ -1458,10 +1592,16 @@
     .srchbtn:active {background:url('./images/srch.png') no-repeat !important}
     .removebtn {background:none !important;border:none !important;color:#C2C7CA !important}
     .removebtn:active {background:none !important;border:none !important;color:#C2C7CA !important}
-    .nvbar .logPos {position: absolute;top: 13px;right: 65px;width:110px;font-size: 13px;}
+    /*.nvbar .logPos {position: absolute;top: 13px;right: 65px;width:110px;font-size: 13px;}
     .nvbar .signPos {position: absolute;top: 13px;right: 4px;font-size: 13px;}
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 65px;font-size: 13px;}
-    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;font-size: 13px;}
+    .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;font-size: 13px;}*/
+    
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 88px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
+    
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
     .bxs {height: auto !important;background: #fff;  margin-top: -1px;}
     .bannerheight {height:130px}
@@ -1501,7 +1641,7 @@
     .signuptxtfldCont p a {width: 50%;height:45px;margin-top: 10px;background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     .signuptxtfldCont p a:active {background-color:#D00000 !important;color:#FFF !important;font-size: 17px !important;font-weight: bold !important;}
     #signupForm h1 {text-align:center;margin-top: 12px;margin-bottom: 30px;}
-    #signupForm .signupTxtFld{width: 100%;height: 35px;padding-left: 7px;border: 1px solid #ccc;}
+    #signupForm .signupTxtFld{width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #signupForm .signupTxtarea{width: 100%;height: 70px;border: 1px solid #ccc;}
     #signupForm label{line-height: 27px;font-size: 15px;font-weight: 400;color: rgb(250, 0, 0);}
     /*#signupForm label.error {font-size:14px;color:#4c5356 }*/
@@ -1573,7 +1713,7 @@
     .homeFooter .content1,.homeFooter .content2 {color:#fff;text-transform: uppercase;}
     .homeFooter .content1 h3,.homeFooter .content2 h3 {font-family: 'Lato', sans-serif;font-size:15px}
     .homeFooter .content1 .content,.homeFooter .content2 .content {width:100% !important;margin:0px auto !important}
-    #contactusForm .contTxtfld{width: 100%;height: 35px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
+    #contactusForm .contTxtfld{width: 100%;height: 40px;border: 1px solid #ccc;border-radius: 3px;padding-left:7px}
     #contactusForm .contTxtfld + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     #contactusForm .conttxtarea{width: 100%;margin: 0;  padding: 5px 0px 75px 8px;border: 1px solid #ccc;}
     #contactusForm .conttxtarea + label{margin:0px;line-height: 30px;font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
@@ -1670,5 +1810,9 @@
     /*22-09-2015*/
     .line1 {position: absolute;top: 17px;right: 73px;}
     .line2 {position: absolute;top: 17px;right: 68px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
 }

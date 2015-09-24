@@ -257,6 +257,10 @@
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
     
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:1024px) {
@@ -531,6 +535,10 @@
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
 }   
 
 @media (min-width:0px) and (max-width:800px) {
@@ -792,6 +800,10 @@
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
     
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:768px) {
@@ -1040,7 +1052,7 @@
     /*23-09-2015*/
     
     #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
-    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: -45px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
     .forgotpwdDV h2 {font-family:'Lato', sans-serif}
     #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
     .forgotpwdDV .forgotBtn {text-align:center}
@@ -1052,6 +1064,10 @@
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
 }
 
@@ -1313,6 +1329,10 @@
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
 }
 
@@ -1584,6 +1604,10 @@
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
     
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
 }
 
 @media (min-width:0px) and (max-width:440px) {
@@ -1838,6 +1862,10 @@
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
 }
 
@@ -2101,6 +2129,10 @@
     /*24-09-2015*/
     #termsBody h3{margin: 0 0 15px 15px !important;padding: 0 !important;}
     #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
 }
 
 @media (min-width:0px) and (max-width:360px) {
@@ -2353,4 +2385,8 @@
     /*22-09-2015*/
     .line1 {position: absolute;top: 17px;right: 73px;}
     .line2 {position: absolute;top: 17px;right: 68px;}
+    
+    #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
+    #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
+    #contactus .contactdetail p {font-size: 15px;font-family: 'Lato', sans-serif;}
 }
