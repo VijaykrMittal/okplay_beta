@@ -13,6 +13,7 @@
         
         show : function()
         {
+            app.contact.viewModel.setblankContactForm();
             $('.popup').hide();
             $('.searchTxtbox').val('');
             $('label.error').hide();

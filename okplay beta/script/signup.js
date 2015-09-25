@@ -15,6 +15,7 @@
         
         show : function(e)
         {
+            app.signupService.viewModel.resetSignupFld();
             $('#gendermale').prop('checked', false);
             $('#genderfemale').prop('checked', false);
             $('.popup').hide();

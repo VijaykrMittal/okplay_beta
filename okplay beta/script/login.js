@@ -10,6 +10,7 @@
         
         show : function()
         {
+            app.loginService.viewModel.setblankLoginfld();
             $('.popup').hide();
             $('.searchTxtbox').val('');
             $('label.error').hide();
@@ -238,7 +239,7 @@
                     console.log(data);
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
-                        navigator.notification.alert("Further instraction have been sent to your e-mail address.",function () { }, "Notification", 'OK');
+                        navigator.notification.alert("Further instruction have been sent to your e-mail address.",function () { }, "Notification", 'OK');
                         app.mobileApp.hideLoading();
                         app.mobileApp.navigate("views/login.html");
                     }
@@ -276,6 +277,12 @@
             app.mobileApp.hideLoading();
             app.homeService.viewModel.getUserLoginStatus();
             app.mobileApp.navigate("views/homepage.html");
+        },
+        
+        setblankLoginfld:function()
+        {
+            this.set('loginemail','');
+            this.set('loginpwd','');  
         },
         
         userLogout : function()
