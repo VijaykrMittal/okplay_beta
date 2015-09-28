@@ -203,7 +203,7 @@
     .root .rightDv .innerDv .creatDv span {width:20%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:25%;float:left}
@@ -270,7 +270,7 @@
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .srchDv { width:80%;height:100%;float:left;padding:6px 0px 0px 0px}
     .bottom_nvbar .srchDv .searchBtnDv {width:10%;float:right;}
-    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:1px;border: 1px solid #ccc;border-left: none;height:31px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;}
+    .bottom_nvbar .srchDv .searchBtnDv .searchbtn {margin-left:-1px;margin-top:2px;/*border: 1px solid #ccc;*/border: none;border-left: none;height:29px;background: none;border-radius: 0px 25px 25px 0px;background-color: #fff !important;width: 35px;border-top: none;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn span {font-size: 22px;margin: -3px 0px 0px -7px;}
     .bottom_nvbar .srchDv .searchBtnDv .searchbtn.km-state-active {color:#4C5356 !important}
     .bottom_nvbar .srchDv .searchtxtDv {width:50%;float:right;}
@@ -290,9 +290,9 @@
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 80px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
     
-    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 115px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
-    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 100px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
@@ -466,7 +466,7 @@
     .root .rightDv .innerDv .creatDv span {width:25%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -507,7 +507,7 @@
     /*24-09-2015*/
     
     #loginForm .forgotpargph {width:95%;display:inline-block;margin-top: -6px;}
-    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:120px}
     .forgotpwdDV h2 {font-family:'Lato', sans-serif}
     #forgotpwd .forgotpwdDV {width:85%;height:auto;margin:0px auto;margin-top: 35%;}
     .forgotpwdDV .forgotBtn {text-align:center}
@@ -746,7 +746,7 @@
     .root .rightDv .innerDv .creatDv span {width:25%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -998,7 +998,7 @@
     .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -1087,9 +1087,9 @@
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
     
-    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 110px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
-    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 105px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
@@ -1258,7 +1258,7 @@
     .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -1309,7 +1309,7 @@
     #signupForm .termscond {font-size:13px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
-    .leftDv .userclass {word-wrap: break-word;width: 100px;}
+    .leftDv .userclass {word-wrap: break-word;width: 95px;}
     
     #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
@@ -1344,9 +1344,9 @@
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 70px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;}*/
     
-    .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 110px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
-    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 100px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
@@ -1515,7 +1515,7 @@
     .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -1556,7 +1556,7 @@
     
     /*24-09-2015*/
     #loginForm .forgotpargph {width:92%;display:inline-block;margin-top: -6px;}
-    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:105px}
+    #loginForm .forgotpargph .forgotpwd {color:#ff3838 !important;background:none !important;float: right;margin-right: 0px;font-size: 12px !important;text-decoration: none;font-weight: 600 !important;font-style:italic;width:120px}
     .forgotpwdDV h2 {font-family:'Lato', sans-serif}
     #forgotpwd .forgotpwdDV {width:95%;height:auto;margin:0px auto;margin-top: 35%;}
     .forgotpwdDV .forgotBtn {text-align:center}
@@ -1600,9 +1600,9 @@
     .nvbar .mainLogPos {position: absolute;top: 13px;right: 65px;font-size: 13px;}
     .nvbar .mainSignPos {position: absolute;top: 13px;right: 4px;font-size: 13px;}*/
     
-    .nvbar .loginPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .loginPos {position: absolute !important;top: 12px;right: 107px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
-    .nvbar .accountPos {position: absolute !important;top: 12px;right: 88px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 95px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
@@ -1630,7 +1630,7 @@
     #categoryList li {border-style: none !important; border-width: 0 0 0 0 !important;box-shadow:inset 0 0px 0 !important;-webkit-box-shadow:inset 0 0px 0 !important}
 
     /*LOGIN*/
-    .txtfldCont {width: 95%;margin: 0px auto;margin-top: 28%;}
+    .txtfldCont {width: 95%;margin: 0px auto;margin-top: 18%;}
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
@@ -1771,10 +1771,10 @@
     .root .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
     .root .rightDv .innerDv .commentTxt {width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
     .root .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
-    .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px;margin-left: 10px;}
     .root .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root .rightDv .innerDv .creatDv ul li {float:left;margin:-3px 20px 0px 0px}
-    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px}
+    .root .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none;margin-left:10px;color: #00ABFF;font-weight: bold;}
     
     .root-1 {padding-left:25px;width:100%;display: inline-block;margin-bottom:15px;}
     .root-1 .leftDv {width:30%;float:left}
@@ -1785,7 +1785,7 @@
     .root-1 .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
     .root-1 .rightDv .innerDv .commentTxt {width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
     .root-1 .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
-    .root-1 .rightDv .innerDv .creatDv span {width:50%;float:left;font-size:13px}
+    .root-1 .rightDv .innerDv .creatDv span {width:60%;float:left;font-size:13px;margin-left: 15px;}
     .root-1 .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root-1 .rightDv .innerDv .creatDv ul li {float:left;margin:0px 20px 0px 0px}
     .root-1 .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none}
