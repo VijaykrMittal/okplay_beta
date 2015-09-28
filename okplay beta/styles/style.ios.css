@@ -1564,7 +1564,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;width: 90%;}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     #contactus .contactdetail {width:95%;margin:0px auto;height:auto;margin-top: 25px;}

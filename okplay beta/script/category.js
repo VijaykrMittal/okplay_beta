@@ -320,7 +320,33 @@
         
         share : function(message, subject, image, link)
         {
-           window.plugins.socialsharing.share(message, subject, image, link, this.onSuccess, this.onError);
+          // window.plugins.socialsharing.share(message, subject, image, link, this.onSuccess, this.onError);
+            /* window.plugins.socialsharing.shareViaFacebook(message,image,  // img
+                link,      //link 
+                this.onSuccess, 
+                this.onError);*/
+            /* window.plugins.socialsharing.shareViaEmail (
+                   message,
+                   subject,
+                   null, // TO: must be null or an array  ['to@person1.com', 'to@person2.com']
+                   null, // CC: must be null or an array  ['cc@person1.com']
+                   null, // BCC: must be null or an array
+                   [shareImg],
+                   app.shareSuccess,
+                   app.shareMessageError
+               );*/
+            
+            if(sessionStorage.getItem('iosDeviceType') === 'iPad2,1')
+            {
+                window.plugins.socialsharing.shareViaFacebook(message,image,  // img
+                link,      //link 
+                this.onSuccess, 
+                this.onError);
+            }
+            else
+            {
+                window.plugins.socialsharing.share(message, subject, image, link, this.onSuccess, this.onError);
+            }
         },
         
         onSuccess: function(msg) {
