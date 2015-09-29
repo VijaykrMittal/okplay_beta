@@ -169,7 +169,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -258,6 +258,12 @@
     #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -432,7 +438,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -526,6 +532,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -712,7 +724,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -788,7 +800,11 @@
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
-     
+     /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -915,7 +931,7 @@
     #articlelist li {border:none !important;width:49%;float:left;margin-left: 4px;border-style:none !important;border-width: 0 0 0px 0 !important;padding:0px !important;}
     /*#alldatasrch {display:inline-block}*/
     #alldatasrch li {border:none !important;width:49%;float:left;margin-left: 4px;border-style:none !important;border-width: 0 0 0px 0 !important;padding:0px !important;}
-   .blankarticleTit {font-size: 18px;color: #FFF;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;position: absolute;top: -10px;left: -6px;font-weight: 400;word-wrap: break-word;width: 95%;}
+   .blankarticleTit {font-size: 18px;color: #FFF;text-shadow: 2px 2px 6px #1A0A0A;font-family: times;position: absolute;top: 0px;left: 10px;font-weight: 400;word-wrap: break-word;width: 95%;}
     .articleDv .shadow {position: absolute;left: 1px;width: 100%;}
     .articleDv .shadow img {width: 100%;height: auto;max-width: 100%;z-index: 9999999;}
     .articleDvDft .shadow {position: absolute;left: 1px;width: 100%;}
@@ -964,7 +980,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1054,6 +1070,12 @@
     #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -1224,7 +1246,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 42% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 42% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1314,6 +1336,12 @@
     #contactus .contactdetail {width:85%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }
 
 @media (min-width:0px) and (max-width:390px) {
@@ -1481,7 +1509,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1570,6 +1598,12 @@
     #contactus .contactdetail {width:95%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }
 
 @media (min-width:0px) and (max-width:320px) {
@@ -1740,7 +1774,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1817,5 +1851,11 @@
     #contactus .contactdetail {width:95%;margin:0px auto;height:auto;margin-top: 25px;}
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }

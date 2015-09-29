@@ -169,7 +169,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -263,6 +263,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -437,7 +443,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -512,6 +518,12 @@
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
     
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
+    
 }
 
 @media (min-width:0px) and (max-width:960px) {
@@ -548,6 +560,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }   
 
 @media (min-width:0px) and (max-width:800px) {
@@ -721,7 +739,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -815,6 +833,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -989,7 +1013,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1083,6 +1107,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -1257,7 +1287,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1351,6 +1381,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -1526,7 +1562,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 45% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1626,6 +1662,11 @@
     #contactus .contactdetail h1 {text-align: center;font-family: 'Lato', sans-serif;}
     #contactus .contactdetail p {font-size: 16px;font-family: 'Lato', sans-serif;}
     
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }
 
 @media (min-width:0px) and (max-width:440px) {
@@ -1793,7 +1834,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 45% !important;left: 42% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 45% !important;left: 42% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -1887,6 +1928,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
     
 }
 
@@ -2051,11 +2098,11 @@
     
     /*loader*/
     .km-loader:before {background:none !important}
-    .km-flat .km-loader>*:not(h1) {background:url('./images/loader.gif') no-repeat !important}
+    .km-flat .km-loader>*:not(h1) {background:url('./images/okplay-loader.gif') no-repeat !important}
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -2157,6 +2204,12 @@
     
     #categoryDiscrip p {font-size:18px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }
 
 @media (min-width:0px) and (max-width:360px) {
@@ -2336,7 +2389,7 @@
     .km-loading-left {}
     .km-flat .km-loading {font-size:0px !important;animation: none ; -webkit-animation:none}
     .km-flat .km-loader .km-loading-right {font-size:0px !important;}
-    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 25% !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
+    .km-flat .km-loader .km-loading-left {width: 80px !important;height: 80px !important;position: absolute !important;top: 43.5% !important;left: 39.5% !important;animation: none !important; -webkit-animation:none !important}
     
     /*24-08-2015*/
     #comment-view .commentTxtFld {width:100%;border:1px solid #ccc;padding: 10px 0px 140px 6px;}
@@ -2416,4 +2469,10 @@
     
     #categoryDiscrip p {font-size:16px;text-align: justify;}
     #categoryDiscrip p br {display:none !important}
+    
+    /*29-09-2015*/
+    .sharefloatDv {}
+    .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
+    .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
+    .sharefloatDv .km-share:before {display:none !important}
 }

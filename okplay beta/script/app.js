@@ -9,7 +9,6 @@ var app = (function(global){
     {
         console.log(window.device.model);
         sessionStorage.setItem("iosDeviceType",window.device.model);
-        alert(window.device.model);
       // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 
