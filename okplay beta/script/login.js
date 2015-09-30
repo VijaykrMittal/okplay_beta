@@ -124,8 +124,8 @@
         
         loginSubmit:function()
         {
-            app.mobileApp.showLoading();
-            /*var status = $('#loginForm').valid();
+            //app.mobileApp.showLoading();
+            var status = $('#loginForm').valid();
 
             if(status === false)
             return status;
@@ -183,7 +183,7 @@
                         app.mobileApp.hideLoading();
                     }
                 });
-            }*/
+            }
         },
         
         checkEnterLogin:function(e)

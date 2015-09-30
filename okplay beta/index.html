@@ -15,7 +15,9 @@
     <script src="script/lib/jquery.bxslider.min.js"></script>
     <script src="kendo/js/kendo.all.min.js"></script>
     <script src="script/lib/jquery.validate.js"></script>
-    
+    <style>
+        #homepageView .backBtn {display:none}
+    </style>
     <style>
         .k-grid .k-header {display: none;}
         /*#grid {background-color:#373F4A;}
@@ -29,8 +31,11 @@
     
     <div data-role="layout" data-id="main-layout" class="main-layout">
         <header data-role="header" id="header">
-            <div data-role="navbar" class="nvbar mainLayoutID" id="mainLayoutID">
-                
+            <div data-role="navbar" class="mainNvbar">
+                <a data-role="backbutton" data-align="left" class="backBtn"></a>
+            </div>
+            <div class="nvbar mainLayoutID" id="mainLayoutID">
+                <a data-role="backbutton">Back</a>
             </div>
             <div class="bottom_nvbar">
                 <a data-role="button" data-click="moveToHome" class="logo"></a>

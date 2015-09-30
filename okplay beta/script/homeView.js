@@ -13,7 +13,7 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
-            
+           
             $('.homeFooter').css("display",'none');
             $('#blockrightContent').css('background','none');
             $('.listCategory').removeClass("highlightColor");

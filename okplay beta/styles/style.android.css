@@ -1,7 +1,9 @@
 @media (min-width:0px) and (max-width:1280px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -275,7 +277,9 @@
 @media (min-width:0px) and (max-width:1024px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -571,7 +575,9 @@
 @media (min-width:0px) and (max-width:800px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -845,7 +851,9 @@
 @media (min-width:0px) and (max-width:768px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -1119,7 +1127,9 @@
 @media (min-width:0px) and (max-width:640px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -1393,7 +1403,9 @@
 @media (min-width:0px) and (max-width:600px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -1672,7 +1684,9 @@
 @media (min-width:0px) and (max-width:440px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -1940,7 +1954,9 @@
 @media (min-width:0px) and (max-width:390px) {
     
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {width:35px;height:35px;position: absolute !important;top: 4px;left: 95px;color: white;line-height: 14px;background: url('./images/back.png') no-repeat !important;background-size: 100% 100% !important;border: 0px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
@@ -1953,7 +1969,7 @@
     .bottom_nvbar .srchDv .searchtxtDv .searchTxtbox {width:100%;height:32px;padding-left:10px;border: 1px solid #ccc;border-right: 0px solid;border-radius: 25px 0px 0px 25px;}
     .bottom_nvbar .menuDv { width:15%;height:100%;float:left}
     .bottom_nvbar .menuDv .menu {width: 30px;height: 32px;border:none !important;margin-top: 6px;margin-left: 17px; ;background:url('./images/menu.png') no-repeat !important;background-size:100% 100% !important}
-    .popup {width: 266px;display: none;position: absolute;top: 105px;right: 12px;z-index:99999;height: 300px !important;overflow: scroll;}
+    .popup {width: 266px;display: none;position: absolute;top: 110px;right: 12px;z-index:99999;height: 475px !important;overflow: scroll;}
     .bottom_nvbar .srchDv .srchtxt{margin: 8px 10px 0px 104px;padding:10px;width: 185px;height: 30px;border-radius: 25px;border: 1px solid #B6AFAF;}
     .nvbar a {text-decoration:none}
     .srchbtn {position: absolute !important;top: 71px !important;right: 63px !important;width: 35px !important;height: 26px !important;border:medium none !important;background:url('./images/srch.png') no-repeat !important;}
@@ -1967,7 +1983,7 @@
     
     .nvbar .loginPos {position: absolute !important;top: 12px;right: 98px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .registerPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
-    .nvbar .accountPos {position: absolute !important;top: 12px;right: 92px;color: white;background: none !important;border: 1px solid #898787;}
+    .nvbar .accountPos {position: absolute !important;top: 12px;right: 90px;color: white;background: none !important;border: 1px solid #898787;}
     .nvbar .logoutPos{position: absolute;top: 12px;right: 10px;background: none !important;color: #fff;border: 1px solid #898787;}
     
     .bxslider li {float: none;list-style: none;position: absolute;margin-left: -40px;width: 100% !important;z-index: 50;display: block;}
@@ -2223,7 +2239,9 @@
 
 @media (min-width:0px) and (max-width:320px) {
     /*Homepage*/
-    .nvbar { height:60px;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
+    .mainNvbar {height:60px;background-color:#373F4A !important;color:#C2C7CA !important;}
+    .mainNvbar .backBtn {position: absolute !important;top: 5px;left: 85px;color: white;height: 31px;line-height: 14px;background: none !important;border: 1px solid #898787;}
+    .nvbar { height:auto;background-color:#373F4A !important;color:#C2C7CA !important;border-bottom:4px solid #EF172E !important}
     .bottom_nvbar { width:100%;height:45px;background-color:#C2C6C9;box-shadow: 1px 1px 2px #333;border-bottom: solid 1px #a3b0b9;}
     .bottom_nvbar .logo { width: 65px;height: 65px;border:none !important;position: absolute;top: 17px;left: 15px;background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }
     .bottom_nvbar .logo:active {background:url('./images/logo_2.png') no-repeat !important;background-size:100% 100% !important }

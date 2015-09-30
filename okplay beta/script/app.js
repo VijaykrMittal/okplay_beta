@@ -16,6 +16,7 @@ var app = (function(global){
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
        // networkStatus();
+        
     };
     
     var networkStatus = function()
