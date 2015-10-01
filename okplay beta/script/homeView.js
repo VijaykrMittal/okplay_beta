@@ -61,14 +61,20 @@
             
             if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
             {
-                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="accountPos" data-align="right"><span>MY ACCOUNT</span></a>';
-              //  hhtml +='<span class="line2">/</span>';
-                 hhtml +='<a data-role="button" data-click="movetoLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                hhtml ='<a data-role="button" data-click="movetoaccountView"  class="accountPos" data-align="right"><span>MY ACCOUNT</span></a>';
+                if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
+                {
+                    hhtml +='<a data-role="button" data-click="movetoLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                }
+                else
+                {
+                    hhtml +='<a data-role="button" data-click="movetoFBLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                }
+                 
             }
             else
             {
                 hhtml = '<a data-role="button" data-click="movetoLogin" class="loginPos" data-align="right"><span>LOGIN</span></a>';
-               // hhtml +='<span class="line1">/</span>';
                 hhtml += '<a data-role="button" data-click="movetoSignup" class="registerPos" data-align="right"><span>REGISTER</span></a>';
             }
             
@@ -102,8 +108,8 @@
                 });
                 category.fetch(function(){
                     var data = this.data();
-                    console.log("category");
-                    console.log(data);
+                   // console.log("category");
+                   // console.log(data);
                     app.homeService.viewModel.setCategoryListData(data[0]);
                     app.homeService.viewModel.setHomePageData(data[0]);
                 });
@@ -162,8 +168,8 @@
         
         setHomePageData : function(data)
         {
-            console.log("right content");
-            console.log(data);
+            //console.log("right content");
+            //console.log(data);
             var that = this;
             dataParam = [];
             dataParamInner = [];
@@ -281,7 +287,7 @@
         
         categoryArticle : function(e)
         {
-            console.log(e);
+           // console.log(e);
             if(e['target']['attributes']['data-cate']['value'] === "main")
             {
                 sessionStorage.setItem("categorySelectItem",e['target']['attributes']['data-id']['value']);
@@ -355,8 +361,8 @@
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
                     app.homeService.viewModel.setHomeLayout(data[0]['data']);
-                    console.log("BLOCK");
-                    console.log(data[0]['data']);
+                   // console.log("BLOCK");
+                   // console.log(data[0]['data']);
                 }
                 else
                 {
@@ -406,8 +412,8 @@
                 var data = this.data();
                 if(data[0]['code'] === 1 || data[0]['code'] === '1')
                 {
-                    console.log("FOOTER");
-                    console.log(data[0]['data']);
+                   // console.log("FOOTER");
+                  //  console.log(data[0]['data']);
                     app.homeService.viewModel.setFooterdata(data[0]['data']);
                 }
                 else

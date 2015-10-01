@@ -19,8 +19,20 @@
                     <a href="#forgotpwd" class="forgotpwd">Forgot Passsword?</a>
                 </p>
             </form>
+            <div class="socialDv">
+                <p>
+                    LOG IN WITH
+                </p>
+                <p>
+                    <a data-role="button" data-click="app.loginService.viewModel.fbLogin"></a>
+                    <a data-role="button" data-click="app.loginService.viewModel.googleLogin"></a>
+                </p>
+            </div>
             <p class="loginBtn">
                 <a data-role="button" data-bind="click:loginSubmit">Log In</a>
+            </p>
+            <p class="loginBtn">
+                <a data-role="button" data-bind="click:googleLogout">Logout</a>
             </p>
         </div>
     </div>

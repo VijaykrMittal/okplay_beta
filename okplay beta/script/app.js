@@ -7,7 +7,7 @@ var app = (function(global){
     
     var onDeviceReady = function()
     {
-        console.log(window.device.model);
+       // console.log(window.device.model);
         sessionStorage.setItem("iosDeviceType",window.device.model);
       // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
@@ -16,7 +16,24 @@ var app = (function(global){
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
        // networkStatus();
-        
+        facebookFunctionCall();
+    };
+    
+    var facebookFunctionCall = function()
+    {
+      try
+        {
+           FB.init({
+            appId:"828834967202957",
+            status:"false",
+            nativeInterface: CDV.FB,
+            useCachedDialogs: false
+           }); 
+        }
+        catch(ex)
+        {
+            console.log(ex.messgae);
+        }  
     };
     
     var networkStatus = function()
