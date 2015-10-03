@@ -108,14 +108,14 @@
             app.mobileApp.navigate("views/login.html");
         }
         
-        function movetoLogout()
+        function movetoLogout(e)
         {
-            app.loginService.viewModel.userLogout();
+            app.loginService.viewModel.userLogout(e['sender']['element'][0]['attributes']['data-id']['value']);
         }
         
-        function movetoFBLogout()
+        function movetoFBLogout(e)
         {
-            app.loginService.viewModel.facebookLogout();
+            app.loginService.viewModel.facebookLogout(e['sender']['element'][0]['attributes']['data-id']['value']);
         }
         
         function movetoaccountView()

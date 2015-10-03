@@ -161,6 +161,8 @@ var app = (function(global){
     localStorage.setItem("contactusAPI","http://okplay.club/mobileapi/savecontactus");
     localStorage.setItem("commentAPI","http://okplay.club/mobileapi/savecommentdata");
     localStorage.setItem("forgotpasswordAPI","http://okplay.club/mobileapi/forgotpass");
+    localStorage.setItem("emailExistAPI","http://okplay.club/mobileapi/social-login");
+    
     return{
       mobileApp : mobileApp
     };

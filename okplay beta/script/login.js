@@ -252,7 +252,7 @@
                     }
                     else
                     {
-                        navigator.notification.alert("ok",
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
                         function () { }, "Notification", 'OK');
                         app.mobileApp.hideLoading();
                     }
@@ -287,19 +287,28 @@
             this.set('loginpwd','');  
         },
         
-        userLogout : function()
+        userLogout : function(data)
         {
-            this.set('loginemail','');
-            this.set('loginpwd','');
-            localStorage.removeItem('userEmail');
-            localStorage.removeItem('userName');
-            localStorage.removeItem('userid');
-            localStorage.setItem("loginStatus",false);
-            app.homeService.viewModel.loginStatus = false;
-            app.signupService.viewModel.resetSignupFld();
-            app.homeService.viewModel.getUserLoginStatus();
-            app.mobileApp.navigate("views/homepage.html");
-            app.homeService.viewModel.show();
+            alert(data);
+            if(data === 'logout')
+            {
+                this.set('loginemail','');
+                this.set('loginpwd','');
+                localStorage.removeItem('userEmail');
+                localStorage.removeItem('userName');
+                localStorage.removeItem('userid');
+                localStorage.setItem("loginStatus",false);
+                app.homeService.viewModel.loginStatus = false;
+                app.signupService.viewModel.resetSignupFld();
+                app.homeService.viewModel.getUserLoginStatus();
+                app.mobileApp.navigate("views/homepage.html");
+                app.homeService.viewModel.show();
+            }
+            else
+            {
+                app.mobileApp.showLoading();
+                app.loginService.viewModel.facebookLogout();
+            }
         },
         
         moveToAccount : function()
@@ -307,10 +316,65 @@
             app.mobileApp.navigate("#myaccount-view");
         },
         
+        emailExistAPI : function(myEmail)
+        {
+            var emailExistDataSource = new kendo.data.DataSource({
+                    transport:{
+                        read:{
+                            url:localStorage.getItem('emailExistAPI'),
+                            type:'GET',
+                            dataType:'json',
+                            data:{apiaction:'sociallogin',email:myEmail}
+                        }
+                    },
+                    schema: {
+                        data: function(data)
+                        {
+                            return [data];
+                        }
+                    },
+                    error: function (e) {
+                        app.mobileApp.hideLoading();
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                    }
+                });
+                emailExistDataSource.fetch(function(){
+                	var data = this.data();
+                    if(data[0]['code'] === "1" || data[0]['code'] === 1)
+                    {
+                        alert("CODE 1");
+                        alert(JSON.stringify(data[0]['data']));
+                        app.loginService.viewModel.setUserLogindata(data[0]['data']);
+                    }
+                    else if(data[0]['code'] === "5" || data[0]['code'] === 5)
+                    {
+                        dataParam = {};
+                        dataParam['firstname'] = localStorage.getItem("fbUserFirstName");
+                        dataParam['lastname'] = localStorage.getItem("fbUserLastName");
+                        dataParam['email'] = localStorage.getItem("fbUserEmail");
+                        dataParam['password'] = localStorage.getItem("fbUserPassword");
+                        dataParam['gender'] = localStorage.getItem("fbUserGender");
+                        dataParam['apiaction'] = 'usersignup';
+                        alert("CODE 5");
+                        alert(JSON.stringify(dataParam));
+                        app.signupService.viewModel.signupAPI(dataParam);
+                    }
+                    else
+                    {
+                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        function () { }, "Notification", 'OK');
+                        app.mobileApp.hideLoading();
+                    }
+                });
+        },
+        
         fbLogin:function()
         {
+            
             app.mobileApp.showLoading();
             FB.getLoginStatus(function(response){
+                alert(response.status);
                 if(response.status !== "connected")
                 {
                     app.loginService.viewModel.loginfbAPI();
@@ -328,7 +392,6 @@
                 else
                 {
                     alert("not logged in");
-                    
                 }
             },{scope:'email'});
         },
@@ -337,22 +400,41 @@
         {
             FB.api('/me', {fields:'last_name,first_name,email,picture,gender'},function(response) {
                 
-                var name = response.first_name+' '+response.last_name;
+                var str = response.email;
+                var result = str.search("@");
+                var fbpwd= str.slice(0, result );
+                var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+                var i;
+                for (i=0;i<6;i++)
+                {
+                    var a = alpha[Math.floor(Math.random() * alpha.length)];
+                    var b = alpha[Math.floor(Math.random() * alpha.length)];
+                    var c = alpha[Math.floor(Math.random() * alpha.length)];
+                    var d = alpha[Math.floor(Math.random() * alpha.length)];
+                }
+                var captcha = a+''+b+''+c+''+d;
+                var mainPwd = fbpwd+''+captcha;
+                
                 localStorage.setItem("fbLoginStatus",true);
-                localStorage.setItem('userEmail',response.email);
-                localStorage.setItem('userName',name);
-                localStorage.setItem("loginStatus",true);
-                app.homeService.viewModel.loginStatus=true;
-                app.mobileApp.hideLoading();
-                app.homeService.viewModel.getUserLoginStatus();
-                app.mobileApp.navigate("views/homepage.html");
+                localStorage.setItem("fbUserFirstName",response.first_name);
+                localStorage.setItem("fbUserLastName",response.last_name);
+                localStorage.setItem('fbUserEmail',response.email);
+                localStorage.setItem('fbUserGender',response.gender);
+                localStorage.setItem('fbUserPassword',mainPwd);
+                app.loginService.viewModel.emailExistAPI(response.email);
             });
         },
         
         facebookLogout:function()
         {
-            app.mobileApp.showLoading();
             FB.logout(function(response){
+                localStorage.setItem("fbLoginStatus",false);
+                localStorage.removeItem('fbUserFirstName');
+                localStorage.removeItem('fbUserLastName');
+                localStorage.removeItem('fbUserEmail');
+                localStorage.removeItem('fbUserGender');
+                localStorage.removeItem('fbUserPassword');
+                
                 localStorage.setItem("loginStatus",false);
                 app.homeService.viewModel.loginStatus = false;
                 app.homeService.viewModel.getUserLoginStatus();

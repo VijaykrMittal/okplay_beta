@@ -13,7 +13,7 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
-           
+            alert(localStorage.getItem("fbLoginStatus"));
             $('.homeFooter').css("display",'none');
             $('#blockrightContent').css('background','none');
             $('.listCategory').removeClass("highlightColor");
@@ -62,13 +62,13 @@
             if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
             {
                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="accountPos" data-align="right"><span>MY ACCOUNT</span></a>';
-                if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
+                if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'null' || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
                 {
-                    hhtml +='<a data-role="button" data-click="movetoLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                    hhtml +='<a data-role="button" data-click="movetoLogout" data-id="logout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
                 }
                 else
                 {
-                    hhtml +='<a data-role="button" data-click="movetoFBLogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                    hhtml +='<a data-role="button" data-click="movetoLogout" data-id="fblogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
                 }
                  
             }

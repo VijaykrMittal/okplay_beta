@@ -109,9 +109,14 @@
                 dataParam['password'] = this.get('signupPassword');
                 dataParam['gender'] = $(".radioChk[type='radio']:checked").val();
                 dataParam['apiaction'] = 'usersignup';
-                
-                app.mobileApp.showLoading();
-                var dataSource = new kendo.data.DataSource({
+                app.signupService.viewModel.signupAPI(dataParam);
+            }
+        },
+            
+        signupAPI : function(dataParam)
+        {
+            app.mobileApp.showLoading();
+            var dataSource = new kendo.data.DataSource({
                 transport: {
                     read: {
                             url: localStorage.getItem("userSignupAPI"),
@@ -141,6 +146,8 @@
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         app.loginService.viewModel.setUserLogindata(data[0]['data']);
+                        alert("Signup");
+                        alert(JSON.stringify(data[0]['data']));
                     }
                     else if(data[0]['code'] === "2" || data[0]['code'] === 2)
                     {
@@ -161,7 +168,6 @@
                         
                     }
                 });
-            }
         },
             
         checkEnterSubmit:function(e)
