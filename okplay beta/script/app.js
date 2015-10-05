@@ -16,7 +16,7 @@ var app = (function(global){
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
        // networkStatus();
-        facebookFunctionCall();
+        //facebookFunctionCall();
     };
     
     var facebookFunctionCall = function()
@@ -143,7 +143,7 @@ var app = (function(global){
     var mobileApp = new kendo.mobile.Application(document.body,
                                                             {
                                                                 skin:'flat',
-                                                                initial:'views/homepage.html',
+                                                                initial:'views/test.html',
                                                                 layout:'main-layout'
                                                             }
     );
