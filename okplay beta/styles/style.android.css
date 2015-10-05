@@ -2218,7 +2218,7 @@
     .root-1 .rightDv .innerDv{width:100%;display: inline-block;margin: 20px 0px 0px 0px;}
     .root-1 .rightDv .innerDv .commentTxt {width:98%;background-color:#E1E3E4;border-radius:15px;padding:10px;line-height:30px;}
     .root-1 .rightDv .innerDv .creatDv {width:100%;margin-top:15px;display: inline-block;}
-    .root-1 .rightDv .innerDv .creatDv span {width:55%;float:left;font-size:13px}
+    .root-1 .rightDv .innerDv .creatDv span {width:55%;float:left;font-size:13px;margin-left: 10px;}
     .root-1 .rightDv .innerDv .creatDv ul {float:left;width:50%;list-style:none;}
     .root-1 .rightDv .innerDv .creatDv ul li {float:left;margin:0px 20px 0px 0px}
     .root-1 .rightDv .innerDv .creatDv ul li .replycls {border:none;background:none}

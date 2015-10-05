@@ -146,8 +146,6 @@
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         app.loginService.viewModel.setUserLogindata(data[0]['data']);
-                        alert("Signup");
-                        alert(JSON.stringify(data[0]['data']));
                     }
                     else if(data[0]['code'] === "2" || data[0]['code'] === 2)
                     {

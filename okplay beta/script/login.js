@@ -270,7 +270,6 @@
         
         setUserLogindata : function(data)
         {
-            alert("SET USER LOGIN DATA");
             localStorage.setItem('userEmail',data['mail']);
             localStorage.setItem('userName',data['name']);
             localStorage.setItem('userid',data['userid']);
@@ -439,7 +438,6 @@
         
         facebookLogout:function()
         {
-            
             FB.logout(function(response){
                 app.mobileApp.showLoading();
                 localStorage.setItem("fbLoginStatus",false);

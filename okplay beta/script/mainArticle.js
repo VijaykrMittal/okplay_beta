@@ -298,7 +298,6 @@
         
         commentRootReply : function(data)
         {
-            alert(JSON.stringify(data));
             if (!window.connectionInfo.checkConnection()) {
                 navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
                     if (confirmed === true || confirmed === 1) {
@@ -335,8 +334,6 @@
                 commentPost.fetch(function(){
                     var data = this.data();
                     console.log(data);
-                    alert(data[0]['code']);
-                    alert(data[0]['data'][0]);
                     if(data[0]['code'] === 1 || data[0]['code'] === '1')
                     {
                         app.mainArticleService.viewModel.show();
