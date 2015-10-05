@@ -270,6 +270,7 @@
         
         setUserLogindata : function(data)
         {
+            alert("SET USER LOGIN DATA");
             localStorage.setItem('userEmail',data['mail']);
             localStorage.setItem('userName',data['name']);
             localStorage.setItem('userid',data['userid']);
@@ -289,7 +290,6 @@
         
         userLogout : function(data)
         {
-            alert(data);
             if(data === 'logout')
             {
                 this.set('loginemail','');
@@ -303,6 +303,11 @@
                 app.homeService.viewModel.getUserLoginStatus();
                 app.mobileApp.navigate("views/homepage.html");
                 app.homeService.viewModel.show();
+            }
+            else if(data === 'googlelogout')
+            {
+                app.mobileApp.showLoading();
+                app.loginService.viewModel.googleLogout();
             }
             else
             {
@@ -343,22 +348,31 @@
                 	var data = this.data();
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
-                        alert("CODE 1");
-                        alert(JSON.stringify(data[0]['data']));
                         app.loginService.viewModel.setUserLogindata(data[0]['data']);
                     }
                     else if(data[0]['code'] === "5" || data[0]['code'] === 5)
                     {
-                        dataParam = {};
-                        dataParam['firstname'] = localStorage.getItem("fbUserFirstName");
-                        dataParam['lastname'] = localStorage.getItem("fbUserLastName");
-                        dataParam['email'] = localStorage.getItem("fbUserEmail");
-                        dataParam['password'] = localStorage.getItem("fbUserPassword");
-                        dataParam['gender'] = localStorage.getItem("fbUserGender");
-                        dataParam['apiaction'] = 'usersignup';
-                        alert("CODE 5");
-                        alert(JSON.stringify(dataParam));
-                        app.signupService.viewModel.signupAPI(dataParam);
+                        if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'null' || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
+                        {
+                            dataParam = {};
+                            dataParam['email'] = localStorage.getItem("googleUserEmail");
+                            dataParam['password'] = localStorage.getItem("googleUserPassword");
+                            dataParam['gender'] = localStorage.getItem("googleUserGender");
+                            dataParam['apiaction'] = 'usersignup';
+                            app.signupService.viewModel.signupAPI(dataParam);
+                        }
+                        else
+                        {
+                            dataParam = {};
+                            dataParam['firstname'] = localStorage.getItem("fbUserFirstName");
+                            dataParam['lastname'] = localStorage.getItem("fbUserLastName");
+                            dataParam['email'] = localStorage.getItem("fbUserEmail");
+                            dataParam['password'] = localStorage.getItem("fbUserPassword");
+                            dataParam['gender'] = localStorage.getItem("fbUserGender");
+                            dataParam['apiaction'] = 'usersignup';
+                            app.signupService.viewModel.signupAPI(dataParam);
+                        }
+                        
                     }
                     else
                     {
@@ -371,10 +385,8 @@
         
         fbLogin:function()
         {
-            
             app.mobileApp.showLoading();
             FB.getLoginStatus(function(response){
-                alert(response.status);
                 if(response.status !== "connected")
                 {
                     app.loginService.viewModel.loginfbAPI();
@@ -427,7 +439,9 @@
         
         facebookLogout:function()
         {
+            
             FB.logout(function(response){
+                app.mobileApp.showLoading();
                 localStorage.setItem("fbLoginStatus",false);
                 localStorage.removeItem('fbUserFirstName');
                 localStorage.removeItem('fbUserLastName');
@@ -448,7 +462,6 @@
             window.plugins.googleplus.isAvailable(
                 function (available) {
                     if (available) {
-                        alert(available);
                       app.loginService.viewModel.googleLoginAPI();
                     }
                 }
@@ -459,13 +472,31 @@
         {
             window.plugins.googleplus.login(
             {
-                // 'scopes': '...', // optional space-separated list of scopes, the default is sufficient for login and basic profile info
+                // 'scopes': 'plus.login', // optional space-separated list of scopes, the default is sufficient for login and basic profile info
                 // 'offline': true, // optional and required for Android only - if set to true the plugin will also return the OAuth access token, that can be used to sign in to some third party services that don't accept a Cross-client identity token (ex. Firebase)
                 // 'androidApiKey': '986576268792-u5lhdmne49pq1hh10kmp7m6gkhm4rgau.apps.googleusercontent.com', // optional API key of your Web application from Credentials settings of your project - if you set it the returned idToken will allow sign in to services like Azure Mobile Services
                 // there is no API key for Android; you app is wired to the Google+ API by listing your package name in the google dev console and signing your apk (which you have done in chapter 4)
                 },
                 function (obj) {
-                    alert(JSON.stringify(obj)); // do something useful instead of alerting
+                    var str = obj.email;
+                    var result = str.search("@");
+                    var fbpwd= str.slice(0, result );
+                    var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+                    var i;
+                    for (i=0;i<6;i++)
+                    {
+                        var a = alpha[Math.floor(Math.random() * alpha.length)];
+                        var b = alpha[Math.floor(Math.random() * alpha.length)];
+                        var c = alpha[Math.floor(Math.random() * alpha.length)];
+                        var d = alpha[Math.floor(Math.random() * alpha.length)];
+                    }
+                    var captcha = a+''+b+''+c+''+d;
+                    var mainPwd = fbpwd+''+captcha;
+                    localStorage.setItem("googleLoginStatus",true);
+                    localStorage.setItem('googleUserEmail',obj.email);
+                    localStorage.setItem('googleUserGender','male');
+                    localStorage.setItem('googleUserPassword',mainPwd);
+                    app.loginService.viewModel.emailExistAPI(obj.email);
                 },
                 function (msg) {
                     alert('error: ' + msg);
@@ -477,7 +508,19 @@
         {
             window.plugins.googleplus.logout(
                 function (msg) {
-                    alert(msg); // do something useful instead of alerting
+                    //alert(msg); // do something useful instead of alerting
+                    
+                    app.mobileApp.showLoading();
+                    localStorage.setItem("googleLoginStatus",false);
+                    localStorage.removeItem('googleUserEmail');
+                    localStorage.removeItem('googleUserGender');
+                    localStorage.removeItem('googleUserPassword');
+
+                    localStorage.setItem("loginStatus",false);
+                    app.homeService.viewModel.loginStatus = false;
+                    app.homeService.viewModel.getUserLoginStatus();
+                    app.mobileApp.navigate("views/homepage.html");
+                    app.homeService.viewModel.show();
                 }
             );
         }

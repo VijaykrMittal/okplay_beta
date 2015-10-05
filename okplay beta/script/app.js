@@ -24,7 +24,7 @@ var app = (function(global){
       try
         {
            FB.init({
-            appId:"828834967202957",
+            appId:"148835445466491",
             status:"false",
             nativeInterface: CDV.FB,
             useCachedDialogs: false

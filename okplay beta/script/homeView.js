@@ -13,7 +13,9 @@
         show:function(e)
         {
             app.mobileApp.showLoading();
-            alert(localStorage.getItem("fbLoginStatus"));
+           // alert("google login status "+localStorage.getItem('googleLoginStatus'));
+           // alert("fb login status "+localStorage.getItem('fbLoginStatus'));
+            
             $('.homeFooter').css("display",'none');
             $('#blockrightContent').css('background','none');
             $('.listCategory').removeClass("highlightColor");
@@ -62,13 +64,26 @@
             if( app.homeService.viewModel.loginStatus === true || app.homeService.viewModel.loginStatus === 'true')
             {
                 hhtml ='<a data-role="button" data-click="movetoaccountView"  class="accountPos" data-align="right"><span>MY ACCOUNT</span></a>';
-                if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'null' || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
+                /*if(localStorage.getItem('fbLoginStatus') === null || localStorage.getItem('fbLoginStatus') === 'null' || localStorage.getItem('fbLoginStatus') === 'false' || localStorage.getItem('fbLoginStatus') === false)
                 {
                     hhtml +='<a data-role="button" data-click="movetoLogout" data-id="logout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
                 }
                 else
                 {
                     hhtml +='<a data-role="button" data-click="movetoLogout" data-id="fblogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                }*/
+                
+                if(localStorage.getItem('fbLoginStatus') === 'true' || localStorage.getItem('fbLoginStatus') === true)
+                {
+                    hhtml +='<a data-role="button" data-click="movetoLogout" data-id="fblogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                }
+                else if(localStorage.getItem('googleLoginStatus') === 'true' || localStorage.getItem('googleLoginStatus') === true)
+                {
+                    hhtml +='<a data-role="button" data-click="movetoLogout" data-id="googlelogout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
+                }
+                else
+                {
+                    hhtml +='<a data-role="button" data-click="movetoLogout" data-id="logout"  class="logoutPos" data-align="right"><span>LOGOUT</span></a>';
                 }
                  
             }
