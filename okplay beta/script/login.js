@@ -162,7 +162,7 @@
                     error: function (e) {
                         app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                     }
                 });
                 loginDataSource.fetch(function(){
@@ -180,7 +180,7 @@
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                         app.mobileApp.hideLoading();
                     }
                 });
@@ -233,7 +233,7 @@
                     error: function (e) {
                         app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                     }
                 });
                 forgotDataSource.fetch(function(){
@@ -253,7 +253,7 @@
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                         app.mobileApp.hideLoading();
                     }
                 });
@@ -340,7 +340,7 @@
                     error: function (e) {
                         app.mobileApp.hideLoading();
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                     }
                 });
                 emailExistDataSource.fetch(function(){
@@ -376,7 +376,7 @@
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                         app.mobileApp.hideLoading();
                     }
                 });
@@ -384,7 +384,7 @@
         
         fbLogin:function()
         {
-           // app.mobileApp.showLoading();
+            app.mobileApp.showLoading();
             
             facebookConnectPlugin.getLoginStatus(function(response) 
             {
@@ -472,6 +472,7 @@
         
         googleLogin:function()
         {
+            app.mobileApp.showLoading();
             window.plugins.googleplus.isAvailable(
                 function (available) {
                     if (available) {
@@ -519,6 +520,7 @@
         
         googleLogout:function()
         {
+            app.mobileApp.showLoading();
             window.plugins.googleplus.logout(
                 function (msg) {
                     //alert(msg); // do something useful instead of alerting

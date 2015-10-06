@@ -117,8 +117,13 @@
                     },
                     error: function (e) {
                         app.mobileApp.hideLoading();
-                        navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'Ok');
+                        navigator.notification.confirm('Server not responding properly.Please check your internet connection.', function (confirmed) {
+                            if (confirmed === true || confirmed === 1) {
+                                navigator.app.exitApp()
+                            }
+                        }, 'Message', 'OK');
+                        //navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                        //function () { }, "Message", 'Ok');
                     },
                 });
                 category.fetch(function(){
@@ -225,8 +230,8 @@
                 },
                 error: function (e) {
                     app.mobileApp.hideLoading();
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                   /* navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Message", 'OK');*/
                 },
 
             });
@@ -248,7 +253,7 @@
                 else
                 {
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                    function () { }, "Message", 'OK');
                 }
                 
             });  
@@ -366,8 +371,8 @@
                 },
                 error: function (e) {
                     app.mobileApp.hideLoading();
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                   /* navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Message", 'OK');*/
                 },
 
             });
@@ -382,7 +387,7 @@
                 else
                 {
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                    function () { }, "Message", 'OK');
                 }
             });  
         },
@@ -418,8 +423,8 @@
                 },
                 error: function (e) {
                     app.mobileApp.hideLoading();
-                    navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                  /*  navigator.notification.alert("Server not responding properly.Please check your internet connection.",
+                    function () { }, "Message", 'OK');*/
                 },
 
             });
@@ -434,7 +439,7 @@
                 else
                 {
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                    function () { }, "Message", 'OK');
                 }
             });  
         },

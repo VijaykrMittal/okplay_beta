@@ -323,13 +323,13 @@
                     if(data[0]['code'] === "1" || data[0]['code'] === 1)
                     {
                         navigator.notification.alert("Thank you, your submission has been received.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                         app.contact.viewModel.setblankContactForm();
                     }
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                        function () { }, "Notification", 'OK');
+                        function () { }, "Message", 'OK');
                         app.mobileApp.hideLoading();
                     }
                 });

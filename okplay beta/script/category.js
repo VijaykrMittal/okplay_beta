@@ -116,7 +116,7 @@
                     error: function (e) {
                         app.mobileApp.hideLoading();
                     	navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
+                    	function () { }, "Message", 'OK');
                     },
                 });
                 categoryDataSource .fetch(function(){
@@ -130,7 +130,7 @@
                     else
                     {
                         navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    	function () { }, "Notification", 'OK');
+                    	function () { }, "Message", 'OK');
                         app.mobileApp.hideLoading();
                     }
                 });
@@ -249,7 +249,7 @@
                 error: function (e) {
                     app.mobileApp.hideLoading();
                     navigator.notification.alert("Server not responding properly.Please check your internet connection.",
-                    function () { }, "Notification", 'OK');
+                    function () { }, "Message", 'OK');
                 },
 
             });
