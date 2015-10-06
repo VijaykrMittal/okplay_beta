@@ -57,7 +57,4 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage"/>
     </feature>
-<gap:plugin name="cordova-plugin-googleplus" source="npm">
-  <param name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.986576268792-5rssfmrbffnd708r2s88s648kbd6ind7" />
-</gap:plugin>
 </widget>
