@@ -1,5 +1,9 @@
 {
   "CordovaPluginVariables": {
+    "com.phonegap.plugins.facebookconnect": {
+      "APP_ID": "148835445466491",
+      "APP_NAME": "okplay"
+    },
     "cordova-plugin-googleplus": {
       "REVERSED_CLIENT_ID": "com.googleusercontent.apps.986576268792-5rssfmrbffnd708r2s88s648kbd6ind7"
     }

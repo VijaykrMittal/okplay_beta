@@ -51,7 +51,7 @@
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleVersion</key>
-    <string>$GeneratedBuildVersionNumber$</string>
+    <string>1.0</string>
     <key>CFBundleShortVersionString</key>
     <string>$BundleVersion$</string>
     <key>LSRequiresIPhoneOS</key>

@@ -384,61 +384,76 @@
         
         fbLogin:function()
         {
-            app.mobileApp.showLoading();
-            FB.getLoginStatus(function(response){
-                if(response.status !== "connected")
+           // app.mobileApp.showLoading();
+            
+            facebookConnectPlugin.getLoginStatus(function(response) 
+            {
+                if (response.status !== "connected") 
                 {
                     app.loginService.viewModel.loginfbAPI();
+                } 
+                else 
+                {
+                    alert("You are not logged in");
                 }
             });
         },
         
         loginfbAPI:function()
         {
-            FB.login(function(response){
-                if(response.authResponse.accessToken && response.authResponse.userId)
+            facebookConnectPlugin.login(["email"], function(response) { // do not retrieve the 'user_likes' permissions from FB as it will break the app
+                if (response.status === "connected") 
                 {
                     app.loginService.viewModel.fbDataFetch();
-                }
-                else
+                } 
+                else 
                 {
-                    alert("not logged in");
+                    alert("You are not logged in");
                 }
-            },{scope:'email'});
+            });
         },
         
         fbDataFetch:function()
         {
-            FB.api('/me', {fields:'last_name,first_name,email,picture,gender'},function(response) {
-                
-                var str = response.email;
-                var result = str.search("@");
-                var fbpwd= str.slice(0, result );
-                var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
-                var i;
-                for (i=0;i<6;i++)
+            var graphPath = "me/?fields=id,last_name,first_name,email,picture,gender";
+            facebookConnectPlugin.api(graphPath, [],
+            function(response) {
+                if (response.error) 
                 {
-                    var a = alpha[Math.floor(Math.random() * alpha.length)];
-                    var b = alpha[Math.floor(Math.random() * alpha.length)];
-                    var c = alpha[Math.floor(Math.random() * alpha.length)];
-                    var d = alpha[Math.floor(Math.random() * alpha.length)];
+                    alert("Uh-oh! " + response.error);
+                } 
+                else 
+                {
+                    var str = response.email;
+                    var result = str.search("@");
+                    var fbpwd= str.slice(0, result );
+                    var alpha = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+                    var i;
+                    for (i=0;i<6;i++)
+                    {
+                        var a = alpha[Math.floor(Math.random() * alpha.length)];
+                        var b = alpha[Math.floor(Math.random() * alpha.length)];
+                        var c = alpha[Math.floor(Math.random() * alpha.length)];
+                        var d = alpha[Math.floor(Math.random() * alpha.length)];
+                    }
+                    var captcha = a+''+b+''+c+''+d;
+                    var mainPwd = fbpwd+''+captcha;
+
+                    localStorage.setItem("fbLoginStatus",true);
+                    localStorage.setItem("fbUserFirstName",response.first_name);
+                    localStorage.setItem("fbUserLastName",response.last_name);
+                    localStorage.setItem('fbUserEmail',response.email);
+                    localStorage.setItem('fbUserGender',response.gender);
+                    localStorage.setItem('fbUserPassword',mainPwd);
+                   // alert(JSON.stringify(mainPwd));
+                    app.loginService.viewModel.emailExistAPI(response.email);
                 }
-                var captcha = a+''+b+''+c+''+d;
-                var mainPwd = fbpwd+''+captcha;
-                
-                localStorage.setItem("fbLoginStatus",true);
-                localStorage.setItem("fbUserFirstName",response.first_name);
-                localStorage.setItem("fbUserLastName",response.last_name);
-                localStorage.setItem('fbUserEmail',response.email);
-                localStorage.setItem('fbUserGender',response.gender);
-                localStorage.setItem('fbUserPassword',mainPwd);
-                app.loginService.viewModel.emailExistAPI(response.email);
             });
         },
         
         facebookLogout:function()
         {
-            FB.logout(function(response){
+            facebookConnectPlugin.logout(function(response){
                 app.mobileApp.showLoading();
                 localStorage.setItem("fbLoginStatus",false);
                 localStorage.removeItem('fbUserFirstName');
