@@ -289,6 +289,7 @@
         
         userLogout : function(data)
         {
+            //alert(data);
             if(data === 'logout')
             {
                 this.set('loginemail','');

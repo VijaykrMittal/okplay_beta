@@ -16,16 +16,16 @@ var app = (function(global){
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
         networkStatus();
-        //facebookFunctionCall();
+        facebookFunctionCall();
 
         if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) 
         {                    
             StatusBar.overlaysWebView(false);
             StatusBar.backgroundColorByHexString('#373F4A');
-        }    
+        } 
     };
     
-    /*var facebookFunctionCall = function()
+    var facebookFunctionCall = function()
     {
       try
         {
@@ -40,7 +40,7 @@ var app = (function(global){
         {
             console.log(ex.messgae);
         }  
-    };*/
+    };
     
     var networkStatus = function()
     {

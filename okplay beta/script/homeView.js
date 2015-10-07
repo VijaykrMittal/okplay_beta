@@ -12,8 +12,6 @@
         scrollImage:[],
         show:function(e)
         {
-            console.log(e);
-            console.log(e['sender']['content'][0]['childNodes']['length']);
             app.mobileApp.showLoading();
            // alert("google login status "+localStorage.getItem('googleLoginStatus'));
            // alert("fb login status "+localStorage.getItem('fbLoginStatus'));
@@ -118,8 +116,8 @@
                         }
                     },
                     error: function (e) {
-                        /*app.mobileApp.hideLoading();
-                        navigator.notification.confirm('Server not responding properly.Please check your internet connection.', function (confirmed) {
+                        app.mobileApp.hideLoading();
+                       /*navigator.notification.confirm('Server not responding properly.Please check your internet connection.', function (confirmed) {
                             if (confirmed === true || confirmed === 1) {
                                 navigator.app.exitApp()
                             }
