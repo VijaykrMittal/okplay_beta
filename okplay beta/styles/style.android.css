@@ -62,7 +62,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center;margin-top: -20px;}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 17px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -254,7 +254,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -278,6 +278,8 @@
     .socialDv p:nth-child(2){margin-top: -15px;}
     .socialDv p:nth-child(2) a:nth-child(1){width: 45px;height: 45px;border: none !important;background:url('./images/facebook.png') no-repeat !important;background-size: 100% 100% !important;}
     .socialDv p:nth-child(2) a:nth-child(2){width: 45px;height: 45px;border: none !important;background:url('./images/google.png') no-repeat !important;background-size: 100% 100% !important;}
+    
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;width:97%}
     
 }
 
@@ -345,7 +347,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center;margin-top: -20px;}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 17px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 17px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -566,7 +568,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -656,7 +658,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -848,7 +850,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 45%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -939,7 +941,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -1131,7 +1133,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -1222,7 +1224,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -1414,7 +1416,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -1505,7 +1507,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center;margin-top: -25px;}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -1698,7 +1700,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:14px}
+    #signupForm .termscond {font-size:14px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 15px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -1727,6 +1729,7 @@
     .socialDv p:nth-child(2){margin-top: -15px;}
     .socialDv p:nth-child(2) a:nth-child(1){width: 40px;height: 40px;border: none !important;background:url('./images/facebook.png') no-repeat !important;background-size: 100% 100% !important;}
     .socialDv p:nth-child(2) a:nth-child(2){width: 40px;height: 40px;border: none !important;background:url('./images/google.png') no-repeat !important;background-size: 100% 100% !important;}
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;width:96%}
 }
 
 @media (min-width:0px) and (max-width:440px) {
@@ -1790,7 +1793,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -1979,7 +1982,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 60%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -2067,7 +2070,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center;margin-top: 0px;}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -2259,7 +2262,7 @@
     #forgotpwdForm label.error {font-size: 15px;color: rgb(250, 0, 0);font-weight: 400;}
     .forgotpwdDV .forgotBtn a {width: 70%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     
-    #signupForm .termscond {font-size:13px}
+    #signupForm .termscond {font-size:13px;margin-top:28px}
     #signupForm .termscond .termsBtn {background:none !important;color:#A0C4EE !important ;font-style: italic;font-size: 13px !important;}
     
     .leftDv .userclass {word-wrap: break-word;width: 100px;}
@@ -2288,7 +2291,7 @@
     .socialDv p:nth-child(2){margin-top: -15px;}
     .socialDv p:nth-child(2) a:nth-child(1){width: 38px;height: 38px;border: none !important;background:url('./images/facebook.png') no-repeat !important;}
     .socialDv p:nth-child(2) a:nth-child(2){width: 38px;height: 38px;border: none !important;background:url('./images/google.png') no-repeat !important;}
-    
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;width:93%}
 }
 
 @media (min-width:0px) and (max-width:360px) {
@@ -2364,7 +2367,7 @@
     .txtfldCont p a {width: 50%;height: 40px;margin-top: 10px;background-color: #D00000 !important;color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont p a:active { color: #FFF !important;font-size: 16px !important;font-weight: bold !important;}
     .txtfldCont .loginBtn {text-align:center}
-    #loginForm p:first-child {text-align: center;color: #000;font-size: 13px;margin-bottom: 30px;}
+    #loginForm p:first-child {text-align: left;color: #000;font-size: 13px;margin-bottom: 30px;}
     #loginForm .logTxtFld {width: 100%;height: 40px;padding-left: 7px;border: 1px solid #ccc;}
     #loginForm label.error {font-size:15px;color: rgb(250, 0, 0);font-weight: 400;}
     
@@ -2556,4 +2559,5 @@
     .sharefloatDv a {position:fixed;top:85%;right:5px;z-index:999999999;-webkit-backface-visibility: hidden;color: #000 !important;border-radius: 50% !important;background-color: #fff !important;border: 1px solid #9D9C9C;box-shadow: 0px 0px 10px 2px #BEB61B;height: 43px;width: 43px;}
     .sharefloatDv .km-share:after {font-size: 23px !important;margin: 1px 0px 0px -7px !important;}
     .sharefloatDv .km-share:before {display:none !important}
+    #termsBody p{margin: 0 0 0 15px !important;padding: 0 !important;width:92%}
 }
