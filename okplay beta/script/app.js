@@ -7,17 +7,17 @@ var app = (function(global){
     
     var onDeviceReady = function()
     {
-       // console.log(window.device.model);
+        // console.log(window.device.model);
         sessionStorage.setItem("iosDeviceType",window.device.model);
-      // alert(window.screen.width);
+        // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 
         //document.addEventListener('backbutton', onBackKeyDown, false);
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
-       // networkStatus();
-        facebookFunctionCall();
-        
+        networkStatus();
+        //facebookFunctionCall();
+
         if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) 
         {                    
             StatusBar.overlaysWebView(false);
@@ -25,7 +25,7 @@ var app = (function(global){
         }    
     };
     
-    var facebookFunctionCall = function()
+    /*var facebookFunctionCall = function()
     {
       try
         {
@@ -40,17 +40,16 @@ var app = (function(global){
         {
             console.log(ex.messgae);
         }  
-    };
+    };*/
     
     var networkStatus = function()
     {
       if(!window.connectionInfo.checkConnection()){
-                navigator.notification.confirm('No Active Connection Found.', function (confirmed) {
+                navigator.notification.confirm('Server not responding properly.Please check your internet connection.', function (confirmed) {
             	if (confirmed === true || confirmed === 1) {
-            		networkStatus();
+            		navigator.app.exitApp()
             	}
-
-            }, 'Connection Error?', 'Retry,Cancel');
+            }, 'Connection Error?', 'OK');
         }  
     };
     
