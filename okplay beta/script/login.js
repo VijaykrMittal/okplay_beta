@@ -385,7 +385,7 @@
         
         fbLogin:function()
         {
-            app.mobileApp.showLoading();
+           // app.mobileApp.showLoading();
             
             facebookConnectPlugin.getLoginStatus(function(response) 
             {
@@ -416,7 +416,7 @@
             function(msg)
             {
                // alert(msg);
-                app.mobileApp.hideLoading();
+               // app.mobileApp.hideLoading();
             });
         },
         
