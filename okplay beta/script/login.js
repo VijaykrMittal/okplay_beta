@@ -411,6 +411,12 @@
                 {
                     alert("You are not logged in");
                 }
+                
+            },
+            function(msg)
+            {
+               // alert(msg);
+                app.mobileApp.hideLoading();
             });
         },
         
@@ -514,7 +520,8 @@
                     app.loginService.viewModel.emailExistAPI(obj.email);
                 },
                 function (msg) {
-                    alert('error: ' + msg);
+                    //alert('error: ' + msg);
+                    app.mobileApp.hideLoading();
                 }
             );
         },

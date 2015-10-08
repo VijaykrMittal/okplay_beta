@@ -9,7 +9,7 @@
         show : function(e)
         {
             app.mobileApp.showLoading();
-            //$("#searchContent").find(".km-scroll-container").css("-webkit-transform", "");
+           // $("#searchContent").find(".km-scroll-container").css("-webkit-transform", "");
             e.view.scroller.scrollTo(0, 0);
             
             if(e['sender']['params']['keyword'] === "")
