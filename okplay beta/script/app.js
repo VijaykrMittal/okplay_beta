@@ -1,9 +1,20 @@
 var app = (function(global){
     
-    /*var onBackKeyDown = function()
+    var onBackKeyDown = function()
     {
-        alert(mobileApp.view()['element']['0']['id']);
-    };*/
+        if(mobileApp.view()['element']['0']['id'] === 'homepageView')
+        {
+            navigator.notification.confirm('Are you sure want to exit?', function (confirmed) {
+                if (confirmed === true || confirmed === 1) {
+                    navigator.app.exitApp()
+                }
+            }, 'Notification', 'OK,Cancel');
+        }
+        else
+        {
+            mobileApp.navigate("#:back");
+        }
+    };
     
     var onDeviceReady = function()
     {
@@ -12,7 +23,7 @@ var app = (function(global){
         // alert(window.screen.width);
         window.connectionInfo = new ConnectionApp();
         //window.camera = new cameraFunction(); 
-        //document.addEventListener('backbutton', onBackKeyDown, false);
+        document.addEventListener('backbutton', onBackKeyDown, false);
         window.connectionInfo.checkConnection()
         //sessionStorage.setItem('internetStatus',window.connectionInfo.checkConnection());
         networkStatus();

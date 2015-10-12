@@ -31,6 +31,7 @@
                 if($(e.target).hasClass('menu'))
                 {
                     $('.popup').slideToggle();
+                    $('.searchTxtbox').blur();
                 }
                 else
                 {
