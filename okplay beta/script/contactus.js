@@ -169,7 +169,7 @@
             
             $('.menu').unbind();
             $('[data-role="view"]').unbind();
-            $('[data-role="view"]#privacyPolicy').on("click",function(e){
+            $('[data-role="view"]#disclaimer').on("click",function(e){
                 if($(e.target).hasClass('menu'))
                 {
                     $('.popup').slideToggle();
